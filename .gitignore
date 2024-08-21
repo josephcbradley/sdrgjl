@@ -12,3 +12,16 @@ tex/cover_sheet.docx
 tex/cover_sheet.pdf
 
 X_ARCHIVE/
+tex/main.toc
+
+*.synctex(busy)
+
+*.out
+
+*.log
+
+*.auxlock
+
+*.aux
+
+*.bcf
