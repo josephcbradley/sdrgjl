@@ -25,3 +25,7 @@ tex/main.toc
 *.aux
 
 *.bcf
+
+*.gz
+
+*.xml
