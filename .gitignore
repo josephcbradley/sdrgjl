@@ -12,7 +12,6 @@ tex/cover_sheet.docx
 tex/cover_sheet.pdf
 
 X_ARCHIVE/
-tex/main.toc
 
 *.synctex(busy)
 
@@ -29,3 +28,15 @@ tex/main.toc
 *.gz
 
 *.xml
+
+*.lof
+
+*.bbl
+
+*.blg
+
+*.run.xml
+
+*.synctex.gz
+
+*.toc
