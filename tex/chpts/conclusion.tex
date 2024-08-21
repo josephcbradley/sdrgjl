@@ -1,0 +1,25 @@
+% !TEX root = ../main.tex
+
+\section{Conclusion}\label{sec:conclusion}
+%This should be a summary and critical evaluation of what the project has achieved and how the results relate to ones obtained by other people. You should also discuss what could have been done differently and how the approach could be improved or developed further in future work.
+
+In this report we have confirmed some key findings in the literature on entanglement scaling in random spin chains, as well as exploring new measures and new systems.
+%\subsection{Logarithmic Negativity for the Randbow System}\label{subsec:conc:randbow}
+In section \ref{sec:randbow_negativity_results} we showed with a simple proof that the scaling of the logarithmic negativity of the randbow chain should be similar to the scaling of the entanglement entropy. We verified this via the numerical SDRG method. In the non-interacting, $XX$ case, we observed a power-law scaling, and for the interacting $XXX$ case, we saw that the entanglement entropy quickly saturated, which reflects the stability of the bubble regions in this regime. We similarly noted that for fixed subsystem sizes but increasing intervals $r$, the negativity of the interacting model scaled far more quickly than the non-interacting model, which is a corollary of the previous result.
+
+%\subsection{Entanglement Scaling for the power-law spin chain}\label{subsec:conc_powerlaw}
+For a system with couplings distributed according to a power-law, we were not able to derive any exact results. However, the scaling of the entanglement entropy and the logarithmic negativity computed via the numerical SDRG method changed significantly compared to the randbow model. Our numerical observations suggest that it does not maintain the square root entanglement scaling of the randbow chain, despite the inhomogeneous factor in the spin couplings. The entanglement entropy at first scaled quickly with $l$, suggesting that a short rainbow phase dominates. However, this rainbow phase appeared to be very unstable, likely due to the relatively slow decaying of the couplings, and from that point onwards the scaling appeared to be logarithmic. This was corroborated with the scaling of the exact case for a smaller system size. Similarly for the logarithmic negativity, we observed via the numerical SDRG method that the power-law spin chain scales as expected in a very similar way to the simple disordered system.
+
+
+
+%\subsection{Limitations and Future Work}\label{subsec:conc_future_work}
+Whilst we were not able to establish any analytical results for the power-law spin chain, this could be achieved more time. One issues is that the power-law expression is not as analytically malleable as the exponential expression, so any solution will probably not take the same form as the details of \cite{paola2018}.
+
+% One could also argue that a more rigorous proof for the square root scaling of the randbow entanglement entropy is needed, but the data match very well to the heuristic used here and in \cite{paola2018} that we do need see this as being as important as any sort of quantitative theory of power-law spin chains in general.
+
+A more exhaustive treatment could have been made of the different ways of measuring the entanglement entropy and logarithmic negativity of the power-law spin chain - for example, calculating the exact solution for the entanglement entropy calculations for a different value of $\alpha / \delta$. Similarly, given more compute power it would have been interesting to calculate the exact solution for both the randbow chain and the power-law chain for $l$ up to $2,000$. Furthermore, we have not considered values of $\Delta$ outside of 0 and 1. Lastly, we attempted to investigate whether the power-law scaling of the entanglement entropy would hold in the power-law spin chain with very high $\alpha$ (including $\alpha = 500$) but these results were inconclusive. All of the above points could be the subject of future work.
+
+%Given that the interactions take us back into an area law, which we know is the result of strictly local Hamiltonians, it suggests that the interacting systems could be mapped onto a strictly local system for large $l$ and that this could give some further insight. 
+
+%In our opinion, the biggest unmet need in this scheme of work is a physical explanation for the breakdown of the area law violation when we consider the interacting case of the randbow and power-law spin chains. Whilst in \cite{paola2018} there is a good quantitative argument given in terms of projecting the SDRG procedure onto a random walk, it remains the case that we do not have a clear understanding of what happens locally in the $\Delta = 1$ case (furthermore, 
+

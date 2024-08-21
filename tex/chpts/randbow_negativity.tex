@@ -1,0 +1,70 @@
+% !TEX root = ../main.tex
+\section{Logarithmic Negativity for the Randbow Chain}\label{sec:randbow_negativity_results}
+
+\subsection{Analytical Expectation}\label{sec:randbow_old_results_negativity_analytical}
+In the following sections, we begin our extension of the existing results. We start by analysing the logarithmic negativity an open randbow chain with two adjacent intervals as we vary the subsystem length $l$. This simulation setup is identical to that seen in \ref{fig:disjoint_diagram}, except that we use the randbow couplings rather than the basic disordered couplings. 
+
+For the $h \to \infty$ limit, we would expect the negativity to follow the volume law. The argument is essentially the same as that made for the large $h$ entanglement entropy: for every extra spin in $A_1$, we introduce another singlet link between $A_1$ and $A_2$, thus we get a volume law. 
+
+For moderate values of $h$, we can predict a power-law scaling via a very similar argument to that presented in \ref{sec:randbow_old_results}. First, recall that the logarithmic negativity in the RSP is the number of singlet links between the two subsystems, multiplied by $\ln 2$. Secondly, assume that all of the singlet links coming \textit{out} of $A_2$ go into $A_1$, and vice versa. This allows us to reduce the problem to just calculating the scaling of the entanglement entropy of either of the subsystems, which is just the number of singlet links connecting outside of the subsystem ($A_1$ or $A_2$ here). We have already shown that the entanglement entropy for the randbow chain scales with a power-law, which suggests that the logarithmic negativity will also scale as a power-law. This is valid in as far as the approximation that all of the singlet links coming \textit{out} of $A_2$ go into $A_1$ is accurate.
+%Secondly, we assume that for moderate $h$, the groundstate of the SDRG procedure is symmetric with respect to the chain centre. This is reasonable for moderate $h$ and is supported by further arguments with respect to the flow of eliminations presented in \cite{paola2018}. This allows us to consider just one of the two subsystems in $A$, either $A_1$ or $A_2$. In for moderate $h$, most of the rainbow links emerging from the subsystem $A_1$, for eaxmple, will go to the subsystem $A_1$ and vice versa\footnote{We ignore the possibility that a rainbow link could leave $A_2$ `to the right' and attach to the remainder of the chain. It is shown in \cite{paola2018} that this is an accurate approximate of the structure of the RSP for moderate $h$.}, and thus will contribute to the logarithmic negativity. Thus to understand the scaling of the logarithmic negativity for $A$ we only need to understand the scaling of number of singlet links coming out of $A_2$ as $l$ varies, which is  scaling of the entanglement entropy of the subsystem $A_2$. This we already know to be a square root scaling.
+
+It is important to point out that this argument, based on that given in \cite{paola2018}, only holds in the non-interacting case. We will see in the numerical evidence that this is indeed the case and the interacting model shows a saturating behaviour consistent with \cite{paola2018}. 
+
+\subsection{Numerical SDRG}\label{subsec:neg_sdrg_results}
+To verify these results, we measure the logarithmic negativity of two adjoint subsystems in the $XX$ and $XXX$ randbow chains with the numerical SDRG method, with $L = 1000$ and $2000$ in both cases. We use the SDRG procedure for $50,000$ disorder realisations each, and plot the logarithmic negativity as a function of the adjusted subsystem length $l / L$. In both cases we use the parameters $h = 1, \delta = 1$ for the moderate inhomogeneity regime. Our results are shown in figure \ref{fig:randbow_negativity_scaling}.
+
+
+As can be seen from figure \ref{fig:randbow_central_neg_XX}, in the $XX$ case the square root scaling is well captured. In the $XXX$ model, we observe the same saturation behaviour reported for the entanglement entropy in \cite{paola2018}. This is to be expected given the the argument made above in section \ref{sec:randbow_old_results_negativity_analytical}: to calculate the logarithmic negativity we only need to know the entanglement entropy, and we already expect this to saturate in $l$. 
+
+%Furthermore, for larger values of $l$ we notice that the logarithmic negativity is higher for a given fraction of the chain. This is to be expected: for a longer chain, there will be more singlet links in a subsystem for length $0.5L$. 
+
+
+%It is interesting to note that the saturation implies an area law regime, and to consider why this occurs only in the interacting case. It is argued in \cite{paola2018} that the bubble regions in the interacting model are much more stable, which invalidates the heuristic argument presented for the square root scaling and leads to a saturation, because there is not enough space in the subsystem for rainbow links.  The details of this argument are beyond the scope of this report but are covered in more detail in \cite{paola2018}. 
+
+\begin{figure}
+     \centering
+     \begin{subfigure}[b]{0.8\textwidth}
+   \centering
+     \includegraphics[width=\textwidth]{../data/imgs/randbow_central_neg_obc_XX}
+    \caption{Logarithmic negativity for the open randbow $XX$ chain. Notice the logarithmic scale on both axes. The fitted curve is of the form $a + b\sqrt{x}$.}
+    \label{fig:randbow_central_neg_XX}
+    \end{subfigure}%
+     \hfill
+     \begin{subfigure}[b]{0.8\textwidth}
+         \centering
+    \includegraphics[width=\textwidth]{../data/imgs/randbow_central_neg_obc_XXY}
+    \caption{Logarithmic negativity for the open randbow XXX chain. Notice the rapid saturation, indicative of an area law.}
+    \label{fig:randbow_central_neg_XXX}
+         \end{subfigure}
+            \caption{Logarithmic negativity scaling in the open randbow chain for adjoint subsystems. We set $h = 1, \delta = 1, L = 100$ in both figures and measure the logarithmic negativity over $50,000$ disorder realisations. We place the subsystems $A_1$ and $A_2$ in the centre of the chain. In both figures we run the simulation for $L = 1000$ and $L = 2000$. \ref{fig:randbow_central_neg_XX}: scaling in the $XX$ regime. A square root scaling is observed, reflecting analytical expectations and the results from \ref{sec:randbow_old_results_exact}. \ref{fig:randbow_central_neg_XXX}: scaling in the $XXX$ regime. We observe that the logarithmic negativity saturates quickly in both system lengths.}
+        \label{fig:randbow_negativity_scaling}
+\end{figure}
+
+As an additional measure of the rate at which entanglement decays from the centre of the chain, we measure the logarithmic negativity as we vary the interval $r$ between two adjacent intervals in the $XX$ and $XXX$ chains. We consider only even $r$, with the interval spaced evenly over the centre of the chain (see figure \ref{fig:disjoint_diagram} for a visualisation) with $L = 1000$. We observe that in the $XX$ case, the logarithmic negativity decays relatively slowly as $r$ increases. This is to be expected given the previously discussed stability of the rainbow regions in the $XX$ case relative to the bubble regions. Furthermore, we notice a strong data collapse onto the ratios $h / \delta$, just as for the previous measures of entanglement. 
+
+However, in the interacting $XXX$ case, the logarithmic negativity decays far more quickly, as expected from the saturating behaviour we see in figure \ref{fig:randbow_central_neg_XXX}. This is a corollary of figure \ref{fig:randbow_central_neg_XXX}: as we extend into the extremes of the chain, we see fewer long distance singlet connections.
+
+\begin{figure}
+     \centering
+     \begin{subfigure}[b]{\textwidth}
+       \centering
+    \includegraphics[width=0.8\textwidth]{../data/imgs/randbow_central_neg_obc_XX_vary_r}
+    \caption{Logarithmic negativity in the $XX$ randbow with varied interval $r$, OBC}
+    \label{fig:randbow_central_neg_vary_r_XX}    
+    \end{subfigure}%
+     \hfill
+     \begin{subfigure}[b]{\textwidth}
+         \centering
+    \includegraphics[width=0.8\textwidth]{../data/imgs/randbow_central_neg_obc_XXY_vary_r}
+    \caption{Logarithmic negativity in the $XXX$ randbow with varied interval $r$, OBC}
+    \label{fig:randbow_central_neg_vary_r_XXX} 
+         \end{subfigure}
+            \caption{Logarithmic negativity scaling in the randbow chain for disjoint subsystems as we vary $r$. We measure the logarithmic negativity over $50, 000$ disorder realisations. We place the subsystems $A_1$ and $A_2$ in the centre of the chain separated by an even interval $r$, located in the centre of the chain. $L =1000$ and $l = 100$ in both figures. \ref{fig:randbow_central_neg_vary_r_XX}: the $XX$ chain. The logarithmic negativity decays relatively slowly, in line with figure \ref{fig:randbow_central_neg_XX}. We also observe a strong data collapse onto the ratio $h / \delta$. \ref{fig:randbow_central_neg_vary_r_XXX}: scaling in the $XXX$ model. The logarithmic negativity decays much more quickly, in line with figure \ref{fig:randbow_central_neg_XXX}, and there is no observable data collapse other than the $r \to 0$ limit in which all entanglement is lost.}
+        \label{fig:randbow_negativity_scaling_vary_r}
+\end{figure}
+
+
+
+%\subsection{Exact results}\label{subsec:neg_exact_results}
+

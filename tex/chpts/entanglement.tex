@@ -1,0 +1,178 @@
+\section{Measures of Entanglement}\label{sec:entanglement}
+\subsection{Entanglement as an Information Phenomenon}\label{subsec:entanglement_physics}
+%Demonstration of entangled Bell pair. Example from LaRose? Link to teleportation
+Calculating the amount of entanglement in a system is a non-trivial problem. A system is defined as being entangled entangled if and only if (iff) it is not \textit{separable} \cite{paola_phd}. To define separability, we first note that any state $\ket{\psi}$ in a Hilbert space $\mathcal{H}$ can be expressed as a density matrix $\rho$:
+ 
+ \begin{equation}
+	\rho = \ket{\psi} \bra{\psi}
+\end{equation}
+
+ Separability implies that, given a set of classical probabilities $\{ p_i\}$, and a set of density matrices for two subsystems $A$ and $B$, any density matrix $\rho$ for the space $\mathcal{H} = \mathcal{H}_A \otimes \mathcal{H}_B$ can be written as:
+
+\begin{equation}\label{eq:seperable_state}
+	\rho = \sum_i p_i \rho_A^{i} \otimes \rho_B^{i}
+\end{equation}
+
+%Again, if a system is separable, it is not entangled.
+
+%We will briefly summarise two approaches to quantifying the degree of entanglement. The first is the operational approach that understands entanglement by considering the set of operations on a state that do not increase entanglement. The first set of such operations are the `local operations and classical communication' (LOCC) operations. These include, for example, person $A$ investigating some subsystem $A$ and communicating their results to someone observing subsystem $B$. Whilst it turns out to be true that one cannot approach a non-separable state from a separable state through LOCC operations, the set of operations that do not increase entanglement is much wider than this \cite{paola_phd}. 
+%Thus a first (and incorrect) attempt would be  to define entanglement as `the property of any state that cannot be reached by local operations and classical communication' (LOCC). LOCC includes, for example, experiments on quantum systems to take observations, and traditional methods of communication. However, as Peres shows \cite{peres_1996}, LOCC is only a subset of operations that lead to separable states. Rather, density matrices must be at least \textit{positive partial transpose preserving} (PPT preserving): this is known as the Peres criterion. The partial transpose is defined as follows - given a density matrix $\rho$ defined as:
+%(Alice: `Bob, my spin is in state $\ket{\psi}$, how about you?')
+%\begin{equation}
+%	\rho = \sum_{ijkl} p_{kl}^{ij}\ket{i}\bra{j} \otimes \ket{k} \bra{l}
+%\end{equation}
+
+%then the partial transpose with respect to $B$ is:
+
+%\begin{equation}\label{eq:partial_transpose}
+%	\rho = \sum_{ijkl} p_{kl}^{ij}\ket{i}\bra{j} \otimes (\ket{k} \bra{l})^T
+%\end{equation}
+
+%The preceding matrix is positive iff it does not have any negative eigenvalues. 
+
+%However, even the Peres criterion does not guarantee that the the partial transpose of the density matrix is positive \cite{paola_phd}, so LOCC presents a useful heuristic for defining a set of axioms that any measure of entanglement must satisfy \cite{vedral_quantification}. 
+
+%An excellent review of measures of entanglement is \cite{Amico2008}, section two, and \cite{chsh_ineq}. For example, the entanglement of distillation gives the number of maximally entangled pairs that can be purified from a quantum state \cite{bennett_correction}. Yet purification processes are varied and there is not currently a way of calculating this quickly. On the other hand, negativity (see section \ref{subsec:entropy_negativity} for a definition) is well defined but does not have any obvious physical interpretation. 
+%An excellent review of measures of entanglement is \cite{Amico2008}, section two.
+
+%It would be useful if, through an understanding of LOCC alone, we could order all density matrices in terms of their entanglement and thus produce a measure of entanglement. Unfortunately this is not possible: for some operation $\Theta$ to be a part of the LOCC set of operations is not a necessary condition for $\Theta$ to preserve separability (\cite{paola_phd}, \cite{Nielsen_entanglement_conditions}). 
+
+Given a such a density matrix $\rho$, research has often turned to an axiomatic approach for measures on entanglement. This involves stating what conditions a measure of entanglement must satisfy to be considered useful. There is a significant debate around what these axioms should be: see \cite{vedral_quantification} and \cite{plenio_negativity} for examples. We will follow \cite{paola_phd} and use the following three conditions for a measure of entanglement $E$:
+ %This is in response to the fact that states had been found that did not violate the Clauser-Horne-Shimony-Holt (CHSH) inequality (i.e. they did not appear to be entangled) but that were effectively entangled under local operations and classical communication (LOCC, again see section \ref{subsec:entanglement_physics}) \cite{gisin_1996}
+
+\begin{enumerate}\label{enum:entanglement}
+	\item \textit{Monotonicity}: $E(\rho) \geq \sum_i E(\Theta(\rho))$ for some LOCC operation $\Theta$
+	\item \textit{Convexity}: $\sum_{i} p_{i} E\left(\rho_{i}\right) \geq E\left(\sum_{i} p_{i} \rho_{i}\right)$
+	\item \textit{Additivity under the tensor product}: $E\left(\otimes_{i} \rho_{i}\right)=\sum_{i} E\left(\rho_{i}\right)$
+\end{enumerate} 
+
+Monotonicity implies that any classical interference with the state (represented by the operation $\Theta$) can only lower its entropy. This is one requirement for keeping measures of entanglement focused strictly on the quantum correlations. The convexity condition implies that a classical mixing of states cannot produce entanglement, and the additivity requirement is exceptionally useful as it permits the simple calculation of states formed of the tensor product of many substates. We will come across such states frequently later in the report.
+
+%To summarise, defining measures of entanglement that satisfy all of the axioms one could reasonably wish for is difficult - in this report we focus on entanglement entropy and entanglement negativity, which we define in the following section.
+
+
+%However, Plenio shows that for entanglement negativity the monotonicity requirement is sufficient to guarantee its suitability as a measure of entanglement because `convexity is merely a mathematical requirement for entanglement monotones and generally does not correspond to a physical process describing the loss of information' \cite{plenio_negativity}: essentially Plenio does not agree that convexity needs to be in the list of entanglement axioms as monotonicity is sufficient.
+% The convexity requirement is more contentious. The right hand side of the convexity condition describes a \textit{mixed state}, i.e. a classical combination of quantum states. 
+%For general measures of entanglement, however, it would be important to revisit the convexity requirement. 
+
+%\subsection{Measures of Entanglement}\label{subsec:measures_entanglement_lit}
+%A proper physical and mathematical treatment of measures of entanglement will be given in section \ref{sec:entanglement}. 
+
+%Here we will review the recent literature on measures of entanglement in quantum mechanics. 
+% As a starting point, Bell \cite{bell_1964} presents his `game' in which Alice and Bob attempt to coordinate their observations of a potentially entangled pair of particles. A full illustration is beyond the scope of this paper, but it can be shown (ibid) that under certain conditions (see below on the Clauser-Horne-Shimony-Holt (CHSH) inequality) this game is properly `entangled', in that the (classical) states of both particles are not known until either one is measured.
+
+%As a starting point, we will assume that the reader... This was developed into the CHSH inequality \cite{chsh_ineq}, which is now a benchmark test for entangled states.
+ 
+%\begin{equation}\label{eq:monotone}
+%	E(\rho) \geq \sum_i E(\Theta(\rho))
+%\end{equation}
+
+%Single measures of entanglement have also been extended to the entanglement spectrum\cite{calabrese_spectrum_2008}, which is in turn related to moments of the reduced density matrix (ibid, \cite{paola2016}), which are in turn the object of numerical approaches that depend on matrix product states (see section \ref{subsec:sdrg_lit}).
+
+
+%The moments of the reduced density matrix are given by its eigenvalues $\lambda_i$ as follows:
+
+%\begin{equation}\label{eq:moments_of_rdm}
+%	R_\alpha = \sum_i \lambda_i^\alpha
+%\end{equation}
+
+
+\subsection{Entanglement Entropy and Logarithmic Negativity}\label{subsec:entropy_negativity}
+%cite Paola's work. Give definitions, partial trace, trace norm, etc. 
+Having established a framework for understanding different measures of entanglement, we will now define the key measures used in this report. We start by defining the generalised Rényi entropies \cite{renyi_entropy}:
+
+\begin{equation}\label{eq:renyi_entropy}
+S_{n}\left(\rho_{A}\right)=\frac{1}{1-n} \log \operatorname{Tr} \rho_{A}^{n}
+\end{equation}
+
+where $\rho_A$ is the reduced density matrix over the subsystem $A$, found by taking the partial trace over the $B$ subsystem with bases $\ket{j_B}$:
+
+\begin{equation}\label{eq:partial_trace}
+\rho_A = \operatorname{Tr}_{B}\left[\rho\right]= \sum_{j} \bra{j}_{B} \rho \ket{j}_B \footnote{Note that in this notation, there is an implied identity operator $I$ in the operation $\bra{j}_B \rho$, i.e. $(I \otimes \bra{j}_B) \rho$, and similarly for the ket, to ensure that the dimensions of the bra and the density matrix match.}
+\end{equation}
+
+Note that all Rényi entropies are symmetric with respect to the subsystem, i.e. $S_{n}\left(\rho_{A}\right)=S_{n}\left(\rho_{B}\right)$ \cite{paola_phd}.
+ Unfortunately, Rényi entropies do not satisfy the useful subadditivity condition: 
+
+\begin{equation}\label{eq:subadditivity}
+S\left(\rho_{A \cup B}\right) \leq S\left(\rho_{A}\right)+S\left(\rho_{B}\right)
+\end{equation}
+
+for bipartite systems $A \cup B$. Fortunately, taking the limit $n \to 1$ we recover the von Neumann entanglement entropy, which is subadditive \cite{lieb_subadditivity}:
+
+\begin{equation}\label{eq:neumann_entropy}
+S\left(\rho_A\right)=-\operatorname{Tr}\left(\rho_A \log \rho_A\right)
+\end{equation}
+
+The von Neumann entanglement entropy, which we will refer to throughout as the entanglement entropy, satisfies all three of the axioms for measures of entanglement.
+
+%, which also suggests that an area law would be reasonable to expect: if $|A| > |B|$, it would be odd for $S\left(\rho_{A}\right)=S\left(\rho_{B}\right)$ if entropy scaled with volume. 	
+
+Unfortunately, the entanglement entropy is only a good measure of entanglement if the system is in a pure state and if it is bipartite - otherwise classical correlations will interfere \cite{paola_phd}. The only other calculable forms of entanglement are those related to the \textit{negativity}. Before defining negativity, we define the partial transpose $\rho_{A}^{T_{2}}$ of a reduced density matrix $\rho_A$:
+
+\begin{equation}\label{eq:partial_trace}
+\langle\varphi_{A} \varphi_{B}|\rho_{A}^{T_{2}}| \varphi_{A}^{\prime} \varphi_{B}^{\prime}\rangle \equiv \langle\varphi_{A} \varphi_{B}^{\prime}\left|\rho_{A}\right| \varphi_{A}^{\prime} \varphi_{B}\rangle
+\end{equation}
+
+where $\{\varphi_{X}\}$ is a basis for subsystem $X$ \cite{paola2016}. We also define the trace distance $||A||$ of an operator $A$:
+
+\begin{equation}
+	||A|| = \operatorname{Tr} \sqrt{A A^\dagger}
+\end{equation}
+
+Assuming $A$ is Hermitian, the trace distance of $A$ is the sum of the absolute value of the eigenvalues of $A$ \cite{paola_phd}. We can now define the negativity:
+%Given the discussion about the Peres criterion, it is clear that this quantity measures the negativity of the partially transposed density matrix.
+
+\begin{equation}\label{eq:negativity}
+	 \mathcal{N}(\rho_A) = \frac{||\rho_A^{T_2}|| - 1}{2}
+\end{equation}
+
+ Whilst this is monotone and convex, it is not additive under the tensor product. However, we can take the logarithmic form, which is additive under the tensor product, giving us the logarithmic negativity $\mathcal{E}$:
+ 
+% and of the logarithmic negativity $\mathcal{E}(\rho_A)$: 
+\begin{equation}\label{eq:logneg}
+	\mathcal{E}(\rho_A) = \ln{||\rho_A^{T_2}||}
+\end{equation}
+%Hence the negativity measures the `negativity' of the eigenvalues of $A$.
+
+%\begin{equation}
+%	\mathcal{E}(\rho_A) = \ln{||\rho_A^{T_2}||}
+%\end{equation}
+
+Whilst the logarithmic negativity is not convex, it is monotone and additive and forms a good measure of entanglement \cite{plenio_negativity}.
+
+\subsection{Entanglement Area Law Violations in Quantum Systems}\label{subsec:area_law_violations}
+Having defined entanglement and two entanglement measures, we will briefly survey the wide literature of area law violations in quantum systems. We will recap that which was mentioned briefly in the introduction, that in 2004 Hastings published a proof of the area law for local, gapped, translationally invariant systems in one dimension in their groundstate \cite{hastings_area_law}, i.e. Hamiltonians of the form:
+
+%For a thorough review, we recommend \cite{eisert_review}. Early work on the scaling of entropy in quantum systems focused on the study of black holes: in particular, Bombelli et al.\ \cite{bombelli_86} and Srednicki \cite{srednicki_area}. As discussed in section \ref{sec:intro}, the event horizon of a black hole and the theory of Hawking radiation are of great general interest. 
+%Srednicki argued that for a field of quantum harmonic oscillators divided into a spherical `in' region and exterior, the entropy of the `in' region must scale with the area as opposed to the volume, as the surface area is the only region common to both subregions.
+\begin{equation}
+H=\sum_{i=1}^{N} H_{i, i+1}
+\end{equation}
+
+where $H_{i, i+1}$ is a function only of the sites $i$ and $i + 1$. Note that this applies strictly to systems in their groundstate (\cite{page_entropy_1993}, \cite{eisert_review}). 
+%- for example, Page shows that if a system is in a random pure state, the average entropy of the subsystem scales as a volume law 
+%, and this was followed by a more general proof in 2005 by Eisert et al. \cite{eisert_2005_proof}. By \cite{eisert_cramer_plenio_2010} it was well established that for local, gapless hamiltonians, the ground state had an entropy that scaled with the area rather than the volume.
+
+  This area law sets a baseline for the physics of such systems. The fact that systems do in fact display area law violations of their quantum entropy (e.g. \cite{wolf_fermion_corrections}) has prompted aresearch to identify and explain these phenomena. For example, Calabrese and Cardy \cite{calabrese_entanglement_2004} give a thorough treatment through $(1+1)d$ conformal field theory (CFT) of the entanglement entropy, and show that the entropy $S_A$ of a subsystem $A$ of length $l$ at zero temperature in an infinitely long, 1D system without boundaries is:
+
+\begin{equation}
+	S_A \sim (c/3) \log{(l / a)}
+\end{equation}
+
+where $c$ is the central charge and $a$ is the lattice spacing. This is known as a logarithmic correction to the area law. Similarly, Calabrese et al.\ compute the scaling of the logarithmic negativity in the CFT framework and show that it scales logarithmically in $l$ \cite{calabrese_qft_2012}. 
+%, and in particular showed that the SDRG groundstate of such a model was a random singlet phase, i.e. a collection of pairs each spins, where within each pair the spins were entangled with each other an no other spins 
+
+Before we introduce the model investigated in this report in detail, it is useful to point out  that the behaviour of most such models depends on the inter-spin couplings $\{J\}$. This will let us summarise a number of results for spins chains that lay the groundwork for this report. In 1980, Dasgupta \& Ma demonstrated an SDRG rule for disordered spin chains which gradually lowers the energy level of the couplings $\{J\}$, and showed that the result of the said procedure was a random singlet phase (RSP) \cite{dasgupta_ma_1980}. An RSP is a collection of singlets (pair of spins) where the spins in each singlet are entangled with each other and no other spins. In 2004, Refael \& Moore showed that the mean entanglement entropy of a subsystem $l$ in a disordered spin chain also scales as $\ln l$ \cite{refael2004}. Their result was derived analytically within the SDRG approach, and they showed in particular that under the steps of the SDRG process the distribution of the couplings $\{J\}$ approaches a fixed point. Then, in 2010, Vitagliano et al.\ presented the `rainbow chain' by introducing an inhomogeneous factor, alongside the disordered factor, for the initial couplings that decayed exponentially quickly from the centre of the chain \cite{Vitagliano2010}. When this inhomogeneous component is very strong, bonds in the centre of the chain are guaranteed to be eliminated first, and the RSP looks like a rainbow: every singlet link is symmetric with respect to the centre of the chain. For the rainbow phase it is easy to show that the entanglement entropy scales as a volume law.
+
+This brings us to the two central papers for this report. In 2016, Ruggiero et al.\ verified the logarithmic scaling of the entanglement entropy in disordered chains numerically with SDDG, as well as showing that the logarithmic negativity also scales logarithmically. Again, this was shown analytically with SDRG and then verified with a numerical implementation of SDRG. Lastly, in 2019, Alba et al.\ showed that the rainbow chain introduced in \cite{Vitagliano2010} could be modified so as to make the inhomogeneous factor in the couplings weaker. This introduced the `randbow' phase, where some singlets are rainbows, symmetric with respect to the centre of the chain, and others are `bubbles', with adjacent spins entangled. The entanglement entropy of the randbow system is a power-law. 
+
+% that "the area law in higher dimensional systems for a gapless model should generally collapse to a log l behaviour in one dimension" \cite{calabrese_entanglement_2004}
+% that progressively smaller subsystems contain virtually no information on the total system, which may explain the logarithmic scaling: as the subsystem size decreases (and as the number of subsystems increases), the entropy decreases more and more quickly, giving rise to the logarithmic scaling in $l$. 
+
+%Furthermore, area law violations do not just come in via the subsystem length. With a combination of analytical and approximate results (more on SDRG below in \ref{subsec:sdrg_lit}) Giampaola et al.\ show that the system size $N$ also affects the entanglement scaling, especially under certain open conditions \cite{giampaolo_2019}.
+
+%Most of the references above report on the entanglement entropy (see \ref{subsec:entropy_negativity} for a definition), but results are not limited to this. For example,
+%Given that the locality of the Hamiltonian affect the scaling, the working hypothesis is that the violations come from a degree of spatial inhomogeneity in certain systems. For example, in a random coupling spin chain, there will be small areas that are deeply inhomogeneous, and these contribute positively to the entropy in a way that a homogeneous model would not. This leads directly to the simulations discussed in \cite{paola2016}. 
+
+As well as verifying these existing results, our report will be exploring the logarithmic negativity of the randbow chain, and the entanglement entropy and the logarithmic negativity of a system between the disordered chain and the randbow chain where couplings decay as a power-law from the centre of the chain. In the following section we will outline the principle model that we study as well, as the SDRG procedure. This will also allow us to explain how entropy measures are calculated in the simulations we conduct.

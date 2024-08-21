@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+\counterwithin{figure}{section}
+\counterwithin{equation}{section}
+
+\usepackage{graphicx}
+\graphicspath{{../data/imgs/}}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=blue,      
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={SDRG Quantum Spin Chains},
+    pdfpagemode=FullScreen,
+}
+\usepackage{caption}
+\captionsetup{font=footnotesize}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+%\usepgfplotslibrary{external}
+\usetikzlibrary{external}
+\tikzexternalize[prefix=tikz/]
+%\tikzset{external/system call={/usr/local/texlive/2022/bin/universal-darwin/pdflatex \tikzexternalcheckshellescape -halt-on-error "\image" "\texsource"}}
+ \usetikzlibrary{arrows.meta}
+ \usetikzlibrary{backgrounds}
+ \usepgfplotslibrary{patchplots}
+ \usepgfplotslibrary{fillbetween}
+ \pgfplotsset{%
+ layers/standard/.define layer set={%
+     background,axis background,axis grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis foreground%
+ }{grid style= {/pgfplots/on layer=axis grid},%
+     tick style= {/pgfplots/on layer=axis ticks},%
+     axis line style= {/pgfplots/on layer=axis lines},%
+     label style= {/pgfplots/on layer=axis descriptions},%
+     legend style= {/pgfplots/on layer=axis descriptions},%
+     title style= {/pgfplots/on layer=axis descriptions},%
+     colorbar style= {/pgfplots/on layer=axis descriptions},%
+     ticklabel style= {/pgfplots/on layer=axis tick labels},%
+     axis background@ style={/pgfplots/on layer=axis background},%
+     3d box foreground style={/pgfplots/on layer=axis foreground},%
+     },
+ }
+ 
+ \pgfplotsset{every axis/.append style={
+                    label style={font=\large},
+                    tick label style={font=\large}  
+                    }}
+ 
+\usepackage{tikzscale}
+
+\usepackage[a4paper, portrait, margin=2cm]{geometry}
+\usepackage{tikzit}
+\usepackage{braket}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\input{diagrams/sample.tikzstyles}
+\usepackage{tabularx}
+
+\usepackage[
+backend=biber,
+sorting=none]{biblatex}
+\addbibresource{library.bib}
+
+\usepackage{algorithm2e}
+\RestyleAlgo{ruled} 
+
+\newcommand{\pluseq}{\mathrel{{+}{=}}}
+
+\usepackage{siunitx}
+
+\pgfplotsset{every tick label/.append style={font=\large}}
+\usepackage{lmodern}
+% Fix heatmap colourings 
+\input{scripts/colourmap.tex}
+
+\title{Area Law Violations in Entanglement Measures for Disordered and Inhomogeneous Quantum Spin Chains}
+\author{AC38091}
+\date{September 2022}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+In this report, we investigate the scaling of different measures of entanglement in disordered and inhomogeneous $XXY$ spin-$\frac{1}{2}$ chains. We first discuss how entanglement can be measured with the entanglement entropy and logarithmic negativity, before discussing the entanglement area law and known violations to the area law. We focus on two previously studied systems that violate the area law: disordered spin chains and inhomogeneous disordered spin chains whose couplings decay exponentially quickly from the centre of the chain. Our review includes analytical results from the Strong Disorder Renormalisation Group (SDRG) method that show that entanglement in the disordered spin chain increases with the logarithm of the subsystem length, and that entanglement in the inhomogeneous disordered spin chain increases as a square root of the subsystem length. We also verify a number of results on entanglement area law violations by implementing the SDRG method numerically. Firstly, we verify results on the entanglement entropy and logarithmic negativity for disordered models and on the entanglement entropy for the inhomogeneous disordered models. Then, we derive a simple analytic expectation for the logarithmic negativity of the inhomogeneous disordered chain via the SDRG method, and verify that numerically. Lastly, we investigate inhomogeneous disordered systems whose couplings decay as a power-law from the centre of the chain. Whilst we are not able to derive any analytic results for these systems, we show via the numerical SDRG method that the power-law scaling does not seem to survive, and the results are closer to those of the disordered homogeneous system.
+\end{abstract}
+
+\tableofcontents
+
+\include{chpts/intro}
+%\include{chpts/lit}
+\include{chpts/entanglement}
+\include{chpts/sdrg}
+\include{chpts/algorithm}
+\include{chpts/old_results}
+\include{chpts/randbow_old}
+\include{chpts/randbow_negativity}
+\include{chpts/powerbow}
+\include{chpts/conclusion}
+\appendix
+\include{chpts/quantum}
+%\include{chpts/exact_solution}
+
+%\bibliographystyle{apa}
+%\bibliography{library.bib}
+\printbibliography
+
+\end{document}

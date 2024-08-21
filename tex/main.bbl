@@ -1,0 +1,1591 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{eisert_review}{article}{}
+      \name{author}{3}{}{%
+        {{hash=fb49471187ac0096b04ef8aed9fc5e37}{%
+           family={Eisert},
+           familyi={E\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bbfccc3bc81330bb40d9b2f1685e0249}{%
+           family={Cramer},
+           familyi={C\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d0b244a8c75ea33516270f686fe851fa}{%
+           family={Plenio},
+           familyi={P\bibinitperiod},
+           given={M.\bibnamedelimi B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{1729854676498146571270dd1725d2e1}
+      \strng{fullhash}{1729854676498146571270dd1725d2e1}
+      \strng{bibnamehash}{1729854676498146571270dd1725d2e1}
+      \strng{authorbibnamehash}{1729854676498146571270dd1725d2e1}
+      \strng{authornamehash}{1729854676498146571270dd1725d2e1}
+      \strng{authorfullhash}{1729854676498146571270dd1725d2e1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Physical interactions in quantum many-body systems are typically local: Individual constituents interact mainly with their few nearest neighbors. This locality of interactions is inherited by a decay of correlation functions, but also reflected by scaling laws of a quite profound quantity: The entanglement entropy of ground states. This entropy of the reduced state of a subregion often merely grows like the boundary area of the subregion, and not like its volume, in sharp contrast with an expected extensive behavior. Such "area laws" for the entanglement entropy and related quantities have received considerable attention in recent years. They emerge in several seemingly unrelated fields, in the context of black hole physics, quantum information science, and quantum many-body physics where they have important implications on the numerical simulation of lattice models. In this Colloquium we review the current status of area laws in these fields. Center stage is taken by rigorous results on lattice models in one and higher spatial dimensions. The differences and similarities between bosonic and fermionic models are stressed, area laws are related to the velocity of information propagation, and disordered systems, non-equilibrium situations, classical correlation concepts, and topological entanglement entropies are discussed. A significant proportion of the article is devoted to the quantitative connection between the entanglement content of states and the possibility of their efficient numerical simulation. We discuss matrix-product states, higher-dimensional analogues, and states from entanglement renormalization and conclude by highlighting the implications of area laws on quantifying the effective degrees of freedom that need to be considered in simulations.}
+      \field{day}{4}
+      \field{eprinttype}{arxiv}
+      \field{issn}{0034-6861}
+      \field{journaltitle}{Reviews of Modern Physics}
+      \field{month}{2}
+      \field{number}{1}
+      \field{title}{Area Laws for the Entanglement Entropy}
+      \field{volume}{82}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{pages}{277\bibrangedash 306}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1103/RevModPhys.82.277
+      \endverb
+      \verb{eprint}
+      \verb 0808.3773
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/TM9M3Z8T/Eisert 2010 area law review.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.82.277
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.82.277
+      \endverb
+    \endentry
+    \entry{hastings_area_law}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=6fe91ce93ec3150a2a51092e35e37fab}{%
+           family={Hastings},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{6fe91ce93ec3150a2a51092e35e37fab}
+      \strng{fullhash}{6fe91ce93ec3150a2a51092e35e37fab}
+      \strng{bibnamehash}{6fe91ce93ec3150a2a51092e35e37fab}
+      \strng{authorbibnamehash}{6fe91ce93ec3150a2a51092e35e37fab}
+      \strng{authornamehash}{6fe91ce93ec3150a2a51092e35e37fab}
+      \strng{authorfullhash}{6fe91ce93ec3150a2a51092e35e37fab}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We prove an area law for the entanglement entropy in gapped one dimensional quantum systems. The bound on the entropy grows surprisingly rapidly with the correlation length; we discuss this in terms of properties of quantum expanders and present a conjecture on completely positive maps which may provide an alternate way of arriving at an area law. We also show that, for gapped, local systems, the bound on Von Neumann entropy implies a bound on R\textbackslash '\{e\}nyi entropy for sufficiently large \$\textbackslash alpha{$<$}1\$ and implies the ability to approximate the ground state by a matrix product state.}
+      \field{day}{14}
+      \field{eprinttype}{arxiv}
+      \field{month}{5}
+      \field{title}{An {{Area Law}} for {{One Dimensional Quantum Systems}}}
+      \field{urlday}{18}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1088/1742-5468/2007/08/P08024
+      \endverb
+      \verb{eprint}
+      \verb 0705.2024
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/XLWD7V85/full-text.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/0705.2024
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/0705.2024
+      \endverb
+    \endentry
+    \entry{refael2004}{article}{}
+      \name{author}{2}{}{%
+        {{hash=eb0811638aefd81692d8db05d21ba7d0}{%
+           family={Refael},
+           familyi={R\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=aa4ebc233d91960705d4a43c1369c0bb}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={J.\bibnamedelimi E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{50e512e92945a456f09e57b76f8cf30d}
+      \strng{fullhash}{50e512e92945a456f09e57b76f8cf30d}
+      \strng{bibnamehash}{50e512e92945a456f09e57b76f8cf30d}
+      \strng{authorbibnamehash}{50e512e92945a456f09e57b76f8cf30d}
+      \strng{authornamehash}{50e512e92945a456f09e57b76f8cf30d}
+      \strng{authorfullhash}{50e512e92945a456f09e57b76f8cf30d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{For quantum critical spin chains without disorder, it is known that the entanglement of a segment of N{$>>$}1 spins with the remainder is logarithmic in N with a prefactor fixed by the central charge of the associated conformal field theory. We show that for a class of strongly random quantum spin chains, the same logarithmic scaling holds for mean entanglement at criticality and defines a critical entropy equivalent to central charge in the pure case. This effective central charge is obtained for Heisenberg, XX, and quantum Ising chains using an analytic real-space renormalization group approach believed to be asymptotically exact. For these random chains, the effective universal central charge is characteristic of a universality class and is consistent with a c-theorem.}
+      \field{day}{29}
+      \field{eprinttype}{arxiv}
+      \field{issue}{26 I}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{6}
+      \field{title}{Entanglement Entropy of Random Quantum Critical Points in One Dimension}
+      \field{volume}{93}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.93.260602
+      \endverb
+      \verb{eprint}
+      \verb cond-mat/0406737
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/4GUR8FMQ/Refael et Moore 2004.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/cond-mat/0406737
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/cond-mat/0406737
+      \endverb
+    \endentry
+    \entry{paola2016}{unpublished}{}
+      \name{author}{3}{}{%
+        {{hash=fd2caaff78436d758f5a500f5c0e8b32}{%
+           family={Ruggiero},
+           familyi={R\bibinitperiod},
+           given={Paola},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8ae83910cee41b6cc861492fd5ecddbe}{%
+           family={Alba},
+           familyi={A\bibinitperiod},
+           given={Vincenzo},
+           giveni={V\bibinitperiod}}}%
+        {{hash=ff8cd1b95a97984f0ddd7974d624dcce}{%
+           family={Calabrese},
+           familyi={C\bibinitperiod},
+           given={Pasquale},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{38661c7c4773c5b5f94cd21a687251ae}
+      \strng{fullhash}{38661c7c4773c5b5f94cd21a687251ae}
+      \strng{bibnamehash}{38661c7c4773c5b5f94cd21a687251ae}
+      \strng{authorbibnamehash}{38661c7c4773c5b5f94cd21a687251ae}
+      \strng{authornamehash}{38661c7c4773c5b5f94cd21a687251ae}
+      \strng{authorfullhash}{38661c7c4773c5b5f94cd21a687251ae}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We investigate the logarithmic negativity in strongly-disordered spin chains in the random-singlet phase. We focus on the spin-1/2 random Heisenberg chain and the random XX chain. We find that for two arbitrary intervals the disorder-averaged negativity and the mutual information are proportional to the number of singlets shared between the two intervals. Using the strong-disorder renormalization group (SDRG), we prove that the negativity of two adjacent intervals grows logarithmically with the intervals length. In particular, the scaling behavior is the same as in conformal field theory, but with a different prefactor. For two disjoint intervals the negativity is given by a universal simple function of the cross ratio, reflecting scale invariance. As a function of the distance of the two intervals, the negativity decays algebraically in contrast with the exponential behavior in clean models. We confirm our predictions using a numerical implementation of the SDRG method. Finally, we also implement DMRG simulations for the negativity in open spin chains. The chains accessible in the presence of strong disorder are not sufficiently long to provide a reliable confirmation of the SDRG results.}
+      \field{day}{2}
+      \field{eprinttype}{arxiv}
+      \field{month}{5}
+      \field{title}{The Entanglement Negativity in Random Spin Chains}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.94.035152
+      \endverb
+      \verb{eprint}
+      \verb 1605.00674
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/BIMHBBFW/Paola entanglement.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1605.00674
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1605.00674
+      \endverb
+    \endentry
+    \entry{paola2018}{article}{}
+      \name{author}{6}{}{%
+        {{hash=8ae83910cee41b6cc861492fd5ecddbe}{%
+           family={Alba},
+           familyi={A\bibinitperiod},
+           given={Vincenzo},
+           giveni={V\bibinitperiod}}}%
+        {{hash=905da9825082c31c50c2eaca598ff412}{%
+           family={Santalla},
+           familyi={S\bibinitperiod},
+           given={Silvia\bibnamedelima N},
+           giveni={S\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=fd2caaff78436d758f5a500f5c0e8b32}{%
+           family={Ruggiero},
+           familyi={R\bibinitperiod},
+           given={Paola},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b50d6a46f0ae1e2ac2ca1a447b1bc7cc}{%
+           family={Rodriguez-Laguna},
+           familyi={R\bibinithyphendelim L\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ff8cd1b95a97984f0ddd7974d624dcce}{%
+           family={Calabrese},
+           familyi={C\bibinitperiod},
+           given={Pasquale},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c20bee2e55d21357dca7c0124290ecd9}{%
+           family={Sierra},
+           familyi={S\bibinitperiod},
+           given={German},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{4b58107cde322ed5024f325d0f9c4d83}
+      \strng{fullhash}{a41f622b219f0daac8bea1233a5d68ef}
+      \strng{bibnamehash}{4b58107cde322ed5024f325d0f9c4d83}
+      \strng{authorbibnamehash}{4b58107cde322ed5024f325d0f9c4d83}
+      \strng{authornamehash}{4b58107cde322ed5024f325d0f9c4d83}
+      \strng{authorfullhash}{a41f622b219f0daac8bea1233a5d68ef}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The discovery of novel entanglement patterns in quantum many-body systems is a prominent research direction in contemporary physics. Here we provide the example of a spin chain with random and inhomogeneous couplings that in the ground state exhibits a very unusual area law violation. In the clean limit, i.e., without disorder, the model is the rainbow chain and has volume law entanglement. We show that, in the presence of disorder, the entanglement entropy exhibits a power-law growth with the subsystem size, with an exponent 1/2. By employing the Strong Disorder Renormalization Group (SDRG) framework, we show that this exponent is related to the survival probability of certain random walks. The ground state of the model exhibits extended regions of short-range singlets (that we term ``bubble'' regions) as well as rare long range singlet (``rainbow'' regions). Crucially, while the probability of extended rainbow regions decays exponentially with their size, that of the bubble regions is power law. We provide strong numerical evidence for the correctness of SDRG results by exploiting the free-fermion solution of the model. Finally, we investigate the role of interactions by considering the random inhomogeneous XXZ spin chain. Within the SDRG framework and in the strong inhomogeneous limit, we show that the above area-law violation takes place only at the free-fermion point of phase diagram. This point divides two extended regions, which exhibit volume-law and area-law entanglement, respectively.}
+      \field{day}{26}
+      \field{issn}{1742-5468}
+      \field{journaltitle}{Journal of Statistical Mechanics: Theory and Experiment}
+      \field{month}{2}
+      \field{number}{2}
+      \field{title}{Unusual Area-Law Violation in Random Inhomogeneous Systems}
+      \field{volume}{2019}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{023105}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1742-5468/ab02df
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/PSEY7EWZ/Paola randbow 2018.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://iopscience.iop.org/article/10.1088/1742-5468/ab02df
+      \endverb
+      \verb{url}
+      \verb https://iopscience.iop.org/article/10.1088/1742-5468/ab02df
+      \endverb
+    \endentry
+    \entry{Vitagliano2010}{article}{}
+      \name{author}{3}{}{%
+        {{hash=71ff67545f0f46eb7fc610572be2d81c}{%
+           family={Vitagliano},
+           familyi={V\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod}}}%
+        {{hash=adf0861472f86f6e3f774151ca3290eb}{%
+           family={Riera},
+           familyi={R\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a2b7cfa5c51ee056e502ee75635f5ed5}{%
+           family={Latorre},
+           familyi={L\bibinitperiod},
+           given={J\bibnamedelima I},
+           giveni={J\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{1fa5dfedec5e8c346b1be9cf6039b37d}
+      \strng{fullhash}{1fa5dfedec5e8c346b1be9cf6039b37d}
+      \strng{bibnamehash}{1fa5dfedec5e8c346b1be9cf6039b37d}
+      \strng{authorbibnamehash}{1fa5dfedec5e8c346b1be9cf6039b37d}
+      \strng{authornamehash}{1fa5dfedec5e8c346b1be9cf6039b37d}
+      \strng{authorfullhash}{1fa5dfedec5e8c346b1be9cf6039b37d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Entanglement entropy obeys area law scaling for typical physical quantum systems. This may naively be argued to follow from the locality of interactions. We show that this is not the case by constructing an explicit simple spin chain Hamiltonian with nearest-neighbor interactions that presents an entanglement volume scaling law. This non-translational model is contrived to have couplings that force the accumulation of singlet bonds across the half-chain. This configuration of the couplings is suggested by real-space renormalization group arguments. Computation of the entanglement entropy is performed by mapping the system to free fermions and diagonalizing numerically its correlation matrix. An analytical relationship between the entanglement entropy and the Frobenius norm of the correlation matrix is also established. Our result is complementary to the known relationship between non-translational invariant, nearest-neighbor interacting Hamiltonians and quantum Merlin-Arthur (QMA)- complete problems. © IOP Publishing Ltd and Deutsche Physikalische Gesellschaft.}
+      \field{day}{26}
+      \field{issn}{1367-2630}
+      \field{journaltitle}{New Journal of Physics}
+      \field{month}{11}
+      \field{number}{11}
+      \field{title}{Volume-Law Scaling for the Entanglement Entropy in Spin-1/2 Chains}
+      \field{volume}{12}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{pages}{113049}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1367-2630/12/11/113049
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/XTZFTXYP/Rainbow Vitagliano et al 2010.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://iopscience.iop.org/article/10.1088/1367-2630/12/11/113049
+      \endverb
+      \verb{url}
+      \verb https://iopscience.iop.org/article/10.1088/1367-2630/12/11/113049
+      \endverb
+    \endentry
+    \entry{Fisher1994}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a8d45599958874528fe28e95da37c271}{%
+           family={Fisher},
+           familyi={F\bibinitperiod},
+           given={Daniel\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8d45599958874528fe28e95da37c271}
+      \strng{fullhash}{a8d45599958874528fe28e95da37c271}
+      \strng{bibnamehash}{a8d45599958874528fe28e95da37c271}
+      \strng{authorbibnamehash}{a8d45599958874528fe28e95da37c271}
+      \strng{authornamehash}{a8d45599958874528fe28e95da37c271}
+      \strng{authorfullhash}{a8d45599958874528fe28e95da37c271}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The properties of spin-2 antiferromagnetic chains with various types of random exchange coupling are studied via an asymptotically exact decimation renormalization-group transformation, which is a generalization of that introduced by Dasgupta and Ma. Random-singlet phases occur in which each spin is paired with one other spin that may be very far away; more exotic phases also occur. The behavior of typical and mean correlation functions is analyzed and found to be very different, with very small sets of spins dominating the latter at long distances as well as the low-temperature thermodynamics. Some of the phase transitions that occur between antiferromagnetically ordered phases and random singlet or other antiferromagnetic phases are also analyzed. For example, if a small uniaxial anisotropy perturbation is added to a random Heisenberg antiferromagnetic chain, a transition occurs from a random-singlet phase to an Ising antiferromagnetic phase, as the anisotropy changes sign from easy plane to easy axis. The staggered magnetization vanishes at the transition with critical exponent /=8/(1+\&7). Possible implications for the properties of random quantum magnetic systems in higher dimensions are briefly discussed. I. I¹RODUCTION Quantum spin chains exhibit a wide variety of interesting phenomena at low temperatures that are controlled by the behavior of their ground states and low-lying exci-tations. Broken symmetry, quasi-long-range order, effects of topology of the rotation group and assorted types of phase transitions are all found at zero temperature and have been analyzed via exact solutions, particularly Bethe's ansatz, mapping onto other solvable problems , renormalization-group treatments of effective long-wavelength actions, conformal covariance, exact numerical diagonalizations, quantum Monte Carlo simulations, series expansions, and by numerical renormalization-group computations. In the presence of quenched randomness, far less is known. In some regimes, the randomness is irrelevant at low energies and can be treated perturbatively. However , for quantum spin chains that can be mapped to free fermion systems (i.e. , XY spin chains and transverse field Ising chains), localization of the wave functions of the fermions suggests some kind of localization of spin exci-tations, although even in these cases the understanding of the low-energy behavior is far from complete. For more complicated situations such as random Heisenberg chains and systems with phase transitions as functions of anisotropy, even less is known. The competition between localization effects and order can certainly play a role, and because of the time independence of the randomness, the effects of rare regions on macroscopic properties will be far more important than for classical systems with quenched disorder. Fortunately, the one-dimensional nature of quantum spin chains enables, even in the presence of quenched randomness, progress to be made by real-space renormalization-group methods. As we shall see, these can be used, somewhat surprisingly, to obtain new exact results for the long-length scale, low-frequency behavior of randomness-dominated phases as well as the critical behavior near to various zero-temperature phase transitions that occur. The basic method follows a novel approach originated studied the properties of antiferro-magnetic Heisenberg spin-, chains with random exchange couplings. They analyzed the low-energy behavior via an approximate renormalization-group transformation in which the strongest exchange is decimated away, yielding a new eff'ective exchange coupling between what were third-nearest neighbors. The procedure is iterated and the distribution of renormalized exchange couplings kept track of. This distribution becomes extremely broad, which makes the approximation better and better. It is this crucial feature of the renormalization-group (RG) transformation which will enable us to obtain many new exact results for this and other random quantum spin chains. Although Dasgupta and Ma did not find exact fixed points of their transformation , they guessed essentially the correct behavior from numerical studies and an approximate analysis of the RG fiow equation for the distribution of exchange couplings, 6nding a zero-temperature phase which has since been dubbed a "random-singlet" phase. ' In a recent paper, " the present author used a generalization of Dasgupta and Ma's method to analyze the critical behavior of random transverse Seld Ising spin chains, which are related to two-dimensional (2D) Ising models with couplings that are uniform along strips, but random from strip to strip-the partially-exactly-solvable McCoy-Wu model. ' In this paper we will extend Dasg-upta and Ma's results on Heisenberg antiferromagnetic chains to analyze more general antiferromagnetic spin chains including the effects of anisotropy, the phase diagrams , the nature of disordered phases, and some of the phase transitions that can occur, in particular, that from}
+      \field{day}{1}
+      \field{issn}{0163-1829}
+      \field{journaltitle}{Physical Review B}
+      \field{month}{8}
+      \field{number}{6}
+      \field{title}{Random Antiferromagnetic Quantum Spin Chains}
+      \field{volume}{50}
+      \field{year}{1994}
+      \field{dateera}{ce}
+      \field{pages}{3799\bibrangedash 3821}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.50.3799
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/28JZQYXF/Fisher 1994.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.50.3799
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.50.3799
+      \endverb
+    \endentry
+    \entry{dasgupta_ma_1980}{article}{}
+      \name{author}{2}{}{%
+        {{hash=207ad10930263e7d80c60e7ab2342849}{%
+           family={Dasgupta},
+           familyi={D\bibinitperiod},
+           given={Chandan},
+           giveni={C\bibinitperiod}}}%
+        {{hash=aa05c2bec97b2c0929663188c3ffb85c}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Shang-keng},
+           giveni={S\bibinithyphendelim k\bibinitperiod}}}%
+      }
+      \strng{namehash}{395e7186757e1db66d5da45a59c6eab0}
+      \strng{fullhash}{395e7186757e1db66d5da45a59c6eab0}
+      \strng{bibnamehash}{395e7186757e1db66d5da45a59c6eab0}
+      \strng{authorbibnamehash}{395e7186757e1db66d5da45a59c6eab0}
+      \strng{authornamehash}{395e7186757e1db66d5da45a59c6eab0}
+      \strng{authorfullhash}{395e7186757e1db66d5da45a59c6eab0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{\& Heisenberg antiferromagnetic model with randomly distributed interaction strengths is solved approximately for several different distributions. Ground-state energy and low-temperature properties are evaluated. Universal qualitative features are found in the specific heat and the magnetic susceptibility, which display a power-law dependence on temperature. Such features hold for nonsingular distributions as well as for distributions with power-law divergence at the origin. The approximate method of solution is based on successive eliminations of spins coupled by the maximum coupling constant.}
+      \field{day}{1}
+      \field{issn}{0163-1829}
+      \field{journaltitle}{Physical Review B}
+      \field{month}{8}
+      \field{number}{3}
+      \field{title}{Low-Temperature Properties of the Random {{Heisenberg}} Antiferromagnetic Chain}
+      \field{volume}{22}
+      \field{year}{1980}
+      \field{dateera}{ce}
+      \field{pages}{1305\bibrangedash 1319}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.22.1305
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/SE82N4SN/Dasgupta Ma 1980.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.22.1305
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.22.1305
+      \endverb
+    \endentry
+    \entry{paola_phd}{report}{}
+      \name{author}{2}{}{%
+        {{hash=fd2caaff78436d758f5a500f5c0e8b32}{%
+           family={Ruggiero},
+           familyi={R\bibinitperiod},
+           given={Paola},
+           giveni={P\bibinitperiod}}}%
+        {{hash=ff8cd1b95a97984f0ddd7974d624dcce}{%
+           family={Calabrese},
+           familyi={C\bibinitperiod},
+           given={Pasquale},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {SCUOLA INTERNAZIONALE SUPERIORE DI STUDI AVANZATI}%
+      }
+      \list{location}{1}{%
+        {Trieste}%
+      }
+      \strng{namehash}{d4206f0882600b144406092e06912b64}
+      \strng{fullhash}{d4206f0882600b144406092e06912b64}
+      \strng{bibnamehash}{d4206f0882600b144406092e06912b64}
+      \strng{authorbibnamehash}{d4206f0882600b144406092e06912b64}
+      \strng{authornamehash}{d4206f0882600b144406092e06912b64}
+      \strng{authorfullhash}{d4206f0882600b144406092e06912b64}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Entanglement and Correlations in One-Dimensional Quantum Many-Body Systems}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/EJX38CBI/m-api-73a0b17d-8f59-b1cb-1120-d9210ef5a680.pdf
+      \endverb
+    \endentry
+    \entry{vedral_quantification}{article}{}
+      \name{author}{4}{}{%
+        {{hash=2d1f33898cfd1c15722c070f05dc63f4}{%
+           family={Vedral},
+           familyi={V\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=d0b244a8c75ea33516270f686fe851fa}{%
+           family={Plenio},
+           familyi={P\bibinitperiod},
+           given={M.\bibnamedelimi B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=aa7b690b1b0afa7ac79c6d2cddd9495d}{%
+           family={Rippin},
+           familyi={R\bibinitperiod},
+           given={M.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=7e22d9d686058d7f2312aef54839e91f}{%
+           family={Knight},
+           familyi={K\bibinitperiod},
+           given={P.\bibnamedelimi L.},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{647ff4ccdda1e9b40468b778177ae938}
+      \strng{fullhash}{4e507451ac2e6c7df336e7ae3ae9a1e8}
+      \strng{bibnamehash}{647ff4ccdda1e9b40468b778177ae938}
+      \strng{authorbibnamehash}{647ff4ccdda1e9b40468b778177ae938}
+      \strng{authornamehash}{647ff4ccdda1e9b40468b778177ae938}
+      \strng{authorfullhash}{4e507451ac2e6c7df336e7ae3ae9a1e8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present conditions every measure of entanglement has to satisfy, and construct a whole class of “good” entanglement measures. The generalization of our class of entanglement measures to more than two particles is straightforward. We present a measure which has a statistical operational basis that might enable experimental determination of the quantitative degree of entanglement. © 1997 The American Physical Society.}
+      \field{day}{24}
+      \field{eprinttype}{arxiv}
+      \field{issn}{10797114}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{3}
+      \field{number}{12}
+      \field{title}{Quantifying {{Entanglement}}}
+      \field{urlday}{21}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{78}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2275}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.78.2275
+      \endverb
+      \verb{eprint}
+      \verb quant-ph/9702027
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/XUE5Q62U/Vedral quantifiying.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.78.2275
+      \endverb
+      \verb{url}
+      \verb https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.78.2275
+      \endverb
+    \endentry
+    \entry{plenio_negativity}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d0b244a8c75ea33516270f686fe851fa}{%
+           family={Plenio},
+           familyi={P\bibinitperiod},
+           given={M.\bibnamedelimi B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{d0b244a8c75ea33516270f686fe851fa}
+      \strng{fullhash}{d0b244a8c75ea33516270f686fe851fa}
+      \strng{bibnamehash}{d0b244a8c75ea33516270f686fe851fa}
+      \strng{authorbibnamehash}{d0b244a8c75ea33516270f686fe851fa}
+      \strng{authornamehash}{d0b244a8c75ea33516270f686fe851fa}
+      \strng{authorfullhash}{d0b244a8c75ea33516270f686fe851fa}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{It is proven that the logarithmic negativity does not increase on average under general positive partial transpose preserving (PPT) operation (a set of operations that incorporate local operations and classical communication (LOCC) as a subset) and, in the process, a further proof is provided that the negativity does not increase on average under the same set of operations. Given that the logarithmic negativity is not a convex function this result is surprising as it is generally considered that convexity describes the local physical process of losing information. The role of convexity and in particular its relation (or lack thereof) to physical processes is discussed and the importance of continuity in this context is stressed. PACS numbers: 03.67.Mn, 05.70.-a Introduction-Entanglement is the key resource in many quantum information processing protocols. Therefore it is of interest to develop a detailed understanding of its properties. In view of the resource character of entan-glement it is of particular interest to be able to quantify entanglement [1, 2, 3, 4, 5]. Any resource is intimately related to a constraint which the resource allows to overcome. Therefore, the detailed character of entanglement and its quantification as a resource depends on the constraints that are being imposed on the set of operations. In a communication setting where two spatially separated parties aim to manipulate a joint quantum state it is natural to restrict attention to local quantum operations and classical communication (LOCC). In this case separable states are freely available while non-separable states, which cannot be prepared by LOCC alone, become a resource. The phenomenon of bound entanglement [6], i.e. non-separable states that possess a positive partial transpose and are useless to distill pure maximally entangled states by LOCC [7, 8], suggest that there are other natural restricted classes of operations. One might add bound entangled states as a free resource to LOCC operations to achieve tasks that are impossible under LOCC alone [9, 10, 11]. Encompassing both classes is the mathematically more natural and convenient class of positive partial transpose preserving operations (PPT-operations) [12] which have the property that they map the set of positive partial transpose states into itself just as LOCC operations map the set of separable states into itself. Under this set of operations distillable quantum states become a valuable resource while bound entanglement is free. A function E that is suggested to quantify entangle-ment must satisfy certain conditions. Apart from the requirement that E vanishes on the set of states that can be created using LOCC (or PPT) alone, the most important property is that of the non-increase on average of E under LOCC (or PPT) [1, 2, 3, 4, 5], ie}
+      \field{day}{26}
+      \field{issn}{0031-9007}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{8}
+      \field{number}{9}
+      \field{title}{Logarithmic {{Negativity}}: {{A Full Entanglement Monotone That}} Is Not {{Convex}}}
+      \field{urlday}{21}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{95}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{090503}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.95.090503
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/PY7UQGUB/full-text.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.95.090503
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.95.090503
+      \endverb
+    \endentry
+    \entry{renyi_entropy}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d1fe4e3577456830636963a58be0aabd}{%
+           family={Rényi},
+           familyi={R\bibinitperiod},
+           given={Alfréd},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Proceedings of the fourth Berkeley symposium on mathematical statistics and probability}%
+      }
+      \strng{namehash}{d1fe4e3577456830636963a58be0aabd}
+      \strng{fullhash}{d1fe4e3577456830636963a58be0aabd}
+      \strng{bibnamehash}{d1fe4e3577456830636963a58be0aabd}
+      \strng{authorbibnamehash}{d1fe4e3577456830636963a58be0aabd}
+      \strng{authornamehash}{d1fe4e3577456830636963a58be0aabd}
+      \strng{authorfullhash}{d1fe4e3577456830636963a58be0aabd}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Berkeley Symposium on Mathematical Statistics and Probability}
+      \field{title}{On {{Measures}} of {{Entropy}} and {{Information}}}
+      \field{volume}{4}
+      \field{year}{1961}
+      \field{dateera}{ce}
+      \field{pages}{547\bibrangedash 561}
+      \range{pages}{15}
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/J5NUVGGA/1200512181.pdf
+      \endverb
+    \endentry
+    \entry{lieb_subadditivity}{article}{}
+      \name{author}{2}{}{%
+        {{hash=298133a6b79dcce8ef5f6cb15b60f119}{%
+           family={Lieb},
+           familyi={L\bibinitperiod},
+           given={Elliott\bibnamedelima H.},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=93acf59bab7fd7cc10f95e1c6ec630dc}{%
+           family={Ruskai},
+           familyi={R\bibinitperiod},
+           given={Mary\bibnamedelima Beth},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Institute of PhysicsAIP}%
+      }
+      \strng{namehash}{cd5c868bc23388ee0ba90663c0db0b0d}
+      \strng{fullhash}{cd5c868bc23388ee0ba90663c0db0b0d}
+      \strng{bibnamehash}{cd5c868bc23388ee0ba90663c0db0b0d}
+      \strng{authorbibnamehash}{cd5c868bc23388ee0ba90663c0db0b0d}
+      \strng{authornamehash}{cd5c868bc23388ee0ba90663c0db0b0d}
+      \strng{authorfullhash}{cd5c868bc23388ee0ba90663c0db0b0d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We prove several theorems about quantum‐mechanical entropy, in particular, that it is strongly subadditive.}
+      \field{day}{3}
+      \field{issn}{0022-2488}
+      \field{journaltitle}{Journal of Mathematical Physics}
+      \field{month}{11}
+      \field{number}{12}
+      \field{title}{Proof of the Strong Subadditivity of Quantum‐mechanical Entropy}
+      \field{urlday}{22}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{14}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1938}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1063/1.1666274
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/DUSW72T5/full-text.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://aip.scitation.org/doi/abs/10.1063/1.1666274
+      \endverb
+      \verb{url}
+      \verb https://aip.scitation.org/doi/abs/10.1063/1.1666274
+      \endverb
+    \endentry
+    \entry{page_entropy_1993}{article}{}
+      \name{author}{1}{}{%
+        {{hash=912dcbe6f59255a341991eeddac4df48}{%
+           family={Page},
+           familyi={P\bibinitperiod},
+           given={Don\bibnamedelima N.},
+           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{912dcbe6f59255a341991eeddac4df48}
+      \strng{fullhash}{912dcbe6f59255a341991eeddac4df48}
+      \strng{bibnamehash}{912dcbe6f59255a341991eeddac4df48}
+      \strng{authorbibnamehash}{912dcbe6f59255a341991eeddac4df48}
+      \strng{authornamehash}{912dcbe6f59255a341991eeddac4df48}
+      \strng{authorfullhash}{912dcbe6f59255a341991eeddac4df48}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{If a quantum system of Hilbert space dimension \$mn\$ is in a random pure state, the average entropy of a subsystem of dimension \$m\textbackslash leq n\$ is conjectured to be \$S\_\{m,n\}=\textbackslash sum\_\{k=n+1\}\^\{mn\}\textbackslash frac\{1\}\{k\}-\textbackslash frac\{m-1\}\{2n\}\$ and is shown to be \$\textbackslash simeq \textbackslash ln m - \textbackslash frac\{m\}\{2n\}\$ for \$1\textbackslash ll m\textbackslash leq n\$. Thus there is less than one-half unit of information, on average, in the smaller subsystem of a total system in a random pure state.}
+      \field{day}{30}
+      \field{eprinttype}{arxiv}
+      \field{issn}{0031-9007}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{8}
+      \field{number}{9}
+      \field{title}{Average Entropy of a Subsystem}
+      \field{urlday}{20}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{71}
+      \field{year}{1993}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1291\bibrangedash 1294}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.71.1291
+      \endverb
+      \verb{eprint}
+      \verb gr-qc/9305007v2
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/AC49ARM8/full-text.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.71.1291
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.71.1291
+      \endverb
+      \keyw{0365-w,0590+m * Alberta-Thy-22-93,1291 (1993),gr-qc/9305007,numbers: 0530Ch,Phys Rev Lett 71}
+    \endentry
+    \entry{wolf_fermion_corrections}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4e6dee68c0ec610108db43f0e6093c51}{%
+           family={Wolf},
+           familyi={W\bibinitperiod},
+           given={Michael\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{4e6dee68c0ec610108db43f0e6093c51}
+      \strng{fullhash}{4e6dee68c0ec610108db43f0e6093c51}
+      \strng{bibnamehash}{4e6dee68c0ec610108db43f0e6093c51}
+      \strng{authorbibnamehash}{4e6dee68c0ec610108db43f0e6093c51}
+      \strng{authornamehash}{4e6dee68c0ec610108db43f0e6093c51}
+      \strng{authorfullhash}{4e6dee68c0ec610108db43f0e6093c51}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We investigate the scaling of the entanglement entropy in an infinite translational invariant fermionic system of any spatial dimension. The states under consideration are ground states and excitations of tight-binding Hamiltonians with arbitrary interactions. We show that the entropy of a finite region typically scales with the area of the surface times a logarithmic correction. Thus, in contrast with analogous bosonic systems, the entropic area law is violated for fermions. The relation between the entanglement entropy and the structure of the Fermi surface is discussed, and it is proven that the presented scaling law holds whenever the Fermi surface is finite. This is, in particular, true for all ground states of Hamiltonians with finite range interactions. © 2006 The American Physical Society.}
+      \field{day}{13}
+      \field{eprinttype}{arxiv}
+      \field{issn}{10797114}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Violation of the Entropic Area Law for Fermions}
+      \field{urlday}{24}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{96}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{010404}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PHYSREVLETT.96.010404/FIGURES/1/MEDIUM
+      \endverb
+      \verb{eprint}
+      \verb quant-ph/0503219
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.96.010404
+      \endverb
+      \verb{url}
+      \verb https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.96.010404
+      \endverb
+    \endentry
+    \entry{calabrese_entanglement_2004}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ff8cd1b95a97984f0ddd7974d624dcce}{%
+           family={Calabrese},
+           familyi={C\bibinitperiod},
+           given={Pasquale},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4ac5aa12178c604ccb16b418a3bdc44c}{%
+           family={Cardy},
+           familyi={C\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{7c41d949114e1e57289dfa73c9196c8d}
+      \strng{fullhash}{7c41d949114e1e57289dfa73c9196c8d}
+      \strng{bibnamehash}{7c41d949114e1e57289dfa73c9196c8d}
+      \strng{authorbibnamehash}{7c41d949114e1e57289dfa73c9196c8d}
+      \strng{authornamehash}{7c41d949114e1e57289dfa73c9196c8d}
+      \strng{authorfullhash}{7c41d949114e1e57289dfa73c9196c8d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We carry out a systematic study of entanglement entropy in relativistic quantum field theory. This is defined as the von Neumann entropy SA = -Tr ρAlogρA corresponding to the reduced density matrix ρA of a subsystem A. For the case of a 1+1-dimensional critical system, whose continuum limit is a conformal field theory with central charge c, we re-derive the result of Holzhey et al when A is a finite interval of length in an infinite system, and extend it to many other cases: finite systems, finite temperatures, and when A consists of an arbitrary number of disjoint intervals. For such a system away from its critical point, when the correlation length χ is large but finite, we show that SA(c/6)log χ, where is the number of boundary points of A. These results are verified for a free massive field theory, which is also used to confirm a scaling ansatz for the case of finite size off-critical systems, and for integrable lattice models, such as the Ising and XXZ models, which are solvable by corner transfer matrix methods. Finally the free field results are extended to higher dimensions, and used to motivate a scaling form for the singular part of the entanglement entropy near a quantum phase transition. ©2004 IOP Publishing Ltd.}
+      \field{day}{12}
+      \field{issn}{1742-5468}
+      \field{journaltitle}{Journal of Statistical Mechanics: Theory and Experiment}
+      \field{month}{6}
+      \field{number}{06}
+      \field{title}{Entanglement Entropy and Quantum Field Theory}
+      \field{urlday}{18}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{2004}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{P06002}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1088/1742-5468/2004/06/P06002
+      \endverb
+      \verb{urlraw}
+      \verb https://iopscience.iop.org/article/10.1088/1742-5468/2004/06/P06002
+      \endverb
+      \verb{url}
+      \verb https://iopscience.iop.org/article/10.1088/1742-5468/2004/06/P06002
+      \endverb
+    \endentry
+    \entry{calabrese_qft_2012}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ff8cd1b95a97984f0ddd7974d624dcce}{%
+           family={Calabrese},
+           familyi={C\bibinitperiod},
+           given={Pasquale},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4ac5aa12178c604ccb16b418a3bdc44c}{%
+           family={Cardy},
+           familyi={C\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7e2320fe6c64c672800a385c4b787198}{%
+           family={Tonni},
+           familyi={T\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{eee1d2dcc6d55f19629fe641c744f1f6}
+      \strng{fullhash}{eee1d2dcc6d55f19629fe641c744f1f6}
+      \strng{bibnamehash}{eee1d2dcc6d55f19629fe641c744f1f6}
+      \strng{authorbibnamehash}{eee1d2dcc6d55f19629fe641c744f1f6}
+      \strng{authornamehash}{eee1d2dcc6d55f19629fe641c744f1f6}
+      \strng{authorfullhash}{eee1d2dcc6d55f19629fe641c744f1f6}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We develop a systematic method to extract the negativity in the ground state of a 1+1 dimensional relativistic quantum field theory, using a path integral formalism to construct the partial transpose ρAT 2 of the reduced density matrix of a subsystem A=A 1A 2, and introducing a replica approach to obtain its trace norm which gives the logarithmic negativity E=lnρAT 2. This is shown to reproduce standard results for a pure state. We then apply this method to conformal field theories, deriving the result E∼(c/4)ln[ 12/( 1+ 2)] for the case of two adjacent intervals of lengths 1, 2 in an infinite system, where c is the central charge. For two disjoint intervals it depends only on the harmonic ratio of the four end points and so is manifestly scale invariant. We check our findings against exact numerical results in the harmonic chain. © 2012 American Physical Society.}
+      \field{day}{28}
+      \field{eprinttype}{arxiv}
+      \field{issn}{0031-9007}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{9}
+      \field{number}{13}
+      \field{title}{Entanglement {{Negativity}} in {{Quantum Field Theory}}}
+      \field{urlday}{20}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{109}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{130502}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.109.130502
+      \endverb
+      \verb{eprint}
+      \verb 1206.3092
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.109.130502
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.109.130502
+      \endverb
+    \endentry
+    \entry{fisher_1998}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1acff495946a970a189fae6a3bbf0861}{%
+           family={Fisher},
+           familyi={F\bibinitperiod},
+           given={Michael\bibnamedelima E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{1acff495946a970a189fae6a3bbf0861}
+      \strng{fullhash}{1acff495946a970a189fae6a3bbf0861}
+      \strng{bibnamehash}{1acff495946a970a189fae6a3bbf0861}
+      \strng{authorbibnamehash}{1acff495946a970a189fae6a3bbf0861}
+      \strng{authornamehash}{1acff495946a970a189fae6a3bbf0861}
+      \strng{authorfullhash}{1acff495946a970a189fae6a3bbf0861}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{issn}{0034-6861}
+      \field{journaltitle}{Reviews of Modern Physics}
+      \field{month}{4}
+      \field{number}{2}
+      \field{title}{Renormalization Group Theory: {{Its}} Basis and Formulation in Statistical Physics}
+      \field{volume}{70}
+      \field{year}{1998}
+      \field{dateera}{ce}
+      \field{pages}{653\bibrangedash 681}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1103/RevModPhys.70.653
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/NCHEI7IE/Fisher History of RG.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.70.653
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.70.653
+      \endverb
+    \endentry
+    \entry{Igloi2005}{unpublished}{}
+      \name{author}{2}{}{%
+        {{hash=1210139a23cbb61290ee40558f13cb67}{%
+           family={Igloi},
+           familyi={I\bibinitperiod},
+           given={Ferenc},
+           giveni={F\bibinitperiod}}}%
+        {{hash=0eb2b790b7d2649ca02defd2819f3473}{%
+           family={Monthus},
+           familyi={M\bibinitperiod},
+           given={Cecile},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{36b8b19bab3a6af74e2c0d8e567fd531}
+      \strng{fullhash}{36b8b19bab3a6af74e2c0d8e567fd531}
+      \strng{bibnamehash}{36b8b19bab3a6af74e2c0d8e567fd531}
+      \strng{authorbibnamehash}{36b8b19bab3a6af74e2c0d8e567fd531}
+      \strng{authornamehash}{36b8b19bab3a6af74e2c0d8e567fd531}
+      \strng{authorfullhash}{36b8b19bab3a6af74e2c0d8e567fd531}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{There is a large variety of quantum and classical systems in which the quenched disorder plays a dominant r\textbackslashôle over quantum, thermal, or stochastic fluctuations : these systems display strong spatial heterogeneities, and many averaged observables are actually governed by rare regions. A unifying approach to treat the dynamical and/or static singularities of these systems has emerged recently, following the pioneering RG idea by Ma and Dasgupta and the detailed analysis by Fisher who showed that the Ma-Dasgupta RG rules yield asymptotic exact results if the broadness of the disorder grows indefinitely at large scales. Here we report these new developments by starting with an introduction of the main ingredients of the strong disorder RG method. We describe the basic properties of infinite disorder fixed points, which are realized at critical points, and of strong disorder fixed points, which control the singular behaviors in the Griffiths-phases. We then review in detail applications of the RG method to various disordered models, either (i) quantum models, such as random spin chains, ladders and higher dimensional spin systems, or (ii) classical models, such as diffusion in a random potential, equilibrium at low temperature and coarsening dynamics of classical random spin chains, trap models, delocalization transition of a random polymer from an interface, driven lattice gases and reaction diffusion models in the presence of quenched disorder. For several one-dimensional systems, the Ma-Dasgupta RG rules yields very detailed analytical results, whereas for other, mainly higher dimensional problems, the RG rules have to be implemented numerically. If available, the strong disorder RG results are compared with another, exact or numerical calculations.}
+      \field{day}{18}
+      \field{eprinttype}{arxiv}
+      \field{month}{2}
+      \field{title}{Strong Disorder {{RG}} Approach of Random Systems}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1016/j.physrep.2005.02.006
+      \endverb
+      \verb{eprint}
+      \verb cond-mat/0502448
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/JKA888IW/Igloi Monthus 2005.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/cond-mat/0502448
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/cond-mat/0502448
+      \endverb
+    \endentry
+    \entry{Igloi2018}{article}{}
+      \name{author}{2}{}{%
+        {{hash=31284a3b3386c9a322d491b452f9d263}{%
+           family={Iglói},
+           familyi={I\bibinitperiod},
+           given={Ferenc},
+           giveni={F\bibinitperiod}}}%
+        {{hash=45a51e56c811ab823d3e638fd8ab26d2}{%
+           family={Monthus},
+           familyi={M\bibinitperiod},
+           given={Cécile},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Heidelberg}%
+      }
+      \strng{namehash}{1a694abeb0d8e9f8f9beca479c9fb696}
+      \strng{fullhash}{1a694abeb0d8e9f8f9beca479c9fb696}
+      \strng{bibnamehash}{1a694abeb0d8e9f8f9beca479c9fb696}
+      \strng{authorbibnamehash}{1a694abeb0d8e9f8f9beca479c9fb696}
+      \strng{authornamehash}{1a694abeb0d8e9f8f9beca479c9fb696}
+      \strng{authorfullhash}{1a694abeb0d8e9f8f9beca479c9fb696}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The strong disorder RG approach for random systems has been extended in many new directions since our previous review of 2005 [F. Igloi, C. Monthus, Phys. Rep. 412, 277 (2005)]. The aim of the present colloquium paper is thus to give an overview of these various recent developments. In the field of quantum disordered models, recent progress concern infinite disorder fixed points for short-ranged models in higher dimensions d {$>$} 1, strong disorder fixed points for long-ranged models, scaling of the entanglement entropy in critical ground-states and after quantum quenches, the RSRG-X procedure to construct the whole set excited stated and the RSRG-t procedure for the unitary dynamics in many-body-localized phases, the Floquet dynamics of periodically driven chains, the dissipative effects induced by the coupling to external baths, and Anderson Localization models. In the field of classical disordered models, new applications include the contact process for epidemic spreading, the strong disorder renormalization procedure for general master equations, the localization properties of random elastic networks, and the synchronization of interacting non-linear dissipative oscillators. Application of the method for aperiodic (or deterministic) disorder is also mentioned.}
+      \field{eprinttype}{arxiv}
+      \field{issn}{14346036}
+      \field{journaltitle}{European Physical Journal B}
+      \field{number}{11}
+      \field{title}{Strong Disorder {{RG}} Approach – a Short Review of Recent Developments}
+      \field{volume}{91}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1140/epjb/e2018-90434-8
+      \endverb
+      \verb{eprint}
+      \verb 1806.07684
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/Q8RING69/Igloi 2018.pdf
+      \endverb
+    \endentry
+    \entry{dasgupta_ma}{article}{}
+      \name{author}{3}{}{%
+        {{hash=aa05c2bec97b2c0929663188c3ffb85c}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Shang-keng},
+           giveni={S\bibinithyphendelim k\bibinitperiod}}}%
+        {{hash=207ad10930263e7d80c60e7ab2342849}{%
+           family={Dasgupta},
+           familyi={D\bibinitperiod},
+           given={Chandan},
+           giveni={C\bibinitperiod}}}%
+        {{hash=9eac50bbe49a917a029491bfca7df53a}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Chin-kun},
+           giveni={C\bibinithyphendelim k\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Bristol and London}%
+      }
+      \strng{namehash}{1e1b82787deb12c154cc04d98dcbc1d7}
+      \strng{fullhash}{1e1b82787deb12c154cc04d98dcbc1d7}
+      \strng{bibnamehash}{1e1b82787deb12c154cc04d98dcbc1d7}
+      \strng{authorbibnamehash}{1e1b82787deb12c154cc04d98dcbc1d7}
+      \strng{authornamehash}{1e1b82787deb12c154cc04d98dcbc1d7}
+      \strng{authorfullhash}{1e1b82787deb12c154cc04d98dcbc1d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The quantum spin-2 Heisenberg antiferromagnet in one dimension with randomly distributed couplirg constants is solved approximately. Ground-state energies and low-temperature properties are obtained for several distributions of coupling constants (in-cIudirg both singular and nonsinguIar distributions). Power-law temperature dependence in specific heat and in susceptibility are found for a11 distributions studied. The random one-dimensional Heisenberg anti-fer romagnet with nearest-neighbor interactions is defined by the Hamiltonian withl-\textasciitilde. Here S"are taken to be spin-2 operators. The coupling constants K"are different for different \textasciitilde. Their values are distributed randomly following a certain probability P(K), 0\&K \& J. The random antiferromagnetic chain does not have the translational invariance of the uniform system (where all K"'s are equal). Consequently, it does not have the spin-wave spectrum of the uniform case, which is difficult enough to have defied analytic solution. Thus, even an approximate solution becomes difficult for the random antiferromagnet, not to mention an exact analytic or numerical solution. Earlier theoretical investigations were motivated by experimental interest. There are systems which can be modeled by (1). These include poly(metal phosphinates)' and (CD,), NMn"Cu, "Cl, (TMMC: Cu). ' More well known are the organic charge-transfer compounds N-methyl-phenazini-um tetracya. noquinodimethanide (NMP-TCNQ), quinolinium tetracyanoquinodimethanide [Qn(TCNQ), ], etc. "\textasciitilde{} Bulaevskii et al. ' transformed the problem to a Fermi-gas model. In order to explain the singular temperature dependence of the susceptibility of TCNQ, they assumed singular energy dependence of the Fermi-on density of states even if P(K) is not singular, without theoretical justification. Their results were criticized by Theodorou and Cohen, ' who argued that only singular P(K) can give rise to a singular susceptibility. A cluster approximation was devised by Theodorou and Cohen to study the cases of singular power-law distributions P(K) \textasciitilde K' ', 0\&c \&1. Singular temperature dependence in the specific heat C and the magnetic susceptibility X were found\textasciitilde ': Cca P}
+      \field{day}{5}
+      \field{issn}{0031-9007}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{11}
+      \field{number}{19}
+      \field{title}{Random {{Antiferromagnetic Chain}}}
+      \field{volume}{43}
+      \field{year}{1979}
+      \field{dateera}{ce}
+      \field{pages}{1434\bibrangedash 1437}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.43.1434
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/TUW4E6IU/Dasgupta Ma 1979.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.43.1434
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.43.1434
+      \endverb
+      \keyw{323 (1972),Solid State Commun 11,Traum}
+    \endentry
+    \entry{bouchard_diffusion}{article}{}
+      \name{author}{2}{}{%
+        {{hash=55f6389369d7164d5dbdb0e2a08c874d}{%
+           family={Bouchaud},
+           familyi={B\bibinitperiod},
+           given={Jean-Philippe},
+           giveni={J\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=a3fd2f2b22938dc53c1d195381d71109}{%
+           family={Georges},
+           familyi={G\bibinitperiod},
+           given={Antoine},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6b3e95341f2867f0c25e6cd57edbf3f}
+      \strng{fullhash}{a6b3e95341f2867f0c25e6cd57edbf3f}
+      \strng{bibnamehash}{a6b3e95341f2867f0c25e6cd57edbf3f}
+      \strng{authorbibnamehash}{a6b3e95341f2867f0c25e6cd57edbf3f}
+      \strng{authornamehash}{a6b3e95341f2867f0c25e6cd57edbf3f}
+      \strng{authorfullhash}{a6b3e95341f2867f0c25e6cd57edbf3f}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{03701573}
+      \field{journaltitle}{Physics Reports}
+      \field{month}{11}
+      \field{number}{4-5}
+      \field{title}{Anomalous Diffusion in Disordered Media: {{Statistical}} Mechanisms, Models and Physical Applications}
+      \field{volume}{195}
+      \field{year}{1990}
+      \field{dateera}{ce}
+      \field{pages}{127\bibrangedash 293}
+      \range{pages}{167}
+      \verb{doi}
+      \verb 10.1016/0370-1573(90)90099-N
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/U4JGSSCA/Bouchard and Georges Diffusion RG.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/037015739090099N
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/037015739090099N
+      \endverb
+    \endentry
+    \entry{motrunich_1999}{article}{}
+      \name{author}{4}{}{%
+        {{hash=df03b9df5df39d3e6e9434a984a45c6f}{%
+           family={Motrunich},
+           familyi={M\bibinitperiod},
+           given={Olexei},
+           giveni={O\bibinitperiod}}}%
+        {{hash=f0c4c33f3d963cdf420e08bb84231d43}{%
+           family={Mau},
+           familyi={M\bibinitperiod},
+           given={Siun-Chuon},
+           giveni={S\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=afc2feebd8732fd639f4590f45eb781b}{%
+           family={Huse},
+           familyi={H\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a8d45599958874528fe28e95da37c271}{%
+           family={Fisher},
+           familyi={F\bibinitperiod},
+           given={Daniel\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a9254d13a1bbd42a423d0e6e1703713}
+      \strng{fullhash}{72ba35660b8757389ee6c5dd2d7d57d4}
+      \strng{bibnamehash}{0a9254d13a1bbd42a423d0e6e1703713}
+      \strng{authorbibnamehash}{0a9254d13a1bbd42a423d0e6e1703713}
+      \strng{authornamehash}{0a9254d13a1bbd42a423d0e6e1703713}
+      \strng{authorfullhash}{72ba35660b8757389ee6c5dd2d7d57d4}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We examine the ground state of the random quantum Ising model in a transverse field using a generalization of the Ma-Dasgupta-Hu renormalization group (RG) scheme. For spatial dimensionality d=2, we find that at strong randomness the RG flow for the quantum critical point is towards an infinite-randomness fixed point, as in one-dimension. This is consistent with the results of a recent quantum Monte Carlo study by Pich, et al., including estimates of the critical exponents from our RG that agree well with those from the quantum Monte Carlo. The same qualitative behavior appears to occur for three-dimensions; we have not yet been able to determine whether or not it persists to arbitrarily high d. Some consequences of the infinite-randomness fixed point for the quantum critical scaling behavior are discussed. Because frustration is irrelevant in the infinite-randomness limit, the same fixed point should govern both ferromagnetic and spin-glass quantum critical points. This RG maps the random quantum Ising model with strong disorder onto a novel type of percolation/aggregation process.}
+      \field{day}{21}
+      \field{eprinttype}{arxiv}
+      \field{journaltitle}{Physical Review B - Condensed Matter and Materials Physics}
+      \field{month}{6}
+      \field{number}{2}
+      \field{title}{Infinite-Randomness Quantum {{Ising}} Critical Fixed Points}
+      \field{urlday}{22}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{61}
+      \field{year}{1999}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1160\bibrangedash 1172}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.61.1160
+      \endverb
+      \verb{eprint}
+      \verb cond-mat/9906322v1
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/cond-mat/9906322
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/cond-mat/9906322
+      \endverb
+    \endentry
+    \entry{monthus_polymers_2000}{article}{}
+      \name{author}{1}{}{%
+        {{hash=619da294a8835ea312844813ccc86235}{%
+           family={Monthus},
+           familyi={M\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer New York}%
+      }
+      \strng{namehash}{619da294a8835ea312844813ccc86235}
+      \strng{fullhash}{619da294a8835ea312844813ccc86235}
+      \strng{bibnamehash}{619da294a8835ea312844813ccc86235}
+      \strng{authorbibnamehash}{619da294a8835ea312844813ccc86235}
+      \strng{authornamehash}{619da294a8835ea312844813ccc86235}
+      \strng{authorfullhash}{619da294a8835ea312844813ccc86235}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{To study the localization of random heteropolymers at an interface separating two selective solvents within the model of Garel, Huse, Leibler and Orland, [Europhys. Lett. 8, 9 (1989)], we propose a disorder-dependent real space renormalization approach. This approach allows to recover that a chain with a symmetric distribution in hydrophobic/hydrophilic components is localized at any temperature in the thermodynamic limit, whereas a dissymmetric distribution in hydrophobic/hydrophilic components leads to a delocalization phase transition. It yields in addition explicit expressions for thermodynamic quantities as well as a very detailed description of the statistical properties of the heteropolymer conformations in the high temperature limit. In particular, scaling distributions are given for the lengths of the blobs in each solvent, for the polymer density, and for some correlation functions. In the case of a small dissymmetry in hydrophobic/hydrophilic components, the renormalization approach yields explicit expressions for the delocalization transition temperature and for the critical behaviors of various quantities: in particular, the free energy presents an essential singularity at the transition (the transition is thus of infinite order), the typical length of blobs in the preferred solvent diverges with an essential singularity, whereas the typical length of blobs in the other solvent diverges algebraically. Finite-size properties are also characterized in details in both cases. In particular, we give the probability distribution of the delocalization temperature for the ensemble of random chains of finite (large) length L, and the distribution of the numbers of blobs for the chains that are still localized at a given temperature. Finally, we discuss the non-equilibrium dynamics at temperature T starting from a zero-temperature initial condition.}
+      \field{day}{1}
+      \field{issn}{1434-6028}
+      \field{journaltitle}{The European Physical Journal B}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{On the Localization of Random Heteropolymers at the Interface between Two Selective Solvents}
+      \field{volume}{13}
+      \field{year}{2000}
+      \field{dateera}{ce}
+      \field{pages}{111\bibrangedash 130}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1007/s100510050016
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/72ISVWSC/Monthus Polymers 2000.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s100510050016
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s100510050016
+      \endverb
+      \keyw{05.40.-a Fluctuation phenomena; random processes; noise; and Brownian motion,36.20.-r Macromolecules and polymer molecules,68.10.-m Fluid surfaces and fluid-fluid interfaces}
+    \endentry
+    \entry{paola_22}{unpublished}{}
+      \name{author}{2}{}{%
+        {{hash=fd2caaff78436d758f5a500f5c0e8b32}{%
+           family={Ruggiero},
+           familyi={R\bibinitperiod},
+           given={Paola},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7387a3d5c4838c9268444185acc5fbd6}{%
+           family={Turkeshi},
+           familyi={T\bibinitperiod},
+           given={Xhek},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{bf849db7a0063a68f774ad5f0c17efe1}
+      \strng{fullhash}{bf849db7a0063a68f774ad5f0c17efe1}
+      \strng{bibnamehash}{bf849db7a0063a68f774ad5f0c17efe1}
+      \strng{authorbibnamehash}{bf849db7a0063a68f774ad5f0c17efe1}
+      \strng{authornamehash}{bf849db7a0063a68f774ad5f0c17efe1}
+      \strng{authorfullhash}{bf849db7a0063a68f774ad5f0c17efe1}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We study the spreading of quantum correlations and information in a one-dimensional quantum spin chain with critical disorder as encoded in an infinite randomness fixed point. Specifically, we focus on the dynamics after a quantum quench of the R\textbackslash 'enyi entropies, of the mutual information and of the entanglement negativity in the prototypical XXZ spin chain with random bonds and anisotropy parameters. We provide analytic predictions in the scaling regime based on real-space renormalization group methods. We support these findings through numerical simulations in the non-interacting limit, where we can access the scaling regime.}
+      \field{day}{6}
+      \field{eprinttype}{arxiv}
+      \field{month}{6}
+      \field{title}{Quantum Information Spreading in Random Spin Chains}
+      \field{urlday}{21}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2206.02934
+      \endverb
+      \verb{eprint}
+      \verb 2206.02934
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/MYU6FD7Y/full-text.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2206.02934
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2206.02934
+      \endverb
+    \endentry
+    \entry{Laflorencie2018}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=30198d2dc9560594180144d5466066a1}{%
+           family={Laflorencie},
+           familyi={L\bibinitperiod},
+           given={Nicolas},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{30198d2dc9560594180144d5466066a1}
+      \strng{fullhash}{30198d2dc9560594180144d5466066a1}
+      \strng{bibnamehash}{30198d2dc9560594180144d5466066a1}
+      \strng{authorbibnamehash}{30198d2dc9560594180144d5466066a1}
+      \strng{authornamehash}{30198d2dc9560594180144d5466066a1}
+      \strng{authorfullhash}{30198d2dc9560594180144d5466066a1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present numerical evidences for the logarithmic scaling of the entanglement entropy in critical random spin chains. Very large scale exact diagonalizations performed at the critical XX point up to L=2000 spins 1/2 lead to a perfect agreement with recent real-space renormalization-group predictions of Refael and Moore [Phys. Rev. Lett. \{\textbackslash bf 93\}, 260602 (2004)] for the logarithmic scaling of the entanglement entropy in the Random Singlet Phase with an effective central charge \$\{\textbackslash tilde\{c\}\}=c\textbackslash times \textbackslash ln 2\$. Moreover we provide the first visual proof of the existence the Random Singlet Phase thanks to the quantum entanglement concept.}
+      \field{day}{18}
+      \field{eprinttype}{arxiv}
+      \field{month}{4}
+      \field{title}{Scaling of {{Entanglement Entropy}} in the {{Random Singlet Phase}}}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.72.140408
+      \endverb
+      \verb{eprint}
+      \verb cond-mat/0504446
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/29WIHM4Y/Laflorencie Entropy 2018.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/cond-mat/0504446
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/cond-mat/0504446
+      \endverb
+      \keyw{0367Mn,7510Nr,numbers: 7510Pq}
+    \endentry
+    \entry{fagotti_2011}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f97e8cf204e9141b745476bf55addafe}{%
+           family={Fagotti},
+           familyi={F\bibinitperiod},
+           given={Maurizio},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ff8cd1b95a97984f0ddd7974d624dcce}{%
+           family={Calabrese},
+           familyi={C\bibinitperiod},
+           given={Pasquale},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c5b71748031c9aa6b5d17116c88bf263}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Joel\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{8ef9c0a239dfe14e8f4fd068d299fa61}
+      \strng{fullhash}{8ef9c0a239dfe14e8f4fd068d299fa61}
+      \strng{bibnamehash}{8ef9c0a239dfe14e8f4fd068d299fa61}
+      \strng{authorbibnamehash}{8ef9c0a239dfe14e8f4fd068d299fa61}
+      \strng{authornamehash}{8ef9c0a239dfe14e8f4fd068d299fa61}
+      \strng{authorfullhash}{8ef9c0a239dfe14e8f4fd068d299fa61}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The entanglement spectrum (i.e., the full distribution of Schmidt eigenvalues of the reduced density matrix) contains more information than the conventional entanglement entropy and has been studied recently in several many-particle systems. We compute the disorder-averaged entanglement spectrum in the form of the disorder-averaged moments TrρAα of the reduced density matrix ρA for a contiguous block of many spins at the random-singlet quantum critical point in one dimension. The result compares well in the scaling limit with numerical studies on the random XX model and is also expected to describe the (interacting) random Heisenberg model. Our numerical studies on the XX case reveal that the dependence of the entanglement entropy and spectrum on the geometry of the Hilbert space partition is quite different than for conformally invariant critical points. © 2011 American Physical Society.}
+      \field{day}{31}
+      \field{eprinttype}{arxiv}
+      \field{issn}{10980121}
+      \field{journaltitle}{Physical Review B - Condensed Matter and Materials Physics}
+      \field{month}{1}
+      \field{number}{4}
+      \field{title}{Entanglement Spectrum of Random-Singlet Quantum Critical Points}
+      \field{urlday}{25}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{83}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{045110}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PHYSREVB.83.045110/FIGURES/10/MEDIUM
+      \endverb
+      \verb{eprint}
+      \verb 1009.1614
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.aps.org/prb/abstract/10.1103/PhysRevB.83.045110
+      \endverb
+      \verb{url}
+      \verb https://journals.aps.org/prb/abstract/10.1103/PhysRevB.83.045110
+      \endverb
+    \endentry
+    \entry{cresser}{report}{}
+      \name{author}{1}{}{%
+        {{hash=e2cb5fdda29a8b1302ed3c89c37dcfa3}{%
+           family={Cresser},
+           familyi={C\bibinitperiod},
+           given={J\bibnamedelima D},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2cb5fdda29a8b1302ed3c89c37dcfa3}
+      \strng{fullhash}{e2cb5fdda29a8b1302ed3c89c37dcfa3}
+      \strng{bibnamehash}{e2cb5fdda29a8b1302ed3c89c37dcfa3}
+      \strng{authorbibnamehash}{e2cb5fdda29a8b1302ed3c89c37dcfa3}
+      \strng{authornamehash}{e2cb5fdda29a8b1302ed3c89c37dcfa3}
+      \strng{authorfullhash}{e2cb5fdda29a8b1302ed3c89c37dcfa3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quantum {{Physics Notes}}}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/NM9QC977/m-api-58b2a868-8b81-ccf1-6586-f8e7705667ac.pdf
+      \endverb
+    \endentry
+    \entry{pauli_nobel}{article}{}
+      \name{author}{1}{}{%
+        {{hash=092601d1e9e8519accb07c37a0611492}{%
+           family={Pauli},
+           familyi={P\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{092601d1e9e8519accb07c37a0611492}
+      \strng{fullhash}{092601d1e9e8519accb07c37a0611492}
+      \strng{bibnamehash}{092601d1e9e8519accb07c37a0611492}
+      \strng{authorbibnamehash}{092601d1e9e8519accb07c37a0611492}
+      \strng{authornamehash}{092601d1e9e8519accb07c37a0611492}
+      \strng{authorfullhash}{092601d1e9e8519accb07c37a0611492}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The history of the discovery of the « exclusion principle », for which I have received the honor of the Nobel Prize award in the year 1945, goes back to my students days in Munich. While, in school in Vienna, I had already obtained some knowledge of classical physics and the then new Einstein rel-ativity theory, it was at the University of Munich that I was introduced by Sommerfeld to the structure of the atom-somewhat strange from the point of view of classical physics. I was not spared the shock which every physicist, accustomed to the classical way of thinking, experienced when he came to know of Bohr's « basic postulate of quantum theory » for the first time. At that time there were two approaches to the difficult problems connected with the quantum of action. One was an effort to bring abstract order to the new ideas by looking for a key to translate classical mechanics and electrodynamics into quantum language which would form a logical generalization of these. This was the direction which was taken by Bohr's « correspondence principle ». Sommerfeld, however, preferred, in view of the difficulties which blocked the use of the concepts of kinematical models, a direct interpretation, as independent of models as possible, of the laws of spectra in terms of integral numbers, following, as Kepler once did in his investigation of the planetary system, an inner feeling for harmony. Both methods, which did not appear to me irreconcilable, influenced me. The series of whole numbers 2, 8, 18, 32... giving the lengths of the periods in the natural system of chemical elements, was zealously discussed in Munich, including the remark of the Swedish physicist, Rydberg, that these numbers are of the simple form 2 n 2 , if n takes on all integer values. Sommerfeld tried especially to connect the number 8 and the number of corners of a cube. A new phase of my scientific life began when I met Niels Bohr personally for the first time. This was in 1922, when he gave a series of guest lectures at Göttingen, in which he reported on his theoretical investigations on the Periodic System of Elements. I shall recall only briefly that the essential progress made by Bohr's considerations at that time was in explaining, by means of the spherically symmetric atomic model, the formation of the intermediate}
+      \field{title}{Exclusion Principle and Quantum Mechanics}
+      \field{year}{1946}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/96AAL87Q/m-api-52a12d85-624e-ddf3-6b0b-36208a1d72e0.pdf
+      \endverb
+    \endentry
+    \entry{blundell_qft}{book}{}
+      \name{author}{2}{}{%
+        {{hash=c6cc445cf5d78ae339f2a3560a8be5b9}{%
+           family={Lancaster},
+           familyi={L\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9cb4aa188ac98c095c36bc003373c966}{%
+           family={Blundell},
+           familyi={B\bibinitperiod},
+           given={Stephen\bibnamedelima J},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{ed4ab99da0057cd7b229d2eefd40de70}
+      \strng{fullhash}{ed4ab99da0057cd7b229d2eefd40de70}
+      \strng{bibnamehash}{ed4ab99da0057cd7b229d2eefd40de70}
+      \strng{authorbibnamehash}{ed4ab99da0057cd7b229d2eefd40de70}
+      \strng{authornamehash}{ed4ab99da0057cd7b229d2eefd40de70}
+      \strng{authorfullhash}{ed4ab99da0057cd7b229d2eefd40de70}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-19-969933-9}
+      \field{journaltitle}{Physics Today}
+      \field{number}{5}
+      \field{title}{Quantum {{Field Theory}} for the {{Gifted Amateur}}}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/SKAJBPH7/ Tom Lancaster Stephen J. Blundell - Quantum Field Theory For The Gifted Amateur (2014, Oxford University Press) - libgen.li.pdf
+      \endverb
+    \endentry
+    \entry{quantum_ising_beginners}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f64638e98d3fa69a0946893d9f1013ba}{%
+           family={Mbeng},
+           familyi={M\bibinitperiod},
+           given={Glen\bibnamedelima Bigan},
+           giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=f30719bdb233a5cd78a98ee67d9f6d9e}{%
+           family={Russomanno},
+           familyi={R\bibinitperiod},
+           given={Angelo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1490cafe3c2f81fe1ce9038e2f2659c8}{%
+           family={Santoro},
+           familyi={S\bibinitperiod},
+           given={Giuseppe\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{7322f1c655102327eab2e7afa5375350}
+      \strng{fullhash}{7322f1c655102327eab2e7afa5375350}
+      \strng{bibnamehash}{7322f1c655102327eab2e7afa5375350}
+      \strng{authorbibnamehash}{7322f1c655102327eab2e7afa5375350}
+      \strng{authornamehash}{7322f1c655102327eab2e7afa5375350}
+      \strng{authorfullhash}{7322f1c655102327eab2e7afa5375350}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present here various techniques to work with clean and disordered quantum Ising chains, for the benefit of students and non-experts. Starting from the Jordan-Wigner transformation, which maps spin-1/2 systems into fermionic ones, we review some of the basic approaches to deal with the superconducting correlations that naturally emerge in this context. In particular, we analyse the form of the ground state and excitations of the model, relating them to the symmetry-breaking physics, and illustrate aspects connected to calculating dynamical quantities, thermal averages, correlation functions and entanglement entropy. A few problems provide simple applications of the techniques.}
+      \field{title}{The Quantum {{Ising}} Chain for Beginners}
+      \field{urlday}{28}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{version}{1}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2009.09208
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2009.09208
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2009.09208
+      \endverb
+      \keyw{FOS: Physical sciences,Quantum Gases (cond-mat.quant-gas),Quantum Physics (quant-ph)}
+    \endentry
+    \entry{peschelReducedDensityMatrices2009}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e1ba1952c7fe69b64b991e46cf17e237}{%
+           family={Peschel},
+           familyi={P\bibinitperiod},
+           given={Ingo},
+           giveni={I\bibinitperiod}}}%
+        {{hash=ac3a020f554064dfe1ce516053b38117}{%
+           family={Eisler},
+           familyi={E\bibinitperiod},
+           given={Viktor},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{813b78c3075a5536d9dce5d3820778b4}
+      \strng{fullhash}{813b78c3075a5536d9dce5d3820778b4}
+      \strng{bibnamehash}{813b78c3075a5536d9dce5d3820778b4}
+      \strng{authorbibnamehash}{813b78c3075a5536d9dce5d3820778b4}
+      \strng{authornamehash}{813b78c3075a5536d9dce5d3820778b4}
+      \strng{authorfullhash}{813b78c3075a5536d9dce5d3820778b4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We review the properties of reduced density matrices for free fermionic or bosonic many-particle systems in their ground state. Their basic feature is that they have a thermal form and thus lead to a quasi-thermodynamic problem with a certain free-particle Hamiltonian. We discuss the derivation of this result, the character of the Hamiltonian and its eigenstates, the single-particle spectra and the full spectra, the resulting entanglement and in particular the entanglement entropy. This is done for various one- and two-dimensional situations, including also the evolution after global or local quenches.}
+      \field{issn}{1751-8121}
+      \field{journaltitle}{Journal of Physics A: Mathematical and Theoretical}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{50}
+      \field{shortjournal}{J. Phys. A: Math. Theor.}
+      \field{title}{Reduced Density Matrices and Entanglement Entropy in Free Lattice Models}
+      \field{urlday}{30}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{42}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{504003}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1751-8113/42/50/504003
+      \endverb
+      \verb{file}
+      \verb /Users/josephbradley/Zotero/storage/WFW25AIQ/Peschel and Eisler - 2009 - Reduced density matrices and entanglement entropy .pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1088/1751-8113/42/50/504003
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1088/1751-8113/42/50/504003
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

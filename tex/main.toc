@@ -1,0 +1,31 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}Measures of Entanglement}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Entanglement as an Information Phenomenon}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Entanglement Entropy and Logarithmic Negativity}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Entanglement Area Law Violations in Quantum Systems}{5}{subsection.2.3}%
+\contentsline {section}{\numberline {3}The Random Inhomogeneous Chain and the SDRG method}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}The Random Inhomogeneous Chain}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}SDRG Literature Review}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}SDRG Procedure}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Algorithmic Implementation and Complexity}{10}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Disordered Chain: Existing Results}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Entanglement Entropy: Analytic Results and Numerical SDRG}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Logarithmic Negativity: Analytic Results and Numerical SDRG}{14}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Randbow Chain: Existing Results}{17}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Entanglement Entropy: Analytic Results}{17}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Entanglement Entropy: Numerical SDRG}{18}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Randbow Chain Exact Solution}{19}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Logarithmic Negativity for the Randbow Chain}{23}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Analytical Expectation}{23}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Numerical SDRG}{23}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Power-Law Spin Chains}{26}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Analytic Results }{26}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Entanglement Entropy: SDRG and exact results}{26}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Logarithmic Negativity Scaling: SDRG}{27}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Possible explanations}{27}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Conclusion}{32}{section.8}%
+\contentsline {section}{\numberline {A}Quantum Mechanics and the Jordan-Wigner Transformation}{33}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Commutators}{33}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Spin}{33}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}The Jordan-Wigner Transformation}{34}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}Using the JW Transformation in the Exact Solution}{34}{subsection.A.4}%

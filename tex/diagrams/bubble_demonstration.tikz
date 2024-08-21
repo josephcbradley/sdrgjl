@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=yellow dot] (2) at (-4, 1) {};
+		\node [style=yellow dot] (3) at (-2, 1) {};
+		\node [style=yellow dot] (6) at (2, 1) {};
+		\node [style=yellow dot] (7) at (4, 1) {};
+		\node [style=yellow dot] (8) at (6, 1) {};
+		\node [style=yellow dot] (10) at (0, 1) {};
+		\node [style=yellow dot] (11) at (7.75, 1) {};
+		\node [style=yellow dot] (12) at (-5.75, 1) {};
+		\node [style=none] (13) at (-7.5, 1) {};
+		\node [style=none] (14) at (9.25, 1) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (2) to (3);
+		\draw (3) to (10);
+		\draw (10) to (6);
+		\draw (6) to (7);
+		\draw (3) to (10);
+		\draw (7) to (8);
+		\draw (12) to (2);
+		\draw (8) to (11);
+		\draw [style={rainbow_links}, bend left, looseness=1.25] (3) to (10);
+		\draw [style={rainbow_links}, bend left, looseness=1.25] (6) to (7);
+		\draw [style={rainbow_links}, bend left] (2) to (8);
+		\draw [style={rainbow_links}, bend left=45] (12) to (11);
+		\draw (11) to (14.center);
+		\draw (12) to (13.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

@@ -1,0 +1,263 @@
+% !TEX root = ../main.tex
+
+\section{Quantum Mechanics and the Jordan-Wigner Transformation}\label{sec:quantum}
+Quantum mechanics is built on \textit{state vectors} that have a different notion of state to classical state vectors. In a classical system, a state $s(t)$ at time $t$ describes how the system would be observed if an simulation were conducted at time $t$. The mapping of moments in time to simulational outcomes is one to one: this grounds the idea of \textit{information} in classical mechanics. To have information about the state of a system means that you know what result you will get if you observe the system.
+
+However, in quantum mechanics, the mapping of states to simulation outcomes is now one to many. A \textit{quantum state} does not, in general, tell us what state we will observe the system in at $t$ - rather, it encodes a range of possible states that the system could be in when observations are drawn from simulation. The result of the simulation will not be known until the simulation has taken place.
+
+In this section we will briefly summarise the quantum mechanical formalism used throughout the paper, and in particular some details of the Jordan-Wigner transformation as used in \ref{subsec:randbow_exact} and \ref{subsec:powerbow_sdrg}.
+
+\subsection{States and Amplitudes}\label{subsec:states}
+To demonstrate, we will start with a quantum state $\psi$ that can be `observed' in two possible outcomes: yes and no. $\psi$ is a vector in $\mathbb{C}^2$, and $\psi(x)$ is the \textit{probability amplitude} of finding $\psi$ in state $x$. The probability amplitude is the working data of a quantum system; the probability that $\psi$ is in state $x$ is $|\psi(x)|^2$.
+% TODO define Hilbert space
+We will represent yes with the vector $y$ and no with the vector $n$. The 'overlap' of $\psi$ on the state yes is the inner product $(y, \psi)$, and the probability that $\psi$ is in state $y$ when observed is $|(y, \psi)|^2$. 
+
+Because the inner product form occurs so frequently, and because it is helpful to distinguish between column vectors and complex conjugated row vectors, we will use bra and ket form: 
+
+\begin{gather}\label{eq:braket}
+\boldsymbol{\psi} = \ket{\psi}\\
+\boldsymbol{\psi}' = \bra{\psi} 
+\end{gather}
+
+When $\ket{\psi}$ is describing a single particle in space, and especially when it is time dependent, it is generally called a \textit{wave function}. This is because the state vector $\ket{\psi}$ describes a matter wave (of probability amplitude) in space. 
+
+The space of quantum states is a \textit{vector space}. For example, a state could be equal proportions yes and no. This is the idea of \textit{superposition}, the quantum phenomenon of objects being in two states (e.g. places) at once. It is often helpful for this space to be given an orthogonal basis, where `states' in the classical sense are represented by orthogonal vectors. For example, in $\mathbb{C}^2$, we could have the basis $\{ \ket{y}, \ket{n} \}$, and a vector could be $\frac{1}{\sqrt{2}}\left (\ket{y} + \ket{n} \right)$, equally yes and no. 
+
+We will also use \textit{density matrices} throughout this work, where the density matrix $\rho$ of a state is the matrix:
+
+\begin{equation}\label{eq:density_matrix}
+	\rho = \ket{\psi}\bra{\psi}
+\end{equation}
+
+
+\subsection{Normalisation and Unitary Operators}\label{subsec:normalisation}
+However, for the system to be meaningfully probabilistic, the probabilities associated with each state must be normalised, i.e.:
+
+\begin{equation}\label{eq:normalisation}
+\sum_x |\ket{\psi(x)}|^2 = 1
+\end{equation}
+
+This in turn implies that that any function that updates the state of our system from time $0$ to time $t$ must maintain the normalisation condition. This suggests that such an map $U$ must be norm preserving and thus orthogonal, which in $\ mathbb{C}^n$ means:
+
+
+\begin{equation}\label{eq:unitarity}
+	UU^* = U^*U = I
+\end{equation}
+
+That is, the map is unitary. 
+
+\subsection{Time Evolution}\label{subsec:time_evolution} 
+We will give a brief, intuitive derivation of the Schrödinger equation\footnote{The following derivation of the Schrödinger equation is heavily indebted to Susskind \cite{susskind}. For a more thorough review, see \cite{blundell_qft}.}. For a time dependent system, we have:
+
+\begin{equation}\label{eq:U_definition}
+	U(t)\ket{\psi(0)} = \ket	{\psi(t)}
+\end{equation}
+
+Now assuming that $U$ can be expanded to first order, we can for small $\mathcal{E}$ say:
+
+\begin{equation}
+U(\mathcal{E}) = I + O(\mathcal{E}) = I - i\mathcal{E} H	
+\end{equation}
+
+where we have introduced the prefactor $-i\mathcal{E}$ in front of $H$ for convenience. $H$ is thus the first order expansion of $U(t)$ without the prefactors. 
+
+Bringing this all together with the definition of $U$ in equation \ref{eq:U_definition}, we have:
+
+\begin{equation}
+	\ket{\psi(\mathcal{E})} = U(\mathcal{E})\ket{\psi(0)} = \ket{\psi(0)} - i\mathcal{E} H \ket{\psi(0)}
+\end{equation}
+
+Rearranging and dividing by $\mathcal{E}$, and relaxing the assumption that our state started at time $0$ we have
+
+\begin{equation}
+	\lim{\mathcal{E} \to 0} \frac{\ket{\psi(\mathcal{E})} - \ket{\psi(0)}}{\mathcal{E}} = \frac{\delta \ket{\psi}}{\delta t} = -iH \ket{\psi}
+\end{equation}
+
+This is the time independent Schödinger equation, which will be useful in section \ref{subsec:powerbow_exact}. $H$ is the Hamiltonian of the system, which will be discussed further in section \ref{subsec:hamiltonians}.
+
+\subsection{Observables}\label{subsec:observables}
+Given a state $\ket{\psi}$, we generally want to know something about it - for example, its position, momentum, spin, energy, etc.. In quantum mechanics we use \textit{observables} to extract these from states. 
+Observables are represented by Hermitian linear operators\footnote{It is often asserted that such operators must be Hermitian, i.e. $H = H^\dagger$, but this is not strictly true: see \cite{bender_hermitian}. Superficially, the requirement is that the operator $H$ on a space of dimension $N$ have $N$ orthogonal eigenvectors and $N$ real (possibly degenerate) eigenvalues. Hermiticity guarantees this, hence it is a useful requirement to impose.}, and their eigenvalues are the values that we can observe through simulation. 
+
+ The combination of linear operators and vector spaces of states gives rise to the following useful summary\footnote{This summary is taken almost directly from Cresser \cite{cresser}.}: 
+
+\begin{center}\label{table:quantum}
+	\begin{tabularx}{1.\textwidth}{| X | X |}
+\hline 
+\textbf{Properties of a Hermitian Operator} & \textbf{Properties of an Observable $A$}\\
+\hline
+All the eigenvalues of the operator are real. & The values of the observable are real. \\ 
+\hline
+The eigenvectors of the operator are orthogonal. & The states of an observable are distinct. \\
+\hline
+The eigenvectors form a basis for the state space. & The possible values of the observable cover all of the possible values that could be observed for this system.  \\
+\hline
+	
+\end{tabularx}
+\end{center}
+
+\subsection{Hamiltonians and Groundstates}\label{subsec:hamiltonians}
+In section \ref{subsec:time_evolution}, we defined the Hamiltonian $H$ as part of our approximation of the time evolution operator $U$. The Hamiltonian is the oberservable for the total energy of the system. In dynamical systems, this will normally have a kinetic and potential term, but in this report it will focus mostly on the states of spins (see \ref{subsec:spin} and \ref{subsec:model_def}).
+
+The 'solution' to most physical problems is the find the \textit{groundstate} $\ket{\psi}$ that minimises the energy. That is equivalent to solving the following minimisation problem: 
+
+\begin{equation}\label{eq:minimisation_problem}
+\begin{aligned}
+		\min_{\ket{\psi}} \quad &  E \\
+		\textrm{s.t.} \quad & H\ket{\psi} = E\ket{\psi}
+\end{aligned}
+\end{equation}
+
+\subsection{Commutators}\label{subsec:commutators}
+Most operators do not commute, and the same is true within quantum mechanics. We define the \textit{commutator}:
+
+\begin{equation}\label{eq:commutator}
+	[A, B] = AB - BA
+\end{equation}
+
+The \textit{anti-commutator} is defined as:
+
+\begin{equation}\label{eq:anticommutator}
+	\{A, B\} = AB + BA
+\end{equation}
+
+Commutation relations are important in defining the relationships between operators. For example, given the position operators $\hat{x}$ and the momentum operator $\hat{p}$:
+
+\begin{equation}
+	[\hat{x}, \hat{p}] = i \hbar \mathbb{I}
+\end{equation}
+
+This relation between two operators that are Fourier transforms of one another is often referred to as the canonical commutation relation.
+
+
+\subsection{Spin}\label{subsec:spin}
+\textit{Spin} is a form of angular momentum inherent to quantum particles. Spin can be measured in the three different dimensions of normal space, and particles each posses a \textit{spin quantum number} $s$. Restrictions on this spin quantum number imply important properties about different quantum particles. Spin is quantized and takes the form:
+
+\begin{equation}\label{eq:spin_number}
+	S = \hbar \sqrt{s(s + 1)}
+\end{equation}
+
+Where $s$ can be any half-integer. Particles with half-integer spin are \textit{fermions} and particles with integer spins are called \textit{bosons}.
+
+An important property of fermions is that they obey the Pauli Exclusion Principle\cite{pauli_nobel}. Consider a \textit{creation operator} $a_i^\dagger$ that acts on a vacuum state $\ket{0}$ to create a particle at position $i$\footnote{This explanation of the exclusion principle is due to Blundell and Lancaster \cite{blundell_qft}.}. Adding a particle at position $i$ and another at position $j$ must give us the same state, up to a prefactor:
+
+\begin{equation}
+	a_i^\dagger a_j^\dagger = \lambda a_j^\dagger a_i^\dagger
+\end{equation}
+
+Restricting ourselves without loss of generality to the cases $\pm1$, we consider the bosonic case of $+1$ first, which implies that \textit{the state vector is symmetric under particle exchange}. This also implies that:
+
+\begin{gather}
+	a_i^\dagger a_j^\dagger - a_j^\dagger a_i^\dagger = [a_i^\dagger, a_j^\dagger] = 0
+\end{gather}
+
+However, for the \textit{fermionic} case, we have the prefactor $-1$ and instead the anti-commutator $\{c_i^\dagger, c_j^\dagger\} = 0$, where $c_i^\dagger$ is the fermionic creation operator at $i$. Mostly importantly, if we set $i = j$ then:
+
+\begin{gather}
+	c_i^\dagger c_i^\dagger + c_i^\dagger c_i^\dagger = 0 \\
+	c_i^\dagger c_i^\dagger = 0
+\end{gather}
+
+Which is exactly the Pauli Exclusion Principle: if we try to create to fermions at the same position, they annihilate and we get nothing at all. This will be relevant when we discuss the Jordan-Wigner transformation.
+
+
+\subsection{The Jordan-Wigner Transformation}
+The Jordan-Wigner (JW) transformation maps a system of spins into a system of (free) fermions. This is useful as it opens up a wider variety of technqiues for dealing with disordered, many body problems. We recommend \cite{quantum_ising_beginners} for a thorough overview, and our summary of the JW transformation relies heavily on their layout. 
+
+Recall from \ref{subsec:spin} that a fermion obeys the Pauli exclusion principle and that one can define a creation operator $\langle c_i^\dagger \rangle$ with anti-commutator $\{c_i^\dagger, c_j^\dagger\} = 0$,. Using this, we can say that the JW transformation maps spins to fermions according to the following transformations: 
+
+\begin{align}
+	\hat{\sigma}_j^x &=\hat{K}_j\left(\hat{c}_j^{\dagger}+\hat{c}_j\right) \\
+	\hat{\sigma}_j^y &=\hat{K}_j i\left(\hat{c}_j^{\dagger}-\hat{c}_j\right) \\
+	\hat{\sigma}_j^z &=1-2 \hat{n}_j
+\end{align}
+
+%\begin{equation}
+%\left\{\begin{aligned}
+%\hat{\sigma}_j^x &=\hat{K}_j\left(\hat{c}_j^{\dagger}+\hat{c}_j\right) \\
+%\hat{\sigma}_j^y &=\hat{K}_j i\left(\hat{c}_j^{\dagger}-\hat{c}_j\right) \\
+%\hat{\sigma}_j^z &=1-2 \hat{n}_j
+%\end{aligned} \quad \text { with } \quad \hat{K}_j=\prod_{j^{\prime}=1}^{j-1}\left(1-2 \hat{n}_{j^{\prime}}\right) .\right.
+%\end{equation}
+
+
+
+where $\hat{n}_j=\hat{c}_j^{\dagger} \hat{c}_j$ is the fermionic number operator and $\hat{K}_j=\prod_{j^{\prime}=1}^{j-1}\left(1-2 \hat{n}_{j^{\prime}}\right)$ is a parity adjusting operator. The physical picture here is that we have gone from spins that can be `up or down' to fermions that can be present or not. 
+
+%Roughly one can interpret the transformation for each spin operator as being something like `rather than measure the spin in such a direction at site $i$, measure the combined effect of adding and also of annihilating a fermion at $i$, adjusted for the parity condition $\hat{K}_j$'. The details are beyond the scope of this report but we use them in the calculations below for the exact solution to the $XX$ chain. 
+
+These mappings can be reversed, following \cite{paola2016}:
+
+\begin{equation}\label{eq:jw_to_fermions}
+c_i=\left(\prod_{m=1}^{i-1} \sigma_m^z\right) \frac{\sigma_i^x-i \sigma_i^y}{2}
+\end{equation}
+
+In the following section we show how this technique can be used to solve the random inhomogeneous chain.
+
+\subsection{Using the JW transformation in the exact solution}\label{subsec:exact_sol_jw}
+
+Again following \cite{paola2016}, we define a slightly more general Hamiltonian than equation \ref{eq:model_hamiltonian} as follows: 
+
+\begin{equation}
+H_{X X} =\sum_{i} J_i\left(S_i^x S_{i+1}^x+S_i^y S_{i+1}^y\right)+h \sum_{i} S_i^z
+\end{equation}
+
+Note that this applies strictly to the $XX$ chain, and the additional $h$ term. Using equation \ref{eq:jw_to_fermions} this is immediately transformed into a fermionic form: 
+
+\begin{equation}
+\mathcal{H}_{X X}=\frac{1}{2} \sum_{i=1}^{L-1} J_i\left(c_i^{\dagger} c_{i+1}+c_{i+1}^{\dagger} c_i\right)+\frac{h}{2} \sum_{i=1}^{L-1} c_i^{\dagger} c_i
+\end{equation}
+
+where we have defined the additional anti-commutator relation $\left\{c_m, c_n^{\dagger}\right\}=\delta_{m, n}$. 
+
+One can now assume that each new fermion has individual eigenstates of the form:
+
+\begin{equation}\label{eq:eta_operator_def}
+\eta_q^{\dagger}|0\rangle = \sum_i \Phi_q(i) c_i^{\dagger}|0\rangle
+\end{equation}
+
+where $q$ labels the different eigenstates and $\Phi$ is a vector of amplitudes to be found. The Schrödinger equation becomes: 
+
+\begin{equation}
+J_i \Phi_q(i+1)+J_{i-1} \Phi_q(i-1)=2 \mathcal{E}_q \Phi_q(i)
+\end{equation}
+
+where $\mathcal{E}_q$ are single particle eigenvalues per eigenstates $q$. This is a new eigenvalue problem for a banded $2L \times 2L$ matrix with the couplings $J_i$ on the off diagonals. 
+
+The groundstate of the original Hamiltonian will have $L \div 2$ fermions, giving us the following: 
+
+\begin{equation}
+|G S\rangle=\eta_{q_M}^{\dagger} \eta_{q_{M-1}}^{\dagger} \cdots \eta_{q_1}^{\dagger}|0\rangle
+\end{equation}
+
+Multiplying equation \ref{eq:eta_operator_def} by the relevant operators, we can derive the anti-commutators:
+
+\begin{equation}
+\left\{\eta_q^{\dagger}, c_j^{\dagger}\right\}=\left\{\eta_q, c_j\right\}=0
+\end{equation}
+
+and
+
+\begin{equation}
+\left\{\eta_q^{\dagger}, c_j\right\}=\Phi_q(j) \delta_{k, j}, \quad\left\{\eta_q, c_j^{\dagger}\right\}=\Phi^*(j) \delta_{k, j}
+\end{equation}
+
+Combining the previous two equations, we can derive the two point function's expected value for the groundstate of the original Hamiltonian:
+
+\begin{equation}
+\left\langle c_i^{\dagger} c_j\right\rangle=\sum_q \Phi_q^*(i) \Phi_q(j)
+\end{equation}
+
+This defines a matrix $C_{i, j}$ that can be restricted to some subsystem $A$ for the purposes of analysing a given disorder realisation. In particular, from \cite{peschelReducedDensityMatrices2009}, we can calculate the entanglement entropy:
+
+\begin{equation}
+S_A=-\sum_l\left(\lambda_k \ln \lambda_k+\left(1-\lambda_k\right) \ln \left(1-\lambda_k\right)\right)
+\end{equation}
+
+This completes our overview of the technique used in \ref{subsec:randbow_exact} to calculate the entanglement entropy of the randbow chain exactly.
+%\begin{equation}\label{eq:boson_creator}
+%c_{i}=\left(\prod_{m=1}^{i-1} \sigma_{m}^{z}\right) \frac{\sigma_{i}^{x}-i \sigma_{i}^{y}}{2}
+%\end{equation}
+
+
+

@@ -1,0 +1,61 @@
+\section{Introduction}\label{sec:intro}
+%This should explain the context of the project and situate it in the broader field of your programme. It should state clearly which problem the project was designed to tackle and with what methodology, and it should give an overview of the structure of the remainder of the report
+
+%Entanglement is often regarded as the key stylistic feature of quantum systems \cite{paola2016}, and understanding entanglement is crucial to understanding a wide variety of physical phenomena \cite{paola_phd}. 
+Entanglement is the phenomenon of correlation between distantly separated objects. In a quantum system, a number of objects can be `entangled' such that operations on one particle instantaneously affects the other entangled particles, even when these particles have no apparent connection to the first. 
+
+
+%Quantum spin chains are (in)finitely long collections of quantum spins in one dimension. One dimensional systems provide a first step towards more detailed models of higher dimensional systems (see for example \cite{tsirlin_chains}), and one dimensional quantum systems have been used to study 1+1 dimensional classical systems \cite{paola_phd}. 
+
+
+%There are of course genuinely one dimensional systems of interest \cite{molin_2005}, and simple, one dimensional classical spin chains are analytically solveable via transfer matrices \cite{onsager_ising}.
+%\footnote{For definitions and details, see section \ref{subsec:entropy_negativity}}.
+
+%Explain the context of the project - quantum spin chains, disordered spin chains, inhomogeneous spin chains. Why do we care? What is already known? Explain that gapped, translationally invariant Hamiltonians should obey area laws. 
+%Their research was motivated by the pre-existing knowledge of area law violations for entropy in quantum systems.
+
+%\begin{enumerate}\label{list:entanglement_reasons}
+	%\item Black hole physics: measures of importance such as Bekenstein-Hawking entropy are conjectured to be related to the boundary surface of a black hole. If entanglement scales with the area... is proportional to the boundary of the black hole \cite{page_information_entropy}.
+	%\item The theory of long range quantum correlations - understanding area laws and their violations will give a greater understanding of how quantum correlations are distributed within a many-body system. 
+	%\item Complexity of numerical simulations: great success has been made in classical physics through mean field theory to more efficiently solve complex systems (\cite{Justin_MFE}). If we understand how and when mean field theories work for quantum systems, this will help us to effectively solve complex quantum systems.
+	%\item Topological entanglement entropy, a novel order parameter, cannot be described by local conditions.
+%\end{enumerate}
+%Understanding entanglement, then, will give us more insight 
+
+
+
+Researchers are especially interested in how the entanglement of a subsystem changes with the subsystem size: does entanglement increase with the area of a subsystem, with its volume, or something else? The claim that in some systems, entanglement scales with area, is known as the \textit{entanglement area law}. Systems whose entanglement does not scale with the area are said to exhibit area law violations, and understanding area law violations has become an important avenue of research \cite{eisert_review}.
+
+The area law is known to hold for certain measures of entanglement in specific conditions. For example, for local, gapped, spatially invariant one dimensional quantum systems in their groundstate, entanglement entropy (one measure of entanglement that will be defined later)  scales with an area law \cite{hastings_area_law}. However, attempts to generalise this to weaker conditions have shown that area law violations may occur \cite{refael2004}. Thus the research question becomes: `Which of the assumptions in \cite{hastings_area_law} when relaxed are necessary or sufficient conditions to lead to an area law violation, and what scaling do we observe when these violations occur?'. 
+%Subsequent papers (\cite{refael2004}, \cite{Vitagliano2010}, \cite{paola2016}, \cite{paola2018}) have developed a significant number of results.
+
+This report extends the work of two papers (\cite{paola2016} and \cite{paola2018}) that have answered this question in the context of quantum spin chains. The authors studied the entanglement scaling of spin chains with varying degrees of disorder and inhomogeneity, both of which violate the spatially invariant condition in \cite{hastings_area_law}. In \cite{paola2016}, the authors reproduced results from \cite{refael2004} that in disordered quantum spin chains, the entanglement entropy scales with the logarithm of the subsystem size, and then showed that the logarithmic negativity (another measure of entanglement that will be defined later) also scales logarithmically. In \cite{Vitagliano2010} the authors show that when inter-spin couplings decay exponentially from the centre of the chain, a volume law for the entanglement entropy can occur. In \cite{paola2018}, the authors extend that work by showing that an intermediate phase exists where the inhomogeneity is less strong and the entanglement entropy scales as a power-law.
+
+
+%: in systems with inhomogeneity introduced via disorder and in `exponential' systems where, along with a disordered factor, the couplings contain a second factor which decays from the centre of the chain. 
+%Whilst a one dimensional system may seem like a trivial object of study, 
+
+%The physical and mathematical definition of a spin will be giving in more detail in section \ref{subsec:spin}, but superficially these chains can be thought of as a more complicated version of a classical Ising spin chain: a sequence of abstract bodies that have one (or more) binary states. 
+
+
+
+%In this report, we will investigate the scaling of entanglement entropy and entanglement negativity with varying degrees of spatial inhomogeneity. We will verify prior results for spatially inhomogeneous systems and systems whose couplings decay exponentially from the centre, before extending some results for exponential systems to negativity and investigating a new type of inhomogeneity that decays more slowly than in exponential systems. 
+%This will be a direct extension to the work reported in \cite{paola2016} and \cite{paola2018}.
+
+Both \cite{paola2016} and \cite{paola2018} make use of the Strong Disorder Renormalisation Group (SDRG). Whilst disorder and inhomogeneity introduce a new richness of modelling possibilities, they also produce complex systems that are difficult to solve. This has prompted a wave of techniques based on renormalisation group (RG) theory \cite{Fisher1994}, which has been extended to SDRG for disordered systems \cite{dasgupta_ma_1980}. The SDRG approach maps a disordered problem to a simpler one by progressively integrating out the high energy degrees of freedom. This provides us with an approximation of the system's groundstate that is easier to calculate than the true groundstate. The SDRG method is useful both for analytic results and as a numerical method. Exact results for the outcome of the SDRG procedure and for analyses on the resulting SDRG groundstate are available and are used in the two papers, which also make use of an exact solution that is available when the system is non-interacting. This report extends their work by calculating the logarithmic negativity of the inhomogeneous system introduced in \cite{paola2018}, and by investigating a new kind of system with a weaker degree of inhomogeneity where couplings decay as a power-law from the chain centre.
+
+
+The structure of this report is as follows. In section \ref{sec:entanglement}, we review measures of entanglement and area law violations. In section \ref{sec:sdrg}, we state spin chain models to be investigated and the SDRG procedure. In sections \ref{sec:disordered_old_results} and \ref{sec:randbow_old_results} we will verify existing results, and in sections \ref{sec:randbow_negativity_results} and \ref{sec:powerbow_results} we will demonstrate the new results on entanglement negativity for old systems and for the new slowly decaying systems. Lastly, in section \ref{sec:conclusion} we will evaluate the new results and discuss areas for further research. In the appendix, we review some relevant quantum physics and the Jordan-Wigner transformation. We assume that the reader is familiar with basic quantum physics and especially bra-ket notation.
+
+
+% Whilst exact results are available for non-interacting disordered spin chains,  but to facilitate analysis we use the Strong Disorder Renormalisation Group (SDRG) technique for the majority of our calculations. The SDRG technique is useful for understanding the groundstate of disordered systems and is known to be asymptotically exact \cite{refael2004}. We implement algorithms for the SDRG procedure and associated analyses, as well as for the exact solutions where possible, at arbitrary precision. 
+
+
+
+%Broader field of your programme - connection to complex systems. Why are these system complex? Why does the disorder make things difficult? Cite solution of non-disordered system DONE 
+
+%Statement of the problem - measuring the entanglement of spatially inhomogeneous 1D quantum systems. Why is there a problem? Some information about LOCC, mixed states, quantum and classical. DONE
+
+%Methodology - what tools? Analytical, exact, SDRG. Summary of SDRG use and exactness (cite). Explanation of code written DONE
+
+% Structure of remainder of report. 

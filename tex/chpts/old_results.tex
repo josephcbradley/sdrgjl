@@ -1,0 +1,228 @@
+% !TEX root = ../main.tex
+%A number of results for the scaling of entanglement measures already exist (see \cite{refael2004}, \cite{paola2016}, \cite{paola2018}). 
+\section{Disordered Chain: Existing Results}\label{sec:disordered_old_results}
+In this section we will reproduce the results of \cite{paola2016} for the disordered spin chain and in the process verify that our SDRG algorithm and related code works as expected.
+
+\subsection{Entanglement Entropy: Analytic Results and Numerical SDRG}\label{subsec:baseline_entropy}
+As per \cite{paola2016}, we measure the entanglement entropy of the disordered chain with and without periodic boundary conditions. We start be reviewing the analytic expectations for the disordered spin chain with the SDRG method. 
+
+We observe that, given the RSP state in equation \ref{eq:groundstate}, to calculate the entanglement entropy we only need to know the number of singlets in $A$ that connect to the remainder of the chain $B = A^\prime$. In the basis $\ket{\uparrow} = \begin{bmatrix}
+	1 \\
+	0 
+\end{bmatrix}$ and $\ket	{\downarrow} = \begin{bmatrix}
+	0 \\
+	1 
+\end{bmatrix}$ we can make the singlet state $\ket{s}$ (see equation \ref{eq:micro_groundstate}) explicit. The two spin vectors become: 
+
+\begin{equation}
+	\ket{\uparrow \downarrow} = \begin{bmatrix}
+	0 \\
+	1 \\
+	0 \\
+	0 \\
+\end{bmatrix}, \ket{\downarrow \uparrow} = \begin{bmatrix}
+	0 \\
+	0 \\
+	1 \\
+	0 \\
+\end{bmatrix}
+\end{equation}
+
+Recalling the singlet state vector (equation \ref{eq:micro_groundstate}), the singlet density matrix is then:
+
+\begin{equation}\label{eq:micro_groundstate_explicit}
+	\rho_{2S} = \ket{s}\bra{s} = \frac{1}{2}\left(\begin{array}{cccc}
+0 & 0 & 0 & 0 \\
+0 & 1 & -1 & 0 \\
+0 & -1 & 1 & 0 \\
+0 & 0 & 0 & 0
+\end{array}\right)
+\end{equation}
+
+Taking the partial trace over the second spin, we have:
+
+\begin{equation}
+\rho_S=\frac{1}{2}\left(\begin{array}{ll}
+1 & 0 \\
+0 & 1
+\end{array}\right)
+\end{equation}
+
+To calculate the entanglement entropy, we note that $\rho_S$ is Hermitian and use the spectral theorem on equation \ref{eq:neumann_entropy} to get:
+
+\begin{equation}
+	S = - \sum_i \lambda_i \ln{\lambda_i} = \ln{2}
+\end{equation}
+
+where $\{\lambda_i\}$ are the eigenvalues of $\rho_S$. At this point, the RSP structure of the grounstate becomes very useful. Following \cite{refael2004} we can say that the entanglement entropy is just `the number of singlets that connect sites inside to sites outside the segment', multiplied by the entropy of each such segment, $\ln{2}$. This is a very simple expression of the entropy for a complex many-body system. We follow \cite{paola2016} and let the number of singlets connecting subsystem $X$ to $Y$ be $n_{X:Y}$, so that the entropy of subsystem $A$ is given by:
+
+\begin{equation}
+	S_A = \ln{2} \times n_{A: B}
+\end{equation}
+
+This is consistent up to a constant with the SDRG result as reported in \cite{paola2016} and \cite{Laflorencie2018}:
+
+\begin{equation}
+S_{A}=\frac{\ln 2}{3} \ln \ell+K
+\end{equation}
+
+which implies that, taking averages over disorder, $\langle n_{A: B} \rangle = \frac{\ln 2}{3}$. 
+%The position in the chain is not as relevant as it is in the later models where a strong spatial inhomogeneity is introduced, because the non-locality is much weaker and is not focused around a particular point (e.g. the centre). 
+%It is known from \cite{refael2004} that the ground state of the random spin chain (equation \ref{eq:model_hamiltonian}) is an RSP, made up of $L \div 2$ singlets each entangled in a valence bond, e.g. a valence bond state. Each pair of singlets has the state given in equation \ref{eq:micro_groundstate}.
+
+To verify this numerically, we run the SDRG procedure on the $XXX$ chain: for each simulation, we draw $L$ random couplings from the uniform distribution over $[0, 1]$ and run the SDRG algorithm. This returns a vector of $L \div 2$ singlets.  On this vector of singlet pairs we  calculate the entanglement entropy for every realisation of the RSP for all window sizes $l$, and maintain a running mean of the result. 
+%The entanglement entropy is calculated by dividing the system into the subsystem $A$ and its complement $A'$: the entropy is the number of singlet links between these two subsections multiplied by $\ln 2$.  
+
+%(figures \ref{fig:baseline_entropy_pbc} and \ref{fig:baseline_entropy_pbc_raw})
+%In this simulation we measure the entanglement entropy of a subsystem of length $l$ located in the left hand side of the the XXX chain. 
+%For the open case (figures \ref{fig:baseline_entropy_obc} and \ref{fig:baseline_entropy_obc_raw}) the need is especially acute. 
+
+
+ We run the analysis for $L = 1000$ and $L = 2000$ for $50,000$ disorder realisations and in each case calculate the entanglement entropy from $l = 10$ to $l = L \div 2$ with an interval of $10$ in between. Our results are shown in figure \ref{fig:baseline_entanglement}, with fitted curves for the adjusted $l$. As can be seen in all four subfigures of figure \ref{fig:baseline_entanglement}, entropy scales logarithmically with the subsystem size. This is clearly an area law violation, and perfectly follows the prediction in \cite{refael2004}.
+ 
+These analytic predictions are accurate for $l \leq L \div 2$, after which finite size effects begin to dominate. For the periodic case the finite size effects are smaller, and can be corrected with the following two maps: 
+
+\begin{equation}\label{eq:L_mapping}
+\ell \rightarrow L_{c} \equiv \frac{L}{\pi} Y\left(\frac{\pi \ell}{L}\right)
+\end{equation}
+
+\begin{equation}
+Y(x)=\sin (x)\left(1+\frac{4}{3} k_{1} \sin ^{2}(x)\right)
+\end{equation}
+
+where $k_1 = 0.115$, given by \cite{fagotti_2011}. 
+% In the unadjusted $l$ cases we notice that for large $l$ the entropy begins to decrease again, as we would expect in a finite system.
+ % It should be noted that in figure \ref{fig:baseline_entropy_pbc_raw} the degree of divergence from the log-linear trend is less than is seen in \cite{paola2016}. This is because we have chosen to calculate the entanglement entropy only up to $L \div 2$. % as beyond half the chain, finite size effects will emerge even for the periodic implementation.
+
+\begin{figure}
+     \centering
+     \begin{subfigure}[b]{0.49\textwidth}
+    \centering
+  \includegraphics[width=\textwidth]{../data/imgs/entropy_baseline_pbc}
+    \caption{Entanglement entropy of the $XXX$ chain, adjusted $l$, PBC}
+    \label{fig:baseline_entropy_pbc}
+\end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+    \includegraphics[width=\textwidth]{../data/imgs/entropy_baseline_obc}
+    \caption{Entanglement entropy of the $XXX$ chain, adjusted $l$, OBC}
+    \label{fig:baseline_entropy_obc}
+     \end{subfigure}
+  	\begin{subfigure}[b]{0.49\textwidth}
+    \centering
+  \includegraphics[width=\textwidth]{../data/imgs/entropy_baseline_pbc_raw}
+    \caption{Entanglement entropy of the $XXX$ chain, no $l$ adjustment, PBC}
+    \label{fig:baseline_entropy_pbc_raw}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.49\textwidth}
+    \centering
+  \includegraphics[width=\textwidth]{../data/imgs/entropy_baseline_obc_raw}
+    \caption{Entanglement entropy of the $XXX$ chain, no $l$ adjustment, OBC}
+    \label{fig:baseline_entropy_obc_raw}
+\end{subfigure}
+     \caption{Entanglement entropy, recalculated from \cite{paola2016}. We measure the entanglement entropy of a subsystem of length $l$ located in the left hand side of the the XXX chain. Each simulation is run for $50,000$ disorder realisations. \ref{fig:baseline_entropy_pbc}: the periodic chain with the adjusted subsystem length $L_c$. \ref{fig:baseline_entropy_obc}: the open chain with the adjusted subsystem length $L_c$. \ref{fig:baseline_entropy_pbc_raw}: the periodic chain with the unadjusted subsystem length $l$. \ref{fig:baseline_entropy_obc_raw}: the open chain with the unadjusted subsystem length $l$.}
+        \label{fig:baseline_entanglement}
+\end{figure}
+
+
+\subsection{Logarithmic Negativity: Analytic Results and Numerical SDRG}\label{subsec:baseline_negativity}
+In this section we recalculate the logarithmic negativity as reported in \cite{paola2016}. We will start by reviewing the analytic prediction via the SDRG method. We note that the groundstate as described in equation \ref{eq:groundstate} is a tensor product of singlet states, and that from section \ref{subsec:entropy_negativity} the logarithmic negativity is additive under the tensor product. Before we go further it is useful to note that the partial transpose $\rho_{2 S}^{T_2}$ of $\rho_{2S}$ with respect to $A_2$ is:
+
+\begin{equation}
+\rho_{2 S}^{T_2}=\frac{1}{2}\left(\begin{array}{cccc}
+0 & 0 & 0 & -1 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+-1 & 0 & 0 & 0
+\end{array}\right)
+\end{equation}
+%This is achieved in this simple case by transposing each $2 \times 2$ block of the matrix in equation \ref{eq:micro_groundstate_explicit}.
+Furthermore, distinguishing between singlets which connect $A$ to $A$, $B$ to $B$, and $A$ to $B$, we can follow \cite{paola2016} and describe the complete RSP as:
+
+\begin{equation}
+\rho_{R S P}=\bigotimes_{i=1}^{n_{A: A}} \rho_{2 S} \bigotimes_{i=1}^{n_{B: B}} \rho_{2 S} \bigotimes_{i=1}^{n_{A: B}} \rho_{2 S}
+\end{equation}
+
+We then trace over the $B$ subsystem, leaving us with:
+
+\begin{equation}
+\rho_A=\bigotimes_{i=1}^{n_{A: A}} \rho_{2 S} \bigotimes_{i=1}^{n_{A: B}} \rho_S
+\end{equation}
+
+and after taking the partial transpose:
+
+\begin{equation}
+\rho_A^{T_2}=\bigotimes_{i=1}^{n_{A: A}} \rho_{2 S}^{T_2} \bigotimes_{i=1}^{n_{A: B}} \rho_S^{T_2}
+\end{equation}
+
+The logarithmic negativity is additive over this, and according to \cite{paola2016} it simplifies to:
+
+\begin{equation}
+\mathcal{E}_{A_1: A_2}=n_{A_1: A_2} \ln \operatorname{Tr}\left|\rho^{T_2}_{2S}\left(A_1 \cup A_2\right)\right|
+\end{equation}
+
+where $\rho$ is the density matrix of the generic singlet state. As discussed in section \ref{subsec:entropy_negativity}, the trace norm of a Hermitian matrix is just the sum of the absolute value of its eigenvalues. The eigenvalues of $\rho^{T_2}_{2S}$ are $\{-1/2, 1/2, 1/2, 1/2\}$, thus the trace norm is $2$ and the logarithmic negativity of the total subsystem $A$ is:
+
+\begin{equation}
+\mathcal{E}_{A_1: A_2}=n_{A_1: A_2} \ln 2
+\end{equation}
+
+This simply says that the logarithmic negativity of the subsystem is $\ln{2}$ multiplied by the number of singlets shared between $A_1$ and $A_2$.
+
+This result allows us to calculate the logarithmic negativity over one disorder realisation. Taking overages over the disorder with $\langle \cdot \rangle$, we have:
+
+\begin{equation}\label{eq:disordered_logneg_n}
+	\langle \mathcal{E}_{A_1: A_2} \rangle = \langle n_{A_1: A_2} \rangle \ln 2
+\end{equation}
+
+In \cite{paola2016} an SDRG result for $\langle n_{A_1: A_2} \rangle$ is also given for two adjacent intervals of lengths $l_1, l_2$ as:
+
+\begin{equation}\label{eq:disordered_n}
+\left\langle n_{A_1: A_2}\right\rangle=\frac{1}{6} \ln \left(\frac{\ell_1 \ell_2}{\ell_1+\ell_2}\right)
+\end{equation}
+
+with results for disjoint systems also available. Combining equations \ref{eq:disordered_logneg_n} and \ref{eq:disordered_n} we get the final results for the logarithmic negativity: 
+
+\begin{equation}\label{eq:disordered_logneg}
+	\langle \mathcal{E}_{A_1: A_2} \rangle = \frac{\ln 2}{6} \ln \left(\frac{\ell_1 \ell_2}{\ell_1+\ell_2}\right)
+\end{equation}
+
+
+To verify this numerically, we calculate the logarithmic negativity of the one dimensional XXX chain as in \cite{paola2016} via the numerical SDRG method. Each subsystem is of length $l$ and are extended in increments of $10$ for every disorder realisation. The simulations are for the adjoint case, i.e. $r = 0$. We run our analysis on systems of $L = 1000$ and $L = 2000$ for $50, 000$ disorder realisations in the OBC and PBC cases. The results can be seen in figure \ref{fig:baseline_negativity}. In particular we have plotted the shifted negativity as defined in \cite{paola2016}:
+
+\begin{equation}\label{eq:shifted negativity}
+\mathcal{E}_{A_{1}: A_{2}}^{s}=\mathcal{E}_{A_{1}: A_{2}}-\frac{\ln 2}{6} \ln L
+\end{equation}
+
+such that simulations for different $L$ collapse onto the same curve. Furthermore, for the periodic case we can fit a more accurate adjusted curve as reported in \cite{paola2018}:
+
+\begin{equation}
+\mathcal{E}_{A_1: A_2}^s \simeq \frac{\ln 2}{6} \ln \frac{Y_c^2(\pi \ell / L)}{Y_c(2 \pi \ell / L)}+k
+\end{equation}
+
+which is an excellent fit for the periodic chain. For the open chain, we use equation \ref{eq:disordered_logneg}, which is a good fit for $\ell/L << 1$. 
+
+%In both cases (entanglement entropy and logarithmic negativity), it can be seen that the entanglement scales with a logarithmic correction to the area law for $l < L/2$. Beyond this point the finite size effects begin to dominate and we see the logarithmic negativity increase sharply, in line with what is reported in \cite{paola2018}. 
+
+\begin{figure}
+     \centering
+     \begin{subfigure}[b]{0.49\textwidth}
+   \centering
+    \includegraphics[width=\textwidth]{../data/imgs/baseline_negativity_plot_pbc}
+    \caption{Shifted logarithmic negativity as a function of $l/L$ for the for $XXX$ chain, $\delta = 1$, periodic boundary conditions.}
+    \label{fig:baseline_negativity_pbc}
+\end{subfigure}%
+     \hfill
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+    \includegraphics[width=\textwidth]{../data/imgs/baseline_negativity_plot_obc}
+    \caption{Shifted logarithmic negativity as a function of $l/L$ for the for $XXX$ chain, $\delta = 1$, open boundary conditions.}
+    \label{fig:baseline_negativity_obc}
+     \end{subfigure}
+            \caption{Shifted logarithmic negativity, recalculated from \cite{paola2016}. In both figures, we measure the logarithmic negativity of two adjacent subsystems of length $l$ in the XXX chain. Each simulation is run for $50,000$ trials. For implementation details, see section \ref{subsec:baseline_negativity}. \ref{fig:baseline_negativity_pbc}: shifted logarithmic negativity of the periodic chain with the subsystem length $l$. \ref{fig:baseline_negativity_obc}: shifted logarithmic negativity of the open chain with the subsystem length $l$.}
+        \label{fig:baseline_negativity}
+\end{figure}
+
+To summarise the preceding sections, we have verified that for disordered models, both entanglement entropy and logarithmic negativity scale logarithmically. In the following section we will review the strongly inhomogeneous `randbow chain'. 

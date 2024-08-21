@@ -1,0 +1,138 @@
+% !TEX root = ../main.tex
+
+\section{Power-Law Spin Chains}\label{sec:powerbow_results}
+In \cite{Vitagliano2010}, it is mentioned that the couplings must decay quickly for the rainbow chain to be enforced. In particular they suggest that: 
+
+\begin{equation}
+J_{i}=\mathcal{E}^{\alpha(i)}
+\end{equation}
+
+where $\alpha(i)$ is monotonically decreasing. To explore how sensitive the scaling of entanglement is to the speed of this decay, we consider a new power-law spin chain with couplings given by: 
+
+%\footnote{In \cite{Vitagliano2010} they say `$\alpha(i)$ is a function that is monotonically increasing' but this would not given the desired result, as couplings would increase exponentially from the chain centre!}
+\begin{equation}\label{eq:powerbow_couplings}
+J_{i} \equiv K_{i} \times \begin{cases} 2, & i=0 \\ |i|^{-\alpha}, & |i|>0\end{cases}
+\end{equation}
+
+In the case where $i = 0$, i.e. when we are determining the central coupling, we have chosen $2$ as the second factor to ensure that the total function $F(i)$ (see equation \ref{eq:general_coupling_form}) is peaked at $i$. 
+
+%In the following sections, we discuss the analytic expectations for the scaling of the entanglement entropy and the logarithmic negativity in the case of the power-law couplings.
+
+\subsection{Analytic Results	}\label{subsec:powerbow_analytical_results}
+In \cite{paola2018}, it is possible to derive analytic expectations for the randbow chain only in the strongly inhomogeneous limit $h \to \infty$ (see in particular section VI.A). This is because only in the limit (and with symmetric $J_i$) can we be sure that the central bond will always be eliminated first and that the elimination process will be symmetric with respect to the chain.
+
+Unfortunately, for the power-law spin chain, we cannot guarantee that the central bond will be eliminated first, nor that the process will be symmetric. The reason is that the effect of the power-law component is not enough, relative to the effect of the $\mathcal{O}(1)$ disorder factor, to rapidly reduce the consecutive couplings. Given that, as discussed in section \ref{subsec:sdrg_proc}, the elimination rule always reduces the energy scale, the couplings around the elimination site must be small enough to still be smaller than the new $J^\prime$ coupling. In the power-law spin chain, this cannot be guaranteed to be the case.
+
+As such, we will investigate the empirical scaling of the entanglement entropy and logarithmic negativity in these power-law spin chains via numerical SDRG in sections \ref{subsec:powerbow_sdrg} and \ref{subsec:powerbow_negativity}. Lastly, in section \ref{subsec:powerbow_hypotheses}, we will explore some possible explanations for our findings.
+
+\subsection{Entanglement Entropy: SDRG and exact results}\label{subsec:powerbow_sdrg}
+We start by calculating the scaling of the entanglement entropy of the open $XX$ power-law spin chain with the numerical SDRG method for $L = 1000$ and $L = 2000$. We use $\delta = 1$ in all of these simulations. We run all of the simulations for $50,000$ disorder realisations and the results are shown in figure \ref{fig:powerbow_entropy}. 
+
+In both figures, we can see that the entanglement entropy scales similarly to the simple disordered model. For low $l$ the entanglement increases quickly, which suggests that the rainbow phase does survive for at least the first few eliminations. After the initial phase, the scaling becomes closer to the logarithmic scaling seen the in disordered model. However, we notice that the most inhomogeneous situation ($\alpha = 10$) does not correspond to the most entangled situation, in constrast to the randbow chain. This suggests that the effect of $\alpha$ in the power-law spin chain is not as simple as the effect of $h$ in the randbow spin chain. Lastly, we observe some finite size effects for $l / L \approx 1/2$. We have not attempted to fit any of the analytical curves from the simple disordered model due to the very different low $l$ region.
+%Furthermore, we notice that for larger values of $\alpha$, the entanglement entropy is generally larger. This pattern is similar to that of the randbow model, where for stronger inhomogeneity, the rainbow regions should be more stable and they are the regions that contribute to the entanglement entropy. 
+
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{\textwidth}
+       \centering
+    \includegraphics[width=0.8\textwidth]{../data/imgs/powerbow_entropy_1000}
+    \caption{Entanglement entropy of the $XX$ power-law spin chain via SDRG for $L = 1000$, varying $\alpha$, OBC. Notice that the entanglement scales similarly to the simple disordered model.}
+    \label{fig:powerbow_entropy_1000}
+   
+    \end{subfigure}%
+     \hfill
+     \begin{subfigure}[b]{\textwidth}
+         \centering
+    \includegraphics[width=0.8\textwidth]{../data/imgs/powerbow_entropy_2000}
+    \caption{Entanglement entropy of the $XX$ power-law spin chain via SDRG for $L = 2000$, varying $\alpha$, OBC. Notice that the entanglement scales similarly to the simple disordered model.}
+    \label{fig:powerbow_entropy_2000}
+
+         \end{subfigure}
+            \caption{Entanglement entropy for the open $XX$ power-law spin chain, calculated via the SDRG method for $L = 1000$ and $2000$. In both figures, we calculated the entropy of a subsystem $A$ over $50,000$ disorder realisations. For each system size we ran the simulation with a different parameter $\alpha$ and with $\delta = 1$. Figure \ref{fig:powerbow_entropy_1000}: $L = 1000$. Figure \ref{fig:powerbow_entropy_2000}: $L = 2000$.}
+        \label{fig:powerbow_entropy}
+\end{figure}
+
+%To determine whether it was possible to force a volume law scaling in the power-law model, we calculated entanglement entropy for the $L = 2000$ $XX$ chain for very high values of $\alpha$. Our results are shown in figure \ref{fig:powerbow_high_h}. We observe that as $\alpha$ becomes larger, the scaling of the entanglement entropy does become linear but with a coefficient much lower than would be expected for a rainbow phase. For example, in a subsystem of length $750$ we would expect an entanglement entropy of $\ln2 * 10 \approx 500$, but instead we see an entanglement entropy of $1.5$ when $\alpha = 500$ and $l = 750$. This suggests that we still do not well understand this power-law spin chain.
+
+
+%\begin{figure}[h]
+%    \centering
+%    \includegraphics[width=0.8\textwidth]{../data/imgs/powerbow_entropy_strong_h_2000}
+%    \caption{Entanglement entropy of the strong inhomogeneous limit of the open $XX$ power-law spin chain, calculated with the SDRG method over $50,000$ disorder realisations with $\delta = 1$. For each simulation we vary the $\alpha$. The system length is $L = 2000$. Notice the more linear but lower entanglement entropy for high $\alpha$.}
+%    \label{fig:powerbow_entropy_exact}
+%\end{figure}
+
+
+Furthermore, we measure the entanglement entropy via the exact solution. Over $1000$ disorder realisations, we calculate the entanglement entropy of the $XX$ power-law spin chain for an open chain of length $100$. Our results are shown in figure \ref{fig:powerbow_entropy_exact}. This is a close match to the low $l$ pattern observed in figures \ref{fig:powerbow_entropy_1000} and \ref{fig:powerbow_entropy_2000}. Interestingly, we observe a strong data collapse onto the ratio $\alpha / \delta$ that is not present in the SDRG numerics. Again, we have not fitted any predictions from the disordered model as the scaling is not exactly logarithmic. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../data/imgs/exact_powerbow_solve}
+    \caption{Entanglement entropy of the open $XX$ power-law spin chain, calculated with the exact solution over $1,000$ disorder realisations with $\delta = 1$. For each simulation we vary $\alpha$ and $\delta = 1$. The system length is $L = 100$.}
+    \label{fig:powerbow_entropy_exact}
+\end{figure}
+
+
+\subsection{Logarithmic Negativity Scaling: SDRG}\label{subsec:powerbow_negativity}
+In this section, we look at the logarithmic negativity of the power-law spin chain. Specifically we measure the logarithmic negativity of the open $XX$ and $XXX$ power-law spin chains for $L = 1000$ and $L = 2000$. We run each simulation for $50,000$ disorder realisations, and our results are shown in \ref{fig:powerbow_negativity_scaling}.
+
+For both values of $L$, we observe that the scaling appears very similar to the simple disordered chain. For low $l/L$ the scaling appears logarithmic before increasing as we approach half of the chain. Interestingly, the curve for $L = 2000$ is higher in both the $XX$ and the $XXX$ simulations than the $L = 1000$ curve. This may be explained by the presence of some persistent rainbow regions even in the power-law model: half of the $L = 2000$ rainbow chain will contain more singlet links between the two subsystems than a subsystem of the same relative size for $L = 1000$.
+
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{0.8\textwidth}
+   \centering
+    \includegraphics[width=\textwidth]{../data/imgs/powerbow_central_neg_obc_XX}
+    \caption{Scaling of the logarithmic negativity in the power-law spin chain, XX, OBC}
+    \label{fig:powerbow_negativity_XX}
+    \end{subfigure}%
+     \hfill
+     \begin{subfigure}[b]{0.8\textwidth}
+         \centering
+   \includegraphics[width=\textwidth]{../data/imgs/powerbow_central_neg_obc_XXY}
+    \caption{Scaling of the logarithmic negativity in the power-law spin chain, XXX, OBC}
+    \label{fig:powerbow_negativity_XXX}
+
+         \end{subfigure}
+            \caption{Scaling of the logarithmic negativity of the open power-law spin chain. In each figure we calculate the negativity over $50,000$ disorder realisations whilst keeping $\alpha =1, \delta = 1$. \ref{fig:powerbow_negativity_XX}: logarithmic negativity for the $XX$ chain. \ref{fig:powerbow_negativity_XXX}: logarithmic negativity for the $XXX$ chain. Notice that in each subfigure, the $L = 2000$ curve is shifted upwards relative to the $L = 1000$ curve.}
+        \label{fig:powerbow_negativity_scaling}
+\end{figure}
+
+Finally, we calculate the scaling of the logarithmic negativity for a varying interval $r$ between two subsystems, in a manner identical to that discussed in \ref{subsec:neg_sdrg_results}. Our results for the open $XX$ and $XXX$ chains with disorder $\delta = 1$ are reported in figure \ref{fig:powerbow_negativity_scaling_r}. We observe that the logarithmic negativity decays much more quickly than in the randbow chain, which we might expect given the relative instability of the rainbow regions. We do not observe the data collapse shown in figure \ref{fig:powerbow_negativity_XX_vary_r} for the non-interacting randbow chain, which again suggests the the system behaviour is qualitatively different.
+
+
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{0.8\textwidth}
+   \centering
+    \includegraphics[width=\textwidth]{../data/imgs/powerbow_central_neg_obc_XX_vary_r}
+    \caption{Logarithmic negativity in the power-law spin chain with varying $r$, XX, OBC. Notice in this case that there is a data collapse onto the ratio $\alpha / \delta$.}
+    \label{fig:powerbow_negativity_XX_vary_r}
+    \end{subfigure}%
+     \hfill
+     \begin{subfigure}[b]{0.8\textwidth}
+         \centering
+   \includegraphics[width=\textwidth]{../data/imgs/powerbow_central_neg_obc_XXY_vary_r}
+    \caption{Logarithmic negativity in the power-law spin chain with varying $r$, XXX ($\Delta = 1$), OBC. Notice in this case that there is no obvious data collapse.}
+    \label{fig:powerbow_negativity_XXX_vary_r}
+
+         \end{subfigure}
+            \caption{Scaling of the logarithmic negativity of the open $XX$ and $XXX$ power-law spin chains as $r$ is varied. We restrict $r$ to even intervals and the position is the same as per figure \ref{fig:randbow_negativity_scaling_vary_r}. $L =1000$ and $l = 100$ in both figures. We notice that the logarithmic negativity decays very quickly compared to the non-interacting randbow case, figure \ref{fig:randbow_central_neg_vary_r_XX}.}
+        \label{fig:powerbow_negativity_scaling_r}
+\end{figure}
+
+\subsection{Possible explanations}\label{subsec:powerbow_hypotheses}
+
+
+Whilst we cannot make any rigorous predictions about the entanglement scaling for the power-law spin chain, after observing the data we can make some conjectures about the qualitative behaviour. Given that we do not expect the couplings to decay quickly enough to maintain a rainbow phase, we might expect that the power-law spin chain will behave at least asymptotically as the simple disordered system. This suggests the following hypotheses:
+
+\begin{enumerate}
+	\item The entanglement entropy will scale in a manner similar to the simple disordered spin chain as seen in section \ref{subsec:baseline_entropy}. 
+	\item The logarithmic negativity will also scale in a manner similar to the simple disordered spin chain as seen in section \ref{subsec:baseline_negativity}. 
+\end{enumerate}
+
+Again, we do not have any rigorous proof of these hypotheses, but they do corroborate the simulation data well.
+
+
+
+

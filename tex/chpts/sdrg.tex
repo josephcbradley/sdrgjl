@@ -1,0 +1,198 @@
+% !TEX root = ../main.tex
+\section{The Random Inhomogeneous Chain and the SDRG method}\label{sec:sdrg}
+
+\subsection{The Random Inhomogeneous Chain}\label{subsec:model_def}
+The random inhomogeneous spin-$\frac{1}{2}$ $XXZ$ chain with $L$ spins and open boundary conditions (OBC) has the Hamiltonian:
+
+\begin{equation}\label{eq:model_hamiltonian}
+H =\sum_{i=1}^{L-1} J_{i}\left(S_{i}^{x} S_{i+1}^{x}+S_{i}^{y} S_{i+1}^{y}+\Delta S_{i}^{z} S_{i+1}^{z}\right)
+\end{equation}
+
+where $S_i^x =\frac{\hbar}{2} \sigma_x$ and $\sigma_i^x$ is a Pauli matrix acting on site $i$, $J_i$ is a coupling connecting site $i$ to $i + 1$, and $\Delta$ is an anisotropy parameter. In all cases we restrict ourselves to even numbers of spins, i.e. even $L$. For periodic boundary conditions (PBC) an additional term for $i = L$ is needed. With $\Delta = 1$ we have the $XXX$ chain and with $\Delta = 0$ we have the $XX$ chain. With the $XX$ chain the model is exactly solvable \cite{paola2016}. 
+
+Here we will give the most general form of the couplings:
+
+\begin{equation}\label{eq:general_coupling_form}
+	J_i = K_i \times F(i)
+\end{equation}
+
+where F is function that depends deterministically on $i$, and $K_i$ is a random variable with the following distribution: 
+
+\begin{equation}\label{eq:disorder_distribution}
+	P_{\delta}(J) \equiv \delta^{-1} J^{-1+1 / \delta}
+\end{equation}
+	
+Clearly as $\delta \to 0$ the distribution peaks at $1$ and taking $F(i) = 1$ we recover the clean spin chain. For $\delta \to 1$ we approach a uniform distribution on $[0, 1]$. As $\delta \to \infty$ we approach the infinite randomness fixed point (IRFP), which describes the asymptotic state of the distribution of $\{J_i\}$ under successive SDRG steps \cite{Fisher1994}. 
+
+%\subsection{Spin Chain Notation}\label{subsec:spin_chain_setup}
+In this report, we will frequently refer to a subsystem centred in a one dimensional chain. To make this clear, we present in figures \ref{fig:chain_diagram} and \ref{fig:disjoint_diagram} the two key subsystem scenarios. In figure \ref{fig:chain_diagram}, we show a single subsystem $A$ in the centre of the chain. Notice that the the subsystem $A$ starts with the right hand spin of the two spins connected by coupling $J_0$. Unless otherwise stated, subsystems will always start from the centre of the chain in this way. In figure \ref{fig:disjoint_diagram}, we show two disjoint subsystems $A_1$ and $A_2$, with a region $r$ separating them. We restrict ourselves to even $r$ in simulations. In the case of periodic boundary conditions, the bond extending from site $L$ will connect around into site $1$. In open boundary conditions, spin $L$ will have a bond $J_L = 0$ which eliminates that interaction from the system. 
+ 
+ %Throughout, we will use $J_i$ to refer to the $i$\textsuperscript{th} site as well as the bond immediately to the right of said bond. In ambiguous cases we will clarify things 
+ %The details of the setup will depend on the boundary conditions and the parity of the system length $L$ - in particular, whether $J_0$ is in the centre of the chain or to the right hand side of the central coupling. In figure \ref{fig:disjoint_diagram}, we show two disjoint subsystems separated by a region $r$, which will normally be restricted to even length. Again, the exact implementation will depend on the boundary conditions and the parity of the system's length.accordingly.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{diagrams/single_subsystem}	
+	\caption{A spin chain with the central bond labelled $J_0$. The subsystem $A$ is highlighted with the dashed line.}
+	\label{fig:chain_diagram}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{diagrams/disjoint_subsystems}	
+	\caption{A spin chain with a pair of disjoint subsystems, separated by a distance $r$. The subsystems $A_1$ and $A_2$ are highlighted with the dashed line.}
+	\label{fig:disjoint_diagram}
+\end{figure}
+
+
+
+\subsection{SDRG Literature Review}\label{subsec:sdrg_lit}
+Whilst in non-interacting cases, spin chain models are often exactly solvable, this is not the case in general. The RG approach to approximating complex systems (quantum and classical) came out of work with (Michael) Fisher and Wilson in the 1960s \cite{fisher_1998}. RG involves successively integrating out the high energy degrees of freedom in a model to approach an approximation of the system's groundstate. Each RG step $f$ maps the problem $H(J)$ to a new problem $f(H(J)) = H(J^\prime)$, with fewer degrees of freedom. Iterating this process will lead to a point where the transformation $f(H(J^\star)) = H(J^\star)$ is a fixed point. This is especially useful in complex models such as many bodied systems: the fixed point is simpler to find and analyse than the true solution, whilst capturing the relevant physical properties of the original model.
+
+%Typically, order parameters will diverge in a scale free manner, i.e. according to a power law, which gives rise to fluctuations with no specific scale. This scale invariance is difficult to capture with traditional mathematical methods, and hence the RG method has proven so useful. 
+
+% who showed that the simulational magnetisation of certain materials could be smooth even around the critical point, and that this was explainable by a degree of disorder.
+In this paper we will focus on disordered models, for which we use the strong disorder renormalisation group (SDRG). For a very thorough review, see \cite{Igloi2005} and \cite{Igloi2018}. The difference between SDRG and other forms of RG for spins chains is that SDRG renormalises space `in an inhomogeneous way in order to adapt better to the local disorder fluctuations' \cite{Igloi2005}. For disordered spin chains, each SDRG step changes the distribution of the remaining couplings $\{J\}$, as well as eliminating two spins, and the `flow' of the successive distributions $P(J) \rightarrow P(J^\prime)$ characterises the SDRG process. The fixed point of this distribution as it changes under SDRG steps is called the infinite randomness fixed point (IRFP). The key contribution was from Dasgupta, Ma, and Hu (\cite{dasgupta_ma}, \cite{dasgupta_ma_1980}) who defined the elimination rule that was generalised by (Daniel) Fisher \cite{Fisher1994}. Since then the SDRG procedure has been used to investigate a great variety of challenging disordered problems (\cite{bouchard_diffusion}, \cite{motrunich_1999}, \cite{monthus_polymers_2000}, \cite{refael2004}). 
+
+%The SDRG procedure is often used alongside matrix product states, and in particular to the density matrix renormalisation group (DMRG)\cite{white_DMRG}. For a thorough review, see \cite{schollwoeck_dmrg} and \cite{schollwoeck_2010}. A detailed discussion of the literature on DMRG is beyond the scope of this report, but it is worthwhile to point out that in \cite{paola2016}, the DMRG technique struggled to converge for large system size $L$, with significant errors relative to the exact solution (where exact solutions were available). For this reason we have not used the DMRG method in this report.
+	
+\subsection{SDRG Procedure}\label{subsec:sdrg_proc}
+We will summarise the SDRG procedure for the inhomogeneous spin chain following \cite{paola2016}. To begin each SDRG step, we identify the strongest coupling $J_M$ and consider the energy of this interaction $H_0$:
+
+\begin{equation}
+H_{0}=J_{M} \vec{S}_{l} \cdot \vec{S}_{r}
+\end{equation}
+
+The groundstate of this microsystem is: 
+
+\begin{equation}\label{eq:micro_groundstate}
+|s\rangle \equiv 2^{-1 / 2}\left(\left|\uparrow_{l} \downarrow_{r}\right\rangle-\left|\downarrow_{l} \uparrow_{r}\right\rangle\right)
+\end{equation}
+
+where $\{\uparrow, \downarrow\}$ are up and down basis vectors for the single spin Hilbert space. The two spin state vectors are generated by the tensor product, e.g. $\ket{\uparrow_l \downarrow_r} = \uparrow_l \otimes \downarrow_r$. Treating equation \ref{eq:micro_groundstate} as a perturbation\footnote{Details of the perturbation calculations can be found in \cite{paola2016} as well.}, we can calculate a new effective coupling between the spins $l - 1$ and $r + 1$:
+
+\begin{equation}
+J^{\prime}=\frac{J_{l} J_{r}}{(1 + \Delta) J_{M}}
+\end{equation}
+
+We remove the spins connected by $J_M$ and insert the coupling $J^\prime$ between $J_l$ and $J_r$. The removed spins are recorded in a list that will be the RSP result of the SDRG procedure. Repeating this process identifies a flow of couplings between steps:
+
+\begin{equation}\label{eq:sdrg_flow}
+\left(\cdots, J_{l}, J_{M}, J_{r}, \cdots\right)_{L} \rightarrow\left(\cdots, \frac{J_{l} J_{r}}{(1 + \Delta) J_{M}}, \cdots\right)_{L-2}
+\end{equation}
+
+Importantly, given that $J_M > J_{(l/r)}$, the new coupling $J^\prime$ is smaller than either, so the energy scale of the system is lowered. The process is then repeated until there are only two spins remaining, which become the final singlet. The RSP is a vector of $L \div 2$ singlets - calling this $\{\ket{s}_i\}$, the groundstate as approximated by the SDRG procedure is:
+
+\begin{equation}\label{eq:groundstate}
+	\ket{GS} = \bigotimes_{i = 1}^{L \div 2} \ket{s}_i
+\end{equation} 
+
+This approximation of the true groundstate via the SDRG procedure is the random singlet phase (RSP) as introduced in the introduction (section \ref{subsec:area_law_violations}). This is the first of two `outputs' of SDRG, the second being the flow of couplings across subsequent SDRG steps. It is this flow of couplings the characterises the progression from the initial distribution $P(J)$ to the the IRFP.
+
+%\subsection{SDRG Flow}\label{subsec:sdrg_flow}
+The distribution of couplings can be given in terms of the SDRG step $m$, following \cite{Fisher1994}. We introduce the logarithmic variables:
+
+\begin{equation}\label{eq:flow_varibles}
+\beta_{i}^{(m)} \equiv \ln \frac{J_{M}^{(m)}}{J_{i}^{(m)}}, \quad \Gamma^{(m)} \equiv \ln \frac{J_{M}^{(0)}}{J_{M}^{(m)}}
+\end{equation}
+
+where $J_M^{(m)}$ is the strongest coupling at the SDRG step $m$. The flow equation to be solved is given by \cite{Fisher1994} as:
+
+\begin{equation}\label{eq:flow_equation}
+\frac{d P}{d \Gamma}=\frac{\partial P(\beta)}{\partial \beta} P(0) \times \int_{0}^{\infty} d \beta_{1} \int_{0}^{\infty} d \beta_{2} \delta\left(\beta-\beta_{1}-\beta_{2}\right) P\left(\beta_{1}\right) P\left(\beta_{2}\right)
+\end{equation}
+
+which is solved with the ansatz:
+
+\begin{equation}
+P^{*}(\beta)=\frac{1}{\Gamma} \exp \left(-\frac{\beta}{\Gamma}\right)
+\end{equation}
+
+Equation \ref{eq:flow_equation} is the IRFP and is an attractor for any initial distribution of the couplings.
+%not just the distribution described in equation \ref{eq:disorder_distribution}.
+
+As an initial test of the numerical SDRG procedure we have implemented, we track the flow of the logarithmic couplings in figure \ref{fig:irfp_flow}. This is a close reproduction of a similar figure in \cite{paola2016} and shows that the SDRG process is indeed working correctly.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../data/imgs/IRFP_plot}
+    \caption{SDRG flow for $L = 50,000$ spins in the disordered XXX chain with $\delta = 1$. The main plot shows the $\beta$ distribution of the remaining bonds at the $m$\textsuperscript{th} step of the SDRG process. Notice that over SDRG steps, the distribution approaches the IRFP. The inset plot shows subset of the $\beta$ distribution late into the SDRG process with the IRFP line overlayed. The data is an excellent fit to the analytic prediction.}
+    \label{fig:irfp_flow}
+\end{figure}
+
+%\subsection{Calculating Entanglement in the 1D Chain}\label{subsec:entropy_equations}
+% we can calculate the entanglement measures of a subsystem $A$ just by focusing on the singlet states that connect $A$ to its complement $A^\prime$. 
+
+\subsection{Algorithmic Implementation and Complexity}\label{sec:algorithm}
+We will briefly detail the SDRG algorithm we have implemented for this report. In studying disordered systems, we frequently need to take averages over disorder, i.e. many different realisations of the system in question. In many cases the number of trials must be very large for the required observables to converge - see \cite{paola_22} and \cite{paola2016} for examples of these issues. Thus an efficient and reliable algorithm is essential. 
+
+The key feature of our SDRG implementation is that it is almost memory static - that is, little or no extra memory is allocated in the computer every time a new disorder realisation is run. Rather, the existing memory used to hold data (e.g. bond strengths) is updated at the start of each realisation, and during the elimination process a `mask' vector is maintained that tracks which bonds are active and should be used in calculation. The one-off allocation of this mask vector is computationally very cheap compared to continually reallocating previous memory. An illustration of this approach can be seen in figure \ref{fig:data_mask} and a psuedo-code version of our implementation can be seen in table \ref{alg:sdrg}. 
+\begin{algorithm}
+\caption{SDRG algorithm}\label{alg:sdrg}
+\KwData{$\{J\}, L, \{(s_1, s_2)\}$}
+\KwResult{$\{(s_1, s_2)\}$}
+$m \gets 1$\;
+$active \gets \{T\}^L$\;
+$n\_active = sum(active)$ \tcp*{will be used to track the number of active spins}
+%\While{$n_active > 2$}{
+%  $J_m \gets max({\J_i\}$\;
+%  $J_l \gets J_{m - 1}$\;
+%  $J_r \gets J_{m + 1}$\;
+%}
+
+\While{$n\_active > 2$}{
+  $J_M \gets max\{(J_i\}$\;
+  $J_l \gets J_{M - 1}$\;
+  $J_r \gets J_{M + 1}$\;
+  $J^\prime \gets \frac{J_l J_l}{(1 + \Delta) J_M }$\;
+  $J_l = J^\prime$\;
+  $active_M \gets F$\;
+  $active_{M+1} \gets F$\;
+  $\{(s_1, s_2)\}_m \gets \{(M, M+1)\}$\;
+  $m \pluseq 1$\;
+  $n\_active = sum(active)$\;
+}
+$\{(s_1, s_2)\}_{L \div 2} \gets \{(J_1, J_2)\}$\;
+\Return $\{(s_1, s_2)\}$\;
+
+\end{algorithm}
+
+\begin{figure}
+	\centering
+	\includegraphics{diagrams/algo_diagram}
+	\caption{Diagram of the data masking procedure used to iteratively eliminate the bonds from the data vector. The approach is size stable so minimises the need for allocations during the procedure.}
+	\label{fig:data_mask}
+\end{figure}
+
+To give an estimate of the speed of this procedure, we benchmark the code for varying levels of machine precision and vary system lengths $L$. The results can be seen in figure \ref{fig:sdrg_performance}. The elimination procedure for a system of $L = 1000$ spins is on the order of four microseconds. This implies that upwards of $200,000$ SDRG eliminations can be calculated in one second.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{../data/imgs/sdrg_timings}
+	\caption{Benchmark results for our SDRG procedure. On the horizontal axis we measure the system length $L$, and on the vertical we report the median execution time for the complete SDRG procedure in microseconds. The execution time increases linearly in the system length for systems $L$ in the order of thousands, and there is only a small performance penalty for using quadruple precision floating point numbers (i.e. 128 bits).}
+	\label{fig:sdrg_performance}
+\end{figure}
+
+In practice, the analysis calculations slow down the `rate of realisations' considerably. To demonstrate this, we calculate the time taken to calculate the entanglement entropy $S$ over a system of size $L$ for $l \in [1, L \div 2]$ across $N$ disorder realisations, at 64 and 128-bit accuracy within the SDRG procedure. Our results are shown in figure \ref{fig:analysis_timing_benchmarks}. In general we observe roughly linear scaling in both $L$ and $N$. Calculating the entanglement entropy of a system of length $2000$ across $2000$ disorder realisations takes around 12 seconds, regardless of the floating point definition. This is acceptable for the immediate verification of results and could probably be improved upon considerably with refinements to the analysis code, and the refactoring of the code to work on distributed systems (e.g. industrial level high performance computers (HPCs)).
+
+\begin{figure}
+     \centering
+     \begin{subfigure}[b]{0.8\textwidth}
+   \centering
+    \includegraphics[width=\textwidth]{../data/imgs/bits_64_analysis_timings}
+    \caption{Heatmap of the execution time in seconds to calculate the entanglement entropy $S$ of system of length $L$ for $l \in [1, L \div 2]$ across $N$ disorder realisations at 64-bit accuracy. The colour represents the execution time in seconds.}
+    \label{fig:analysis_64bit_timings}
+\end{subfigure}%
+     \hfill
+     \begin{subfigure}[b]{0.8\textwidth}
+         \centering
+    \includegraphics[width=\textwidth]{../data/imgs/bits_128_analysis_timings}
+    \caption{Heatmap of the execution time in seconds to calculate the entanglement entropy $S$ of system of length $L$ for $l \in [1, L \div 2]$ across $N$ disorder realisations at 128-bit accuracy. The colour represents the execution time in seconds.}
+    \label{fig:analysis_128bit_timings}
+     \end{subfigure}
+            \caption{Heatmap of the execution time in seconds to calculate the entanglement entropy $S$ of system of length $L$ for $l \in [1, L \div 2]$ across $N$ disorder realisations at 64- and 128-bit accuracy. The colour represents the execution time in seconds. Notice that the two heatmaps are almost identical to the human eye, which suggests that the floating point size is not a bottleneck for this implementation. Figure \ref{fig:analysis_64bit_timings}: timings for 64-bit accuracy in the SDRG procedure. Figure \ref{fig:analysis_128bit_timings}: timings for 128-bit accuracy in the SDRG procedure.}
+        \label{fig:analysis_timing_benchmarks}
+\end{figure}
+
+
+

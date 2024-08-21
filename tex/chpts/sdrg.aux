@@ -1,0 +1,186 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {3}The Random Inhomogeneous Chain and the SDRG method}{7}{section.3}\protected@file@percent }
+\newlabel{sec:sdrg}{{3}{7}{The Random Inhomogeneous Chain and the SDRG method}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}The Random Inhomogeneous Chain}{7}{subsection.3.1}\protected@file@percent }
+\newlabel{subsec:model_def}{{3.1}{7}{The Random Inhomogeneous Chain}{subsection.3.1}{}}
+\newlabel{eq:model_hamiltonian}{{3.1}{7}{The Random Inhomogeneous Chain}{equation.3.1}{}}
+\newlabel{eq:general_coupling_form}{{3.2}{7}{The Random Inhomogeneous Chain}{equation.3.2}{}}
+\newlabel{eq:disorder_distribution}{{3.3}{7}{The Random Inhomogeneous Chain}{equation.3.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces A spin chain with the central bond labelled $J_0$. The subsystem $A$ is highlighted with the dashed line.\relax }}{7}{figure.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:chain_diagram}{{3.1}{7}{A spin chain with the central bond labelled $J_0$. The subsystem $A$ is highlighted with the dashed line.\relax }{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}SDRG Literature Review}{7}{subsection.3.2}\protected@file@percent }
+\newlabel{subsec:sdrg_lit}{{3.2}{7}{SDRG Literature Review}{subsection.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces A spin chain with a pair of disjoint subsystems, separated by a distance $r$. The subsystems $A_1$ and $A_2$ are highlighted with the dashed line.\relax }}{8}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:disjoint_diagram}{{3.2}{8}{A spin chain with a pair of disjoint subsystems, separated by a distance $r$. The subsystems $A_1$ and $A_2$ are highlighted with the dashed line.\relax }{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}SDRG Procedure}{8}{subsection.3.3}\protected@file@percent }
+\newlabel{subsec:sdrg_proc}{{3.3}{8}{SDRG Procedure}{subsection.3.3}{}}
+\newlabel{eq:micro_groundstate}{{3.5}{8}{SDRG Procedure}{equation.3.5}{}}
+\newlabel{eq:sdrg_flow}{{3.7}{8}{SDRG Procedure}{equation.3.7}{}}
+\newlabel{eq:groundstate}{{3.8}{9}{SDRG Procedure}{equation.3.8}{}}
+\newlabel{eq:flow_varibles}{{3.9}{9}{SDRG Procedure}{equation.3.9}{}}
+\newlabel{eq:flow_equation}{{3.10}{9}{SDRG Procedure}{equation.3.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces SDRG flow for $L = 50,000$ spins in the disordered XXX chain with $\delta = 1$. The main plot shows the $\beta $ distribution of the remaining bonds at the $m$\textsuperscript  {th} step of the SDRG process. Notice that over SDRG steps, the distribution approaches the IRFP. The inset plot shows subset of the $\beta $ distribution late into the SDRG process with the IRFP line overlayed. The data is an excellent fit to the analytic prediction.\relax }}{9}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:irfp_flow}{{3.3}{9}{SDRG flow for $L = 50,000$ spins in the disordered XXX chain with $\delta = 1$. The main plot shows the $\beta $ distribution of the remaining bonds at the $m$\textsuperscript {th} step of the SDRG process. Notice that over SDRG steps, the distribution approaches the IRFP. The inset plot shows subset of the $\beta $ distribution late into the SDRG process with the IRFP line overlayed. The data is an excellent fit to the analytic prediction.\relax }{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagram of the data masking procedure used to iteratively eliminate the bonds from the data vector. The approach is size stable so minimises the need for allocations during the procedure.\relax }}{10}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:data_mask}{{3.4}{10}{Diagram of the data masking procedure used to iteratively eliminate the bonds from the data vector. The approach is size stable so minimises the need for allocations during the procedure.\relax }{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Algorithmic Implementation and Complexity}{10}{subsection.3.4}\protected@file@percent }
+\newlabel{sec:algorithm}{{3.4}{10}{Algorithmic Implementation and Complexity}{subsection.3.4}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces SDRG algorithm\relax }}{10}{algocf.1}\protected@file@percent }
+\newlabel{alg:sdrg}{{1}{10}{Algorithmic Implementation and Complexity}{algocf.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Benchmark results for our SDRG procedure. On the horizontal axis we measure the system length $L$, and on the vertical we report the median execution time for the complete SDRG procedure in microseconds. The execution time increases linearly in the system length for systems $L$ in the order of thousands, and there is only a small performance penalty for using quadruple precision floating point numbers (i.e. 128 bits).\relax }}{11}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:sdrg_performance}{{3.5}{11}{Benchmark results for our SDRG procedure. On the horizontal axis we measure the system length $L$, and on the vertical we report the median execution time for the complete SDRG procedure in microseconds. The execution time increases linearly in the system length for systems $L$ in the order of thousands, and there is only a small performance penalty for using quadruple precision floating point numbers (i.e. 128 bits).\relax }{figure.caption.7}{}}
+\newlabel{fig:analysis_64bit_timings}{{3.6a}{12}{Heatmap of the execution time in seconds to calculate the entanglement entropy $S$ of system of length $L$ for $l \in [1, L \div 2]$ across $N$ disorder realisations at 64-bit accuracy. The colour represents the execution time in seconds.\relax }{figure.caption.8}{}}
+\newlabel{sub@fig:analysis_64bit_timings}{{a}{12}{Heatmap of the execution time in seconds to calculate the entanglement entropy $S$ of system of length $L$ for $l \in [1, L \div 2]$ across $N$ disorder realisations at 64-bit accuracy. The colour represents the execution time in seconds.\relax }{figure.caption.8}{}}
+\newlabel{fig:analysis_128bit_timings}{{3.6b}{12}{Heatmap of the execution time in seconds to calculate the entanglement entropy $S$ of system of length $L$ for $l \in [1, L \div 2]$ across $N$ disorder realisations at 128-bit accuracy. The colour represents the execution time in seconds.\relax }{figure.caption.8}{}}
+\newlabel{sub@fig:analysis_128bit_timings}{{b}{12}{Heatmap of the execution time in seconds to calculate the entanglement entropy $S$ of system of length $L$ for $l \in [1, L \div 2]$ across $N$ disorder realisations at 128-bit accuracy. The colour represents the execution time in seconds.\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Heatmap of the execution time in seconds to calculate the entanglement entropy $S$ of system of length $L$ for $l \in [1, L \div 2]$ across $N$ disorder realisations at 64- and 128-bit accuracy. The colour represents the execution time in seconds. Notice that the two heatmaps are almost identical to the human eye, which suggests that the floating point size is not a bottleneck for this implementation. Figure \ref  {fig:analysis_64bit_timings}: timings for 64-bit accuracy in the SDRG procedure. Figure \ref  {fig:analysis_128bit_timings}: timings for 128-bit accuracy in the SDRG procedure.\relax }}{12}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:analysis_timing_benchmarks}{{3.6}{12}{Heatmap of the execution time in seconds to calculate the entanglement entropy $S$ of system of length $L$ for $l \in [1, L \div 2]$ across $N$ disorder realisations at 64- and 128-bit accuracy. The colour represents the execution time in seconds. Notice that the two heatmaps are almost identical to the human eye, which suggests that the floating point size is not a bottleneck for this implementation. Figure \ref {fig:analysis_64bit_timings}: timings for 64-bit accuracy in the SDRG procedure. Figure \ref {fig:analysis_128bit_timings}: timings for 128-bit accuracy in the SDRG procedure.\relax }{figure.caption.8}{}}
+\@setckpt{chpts/sdrg}{
+\setcounter{page}{13}
+\setcounter{equation}{11}
+\setcounter{enumi}{3}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{2}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{section}{3}
+\setcounter{subsection}{4}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{6}
+\setcounter{table}{0}
+\setcounter{Item}{3}
+\setcounter{Hfootnote}{2}
+\setcounter{bookmark@seq@number}{10}
+\setcounter{caption@flags}{6}
+\setcounter{continuedfloat}{0}
+\setcounter{subfigure}{2}
+\setcounter{subtable}{0}
+\setcounter{parentequation}{0}
+\setcounter{tabx@nest}{0}
+\setcounter{listtotal}{0}
+\setcounter{listcount}{0}
+\setcounter{liststart}{0}
+\setcounter{liststop}{0}
+\setcounter{citecount}{0}
+\setcounter{citetotal}{0}
+\setcounter{multicitecount}{0}
+\setcounter{multicitetotal}{0}
+\setcounter{instcount}{57}
+\setcounter{maxnames}{3}
+\setcounter{minnames}{1}
+\setcounter{maxitems}{3}
+\setcounter{minitems}{1}
+\setcounter{citecounter}{0}
+\setcounter{maxcitecounter}{0}
+\setcounter{savedcitecounter}{0}
+\setcounter{uniquelist}{0}
+\setcounter{uniquename}{0}
+\setcounter{refsection}{0}
+\setcounter{refsegment}{0}
+\setcounter{maxextratitle}{0}
+\setcounter{maxextratitleyear}{0}
+\setcounter{maxextraname}{2}
+\setcounter{maxextradate}{0}
+\setcounter{maxextraalpha}{0}
+\setcounter{abbrvpenalty}{50}
+\setcounter{highnamepenalty}{50}
+\setcounter{lownamepenalty}{25}
+\setcounter{maxparens}{3}
+\setcounter{parenlevel}{0}
+\setcounter{blx@maxsection}{0}
+\setcounter{blx@maxsegment@0}{0}
+\setcounter{blx@sectionciteorder@0}{57}
+\setcounter{mincomprange}{10}
+\setcounter{maxcomprange}{100000}
+\setcounter{mincompwidth}{1}
+\setcounter{afterword}{0}
+\setcounter{savedafterword}{0}
+\setcounter{annotator}{0}
+\setcounter{savedannotator}{0}
+\setcounter{author}{0}
+\setcounter{savedauthor}{0}
+\setcounter{bookauthor}{0}
+\setcounter{savedbookauthor}{0}
+\setcounter{commentator}{0}
+\setcounter{savedcommentator}{0}
+\setcounter{editor}{0}
+\setcounter{savededitor}{0}
+\setcounter{editora}{0}
+\setcounter{savededitora}{0}
+\setcounter{editorb}{0}
+\setcounter{savededitorb}{0}
+\setcounter{editorc}{0}
+\setcounter{savededitorc}{0}
+\setcounter{foreword}{0}
+\setcounter{savedforeword}{0}
+\setcounter{holder}{0}
+\setcounter{savedholder}{0}
+\setcounter{introduction}{0}
+\setcounter{savedintroduction}{0}
+\setcounter{namea}{0}
+\setcounter{savednamea}{0}
+\setcounter{nameb}{0}
+\setcounter{savednameb}{0}
+\setcounter{namec}{0}
+\setcounter{savednamec}{0}
+\setcounter{translator}{0}
+\setcounter{savedtranslator}{0}
+\setcounter{shortauthor}{0}
+\setcounter{savedshortauthor}{0}
+\setcounter{shorteditor}{0}
+\setcounter{savedshorteditor}{0}
+\setcounter{labelname}{0}
+\setcounter{savedlabelname}{0}
+\setcounter{institution}{0}
+\setcounter{savedinstitution}{0}
+\setcounter{lista}{0}
+\setcounter{savedlista}{0}
+\setcounter{listb}{0}
+\setcounter{savedlistb}{0}
+\setcounter{listc}{0}
+\setcounter{savedlistc}{0}
+\setcounter{listd}{0}
+\setcounter{savedlistd}{0}
+\setcounter{liste}{0}
+\setcounter{savedliste}{0}
+\setcounter{listf}{0}
+\setcounter{savedlistf}{0}
+\setcounter{location}{0}
+\setcounter{savedlocation}{0}
+\setcounter{organization}{0}
+\setcounter{savedorganization}{0}
+\setcounter{origlocation}{0}
+\setcounter{savedoriglocation}{0}
+\setcounter{origpublisher}{0}
+\setcounter{savedorigpublisher}{0}
+\setcounter{publisher}{0}
+\setcounter{savedpublisher}{0}
+\setcounter{language}{0}
+\setcounter{savedlanguage}{0}
+\setcounter{origlanguage}{0}
+\setcounter{savedoriglanguage}{0}
+\setcounter{pageref}{0}
+\setcounter{savedpageref}{0}
+\setcounter{textcitecount}{0}
+\setcounter{textcitetotal}{0}
+\setcounter{textcitemaxnames}{0}
+\setcounter{biburlbigbreakpenalty}{100}
+\setcounter{biburlbreakpenalty}{200}
+\setcounter{biburlnumpenalty}{0}
+\setcounter{biburlucpenalty}{0}
+\setcounter{biburllcpenalty}{0}
+\setcounter{smartand}{1}
+\setcounter{bbx:relatedcount}{0}
+\setcounter{bbx:relatedtotal}{0}
+\setcounter{AlgoLine}{0}
+\setcounter{algocfline}{1}
+\setcounter{algocfproc}{1}
+\setcounter{algocf}{1}
+\setcounter{section@level}{2}
+}

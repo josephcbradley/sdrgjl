@@ -1,0 +1,161 @@
+\section{Randbow Chain: Existing Results}\label{sec:randbow_old_results}
+\subsection{Entanglement Entropy: Analytic Results}\label{sec:randbow_old_results}
+In this section we move on to reproducing the results of \cite{paola2018}, which involves modifying the couplings of the random chain to include an exponentially decaying term:
+
+\begin{equation}\label{eq:randbow_couplings}
+J_{i} \equiv K_{i} \times \begin{cases}e^{-h / 2}, & i=0 \\ e^{-h|i|}, & |i|>0\end{cases}
+\end{equation}
+
+where the $K_i$ terms are randomly distributed coefficients as before. This is known as the `randbow chain'. The significance of these random couplings is to enforce a \textit{rainbow} phase for $\lim h \to \infty$ \cite{Vitagliano2010} - see figure \ref{fig:rainbow_chain} for an illustration - which brings about a volume law scaling for the entanglement entropy. This is because for any subsystem $l$, the subsystem of size $l + 1$ must contain another singlet link. For example, if our subsystem $A$ starts as $A = \{J_1\}$ and we extend it to $A = \{J_1, J_2\}$, these two subsystems have $1$ and $2$ singlet links in them respectively, and this holds for every other subsystem up to the maximum for $l = L \div 2$. Note that if we position the subsystem centrally in the chain, then the entanglement entropy will tend to zero for the strong $h$ phase as we only have  `complete singlets' in our subsystem (see \cite{Vitagliano2010} for an illustration, figure 2(b)).
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{diagrams/rainbow_chain}	
+	\caption{A rainbow chain as introduced in \cite{Vitagliano2010} and \cite{paola2018}. The central coupling $J_0$ is by definition the strongest coupling for the clean chain or for sufficiently large $h$, so it will always be eliminated first. The black lines represent the couplings $\{J_i\}$, whereas the blue lines represent the singlet links. Note that for the rainbow chain to make sense, we must have an odd number of links and an even number of spins in the open chain, hence the asymmetry in the diagram.}
+	\label{fig:rainbow_chain}
+\end{figure}
+
+For the $h = 0$ phase we recover the random chain and the results from section \ref{subsec:baseline_entropy} hold. However, for intermediate $h$ the volume law does not hold. To derive the correct scaling of the entanglement entropy in this `randbow' phase, we follow \cite{paola2018} and perform some intermediate analysis of the RSPs produced by SDRG in these conditions. We consider the probability distributions of the sizes of the `rainbow' regions where spins are linked consecutively to spins more than one spin away, and `bubble' regions where spins are linked to one of their adjacent neighbours. In any given realisation of the randbow chain, there will be continuous subregions of rainbow links and continuous subregions of bubbles (see figure \ref{fig:bubble_demonstration} for an example). 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{diagrams/bubble_demonstration}	
+	\caption{A demonstration of the bubble and rainbow subregions as named in \cite{paola2018}. The first two spins represent a randbow region of $l = 2$, and the second four spins represent a bubble region of $l = 4$.}
+	\label{fig:bubble_demonstration}
+\end{figure}
+
+We denote $P_r(l)$ the probability mass of seeing a rainbow subregion of length $l$, and similarly $P_b(l)$ for the probability of a bubble subregion of length $l$. We calculate these via SDRG simulation and report the results in figures \ref{fig:p_r_distribution} and \ref{fig:p_b_distribution} respectively, both with disorder parameter $\delta = 1$ and for a system size $L = 1000$ in the $XX$ chain. We observe that for the rainbow distribution $P_r$, the probability of a region of length $l$ decays exponentially in $l$, and that the rate of decay depends on $h$. However, for the $P_b$ distribution, we observe a much slower power law decay, implying that there is no characteristic size of a bubble region, and furthermore that this does not depend on $h$ at a scale visible on the plot. 
+
+\begin{figure}[h!]
+     \centering
+     \begin{subfigure}[b]{0.8\textwidth}
+   \includegraphics[width=\textwidth]{../data/imgs/p_r_distribution}
+    \caption{Probability density function $P_r(l)$ of the lengths of rainbow subsystems. The data were collected by averaging over $10,000$ disorder realisations for $h = 10$ and $h = 7$ in the open $XX$ chain, solved with the SDRG method. Notice the logarithmic scale on the y-axis only, suggesting an exponential decay.}
+    \label{fig:p_r_distribution}
+    \end{subfigure}%
+   \hfill
+     \begin{subfigure}[b]{0.8\textwidth}
+     \centering
+    \includegraphics[width=\textwidth]{../data/imgs/p_b_distribution}
+    \caption{Probability density function $P_b(l)$ of the lengths of bubble subsystems. The data were collected by averaging over $10,000$ disorder realisations for $h = 10$ and $h = 7$ in the open $XX$ chain, solved with the SDRG method. Notice the logarithmic scale on both axes, suggesting a power law decay.}
+    \label{fig:p_b_distribution}
+        \end{subfigure}
+           \caption{Subregion analysis for the $XX$ chain of $L = 1000$. In both figures, $\delta = 1$. \ref{fig:p_r_distribution}: probability mass for rainbow region lengths. \ref{fig:p_b_distribution}: probability mass for bubble region lengths.}
+       \label{fig:subregion_analysis}
+\end{figure}
+
+This leads to an argument that the scaling of the entanglement entropy scales as a square root for the randbow chain. The argument below is slightly adapted from that given in \cite{paola2018}, where a full analytic result is available. First, we observe from figure \ref{fig:p_b_distribution} that $P_b(l) \approx l^{-3/2}$, and thus:
+
+\begin{equation}\label{eq:mean_lb}
+\left\langle l_{b}\right\rangle=\int_{2}^{l} d l l P_{b}(l) \propto l^{1 / 2}
+\end{equation}
+
+To a crude approximation, the number of bubble regions $N_b$ should be equal to the number of rainbow regions $N_r$. Furthermore, dividing the total subsystem length $l$ by the average length of a bubble region $\langle l_b \rangle$  gives $N_b$, and thus: 
+
+\begin{equation}\label{eq:N_regions_identity}
+	\frac{l}{\langle l_b \rangle} \propto N_b = N_r
+\end{equation}
+
+The entanglement entropy is equal to the number of rainbow links in the subsystem multiplied by $\ln 2$, which is equal to the number of rainbow regions multiplied by the average length of a rainbow region: 
+
+\begin{equation}\label{eq:entropy_r_regions}
+	S_A \propto N_r \times \langle l_r \rangle \times \ln 2
+\end{equation}
+
+Bringing together equations \ref{eq:N_regions_identity} and \ref{eq:entropy_r_regions}, we get:
+
+\begin{equation}
+	S_A \propto \frac{l}{\langle l_b \rangle} \times \langle l_r \rangle \times \ln 2 \propto l^{1/2} \langle l_r \rangle \ln2
+\end{equation}
+
+which suggests that the entanglement entropy scales as a square root, i.e. a power-law.
+
+\subsection{Entanglement Entropy: Numerical SDRG}
+
+We then verify this numerically with the SDRG as per \cite{paola2018} by running the SDRG procedure on the $XX$ chain. For each simulation, we draw $L$ random couplings from the uniform distribution over $[0, 1]$ and run the SDRG procedure for different parameters $h$ and $\delta$ over $50, 000$ disorder realisations. We present our results in figure \ref{fig:randbow_entropy_joint}. As $h$ increases, the scaling of the entropy gets closer to the volume law phase, as the effect of the `rainbow' dominates. As we approach $h = 0$, the effect is weaker and we approach the random phase again. We see that a square root scaling holds, again indicating a violation of the area law. 
+%In \ref{fig:randbow_sqrt_entropy} we measure the scaling of the entanglement entropy for a subsystem $A$ of length $l$ with its left edge on the centre of the chain. This positioning guarantees that we capture the volume scaling as $h$ increases. We run both simulations for for the non-interacting open $XX$ chain. 
+
+When we measure the entropy scaling for set ratios of $h/\delta$, we observe a data collapse as first reported in \cite{paola2018}. The absolute values of $h$ and $\delta$ no longer determine entanglement entropy but rather their ratio, with higher ratios leading to higher values of entanglement entropy. This is interestingly only in the case of the SDRG procedure and does not hold in the exact solution for the XX chain (see section \ref{sec:randbow_old_results_exact}). 
+
+%\begin{figure}[h]
+ %    \centering
+  %  \includegraphics[width=0.8\textwidth]{../data/imgs/randbow_sqrt_entropy}
+   % \caption{Entanglement entropy for the open $XX$ randbow chain whilst varying the exponential parameter $h$. Notice the log-log scaling on each axis. Each simulation is run for $50, 000$ disorder realisations, and we measure the entanglement entropy of a subsystem $A$ starting at the chain centre (offset by one to ensure the proper scaling) for each realisation. A fitted function of the form $y = a + b\sqrt{x}$ is overlayed for each value of $h$.}
+%    \label{fig:randbow_sqrt_entropy}
+%\end{figure}
+
+%\begin{figure}[h]
+ %    \centering
+  %  \includegraphics[width=0.8\textwidth]{../data/imgs/randbow_ratio_entropy}
+   % \caption{Entanglement entropy for the open $XX$ randbow chain whilst varying the exponential parameter $h$ and the disorder parameter $\delta$ in fixed ratios. Again, notice the log-log scaling on each axis. Each simulation is run for $50, 000$ disorder realisations, and we measure the entanglement entropy of a subsystem $A$ starting at the chain centre (offset by one to ensure the proper scaling) for each realisation. A fitted function of the form $y = a + b\sqrt{x}$ is overlayed for each value of $h / \delta$.}
+    %\label{fig:randbow_ratio_entropy}
+%\end{figure}
+
+\begin{figure}
+     \centering
+     \begin{subfigure}[b]{0.8\textwidth}
+   \centering
+    \includegraphics[width=\textwidth]{../data/imgs/randbow_sqrt_entropy}
+    \caption{Entanglement entropy for the open $XX$ randbow chain whilst varying the exponential parameter $h$. Notice the log-log scaling on each axis. Each simulation is run for $50, 000$ disorder realisations, and we measure the entanglement entropy of a subsystem $A$ starting at the chain centre for each realisation. A fitted function of the form $y = a + b\sqrt{x}$ is overlayed for each value of $h$.}
+    \label{fig:randbow_sqrt_entropy}
+	\end{subfigure}%
+   \hfill
+     \begin{subfigure}[b]{0.8\textwidth}
+     \centering
+    \includegraphics[width=\textwidth]{../data/imgs/randbow_ratio_entropy}
+    \caption{Entanglement entropy for the open $XX$ randbow chain whilst varying the exponential parameter $h$ and the disorder parameter $\delta$ in fixed ratios. Again, notice the log-log scaling on each axis. Each simulation is run for $50, 000$ disorder realisations, and we measure the entanglement entropy of a subsystem $A$ starting at the chain centre for each realisation. A fitted function of the form $y = a + b\sqrt{x}$ is overlayed for each value of $h / \delta$.}
+    \label{fig:randbow_ratio_entropy}
+        \end{subfigure}
+           \caption{Entanglement entropy scaling of the randbow chain via SDRG. \ref{fig:randbow_sqrt_entropy}: the entanglement entropy scales as a square root. Figure \ref{fig:randbow_ratio_entropy}: data collapse onto $h / \delta$.}
+       \label{fig:randbow_entropy_joint}
+\end{figure}
+
+%\subsection{Randbow Subregion Analysis}\label{sec:randbow_old_results_analysis}
+%To further verify the findings of \cite{paola2018} and to verify our own SDRG implementation, we recalculated specific elements of the contour analysis performed in that paper. 
+
+
+
+
+\subsection{Randbow Chain Exact Solution}\label{sec:randbow_old_results_exact} 
+Finally, we analyse the exact solution of the $XX$ chain. This possible in the $XX$ case thanks to the Jordan-Wigner transformation, which maps the original $2^L \times 2^L$ eigenproblem to a much reduced $L \times L$ problem. We present the details in section \ref{subsec:jw_transform}, and here present only the numerical findings.
+
+We calculate the exact solution to the XX randbow chain for a system with $L = 100$ spins. We take an average over $1,000$ disorder realisations for each system and calculate the entanglement entropy from $l = 1$ to $l = 32$ for each realisation. For accuracy these simulations were run with 128-bit floating point numbers, which slows down the computation significantly as most optimised linear algebra routines are designed for 64-bit precision or lower. The results for the disordered cases are shown in figure \ref{fig:exact_randbow_solve}. Note the $\log_2$ scaling on each axis. The entanglement entropy retains its clear square root scaling, but we observe the the data collapse onto the $h / \delta$ ratios is no longer present. In addition, the absolute increase in $h$ does increase the entanglement entropy at all scales $l$. 
+
+Furthermore, we calculate the entanglement entropy of the clean rainbow chain, and our results are in figure \ref{fig:exact_randbow_solve_clean}. Here we see the volume law very clearly, even for relatively weak inhomogeneity $h = 1.5$. 
+
+%This suggests that the SDRG procedure is not wholly accurate in the large $l$ limit, perhaps because in the tail region of the spin couplings the values of $J_i$ are so small that the second order perturbation used to develop the Dasgupta-Ma rule is no longer accurate.
+
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=\textwidth]{../data/imgs/exact_randbow_solve}
+%	\caption{Entanglement entropy scaling of the $XX$ randbow chain with the exact solution. We calculate the solution for the $L = 100$ chain with $\delta = 1$ for $1,000$ disorder realisations. Notice the log-log scales. Notice that the data collapse on the ratio $h / \delta$ is no longer present.}
+%	\label{fig:exact_randbow_solve}
+%\end{figure}
+
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=\textwidth]{../data/imgs/exact_randbow_solve_clean}
+%	\caption{Scaling of the entanglement entropy of the clean open XX chain, calculated with the exact solution to the groundstate problem with varying $h$. We use $1$ trial for each value of $h$ on a system of size $L = 100$, with $\delta = 0$. Notice the volume scaling in $l$.}
+%	\label{fig:exact_randbow_solve_clean}
+%\end{figure}
+
+%We also show the results for the clean XX rainbow chain, again with $L = 100$, in figure \ref{fig:exact_randbow_solve_clean}. Here we observe the predicted volume scaling as discussed in section \ref{sec:randbow_old_results}.
+
+\begin{figure}
+     \centering
+     \begin{subfigure}[b]{0.8\textwidth}
+   \centering
+	\includegraphics[width=\textwidth]{../data/imgs/exact_randbow_solve}
+	\caption{Entanglement entropy scaling of the $XX$ randbow chain with the exact solution. We calculate the solution for the $L = 100$ chain with $\delta = 1$ for $1,000$ disorder realisations. Notice the logarithmic scales on both axis, and that the data collapse on the ratio $h / \delta$ is no longer present.}
+	\label{fig:exact_randbow_solve} 
+	\end{subfigure}%
+   \hfill
+     \begin{subfigure}[b]{0.8\textwidth}
+     \centering
+	\includegraphics[width=\textwidth]{../data/imgs/exact_randbow_solve_clean}
+	\caption{Scaling of the entanglement entropy of the clean open XX chain, calculated with the exact solution to the groundstate problem with varying $h$ on a system of size $L = 100$, with $\delta = 0$. Notice the volume scaling in $l$.}
+	\label{fig:exact_randbow_solve_clean}
+        \end{subfigure}
+           \caption{Entanglement entropy scaling of the randbow chain with the exact solution. We calculate the solution for the $L = 100$ chain. \ref{fig:exact_randbow_solve}: the exact solutions for the $XX$ chain with disorder ($\delta = 1$) for $1,000$ disorder realisations. Figure \ref{fig:exact_randbow_solve_clean}: the exact solution of the clean case.}
+       \label{fig:exact_randbow_entropy}
+\end{figure}

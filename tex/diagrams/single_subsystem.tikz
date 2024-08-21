@@ -1,0 +1,38 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=yellow dot] (0) at (-6, 1) {};
+		\node [style=yellow dot] (1) at (-4, 1) {};
+		\node [style=yellow dot] (3) at (-2, 1) {};
+		\node [style=yellow dot] (6) at (2, 1) {};
+		\node [style=yellow dot] (7) at (4, 1) {};
+		\node [style=yellow dot] (8) at (6, 1) {};
+		\node [style=yellow dot] (9) at (8, 1) {};
+		\node [style=yellow dot] (10) at (0, 1) {};
+		\node [style=none] (12) at (1.5, 2) {};
+		\node [style=none] (13) at (8.5, 2) {};
+		\node [style=none] (14) at (8.5, 0) {};
+		\node [style=none] (15) at (1.5, 0) {};
+		\node [style={A_label}] (17) at (5, -0.5) {$A$};
+		\node [style=none] (18) at (-5, 1.5) {$J_{-n}$};
+		\node [style=none] (20) at (-1, 1.5) {$J_{-1}$};
+		\node [style=none] (21) at (1, 1.5) {$J_0$};
+		\node [style=none] (22) at (3, 1.5) {$J_1$};
+		\node [style=none] (23) at (7, 1.5) {$J_{n-1}$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (0) to (1);
+		\draw (8) to (9);
+		\draw (3) to (10);
+		\draw (10) to (6);
+		\draw (6) to (7);
+		\draw (3) to (10);
+		\draw (8) to (9);
+		\draw [style={thin_dashed_line}] (7) to (8);
+		\draw [style={thick_dashed_line}] (12.center)
+			 to (13.center)
+			 to (14.center)
+			 to (15.center)
+			 to cycle;
+		\draw [style={thin_dashed_line}] (1) to (3);
+	\end{pgfonlayer}
+\end{tikzpicture}
